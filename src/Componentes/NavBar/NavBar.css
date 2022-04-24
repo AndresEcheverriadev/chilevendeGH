@@ -1,0 +1,32 @@
+.contenedorNav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    padding-top: 25px !important;
+    background-color: var(--colorPrincipalClaro) !important;
+}
+
+.contenedorNav--contenedorPrincipal {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    justify-content:space-between;
+    align-items: center;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.contenedorNav--contenedorSecundario {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnSearch {
+    background-color: var(--colorContraste) !important;
+}
