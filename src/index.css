@@ -2,10 +2,12 @@ html {
   --colorPrincipal: #0098ce;
   --colorPrincipalClaro: #cceaf5;
   --colorBlanco: #ffffff;
-  --colorContraste: #ffdd00;
+  --colorNegro: #000000;
+  --colorGrisClaro: #a7a7a7;
+  --colorGrisOscuro: #3b3b3a;
+  --colorContraste: #02488e;
   --colorContrasteSecundario: #e4032d;
-
-  --fontPrincipal: 'Poppins', sans-serif; ;
+  --fontPrincipal:'Poppins', sans-serif; 
   --h1: 48.83px ;
   --h2: 39.06px ;
   --h3: 31.25px ;
