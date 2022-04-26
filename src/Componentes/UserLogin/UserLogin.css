@@ -1,0 +1,48 @@
+.userLoginPage {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.userLoginContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+    background-color: var(--colorBlanco);
+    width: 50%;
+    height: 500px;
+    border-radius: 5px;
+    box-shadow: var(--Sombra);
+    padding: 20px;
+}
+
+.userLoginContainer--bsFormContainer {
+    display: flex;
+    flex-direction: column;
+    justify-self: flex-end;
+    width: 50%;
+}
+
+.form-check {
+    display: flex !important;
+    justify-content: space-between;
+    flex-direction: row !important;
+}
+
+.bsFormContainer--Btn {
+    background-color: var(--colorPrincipal) !important;
+}
+
+.form-check-label {
+    display: flex;
+    justify-content: flex-start !important;
+}
+
+.form-check-input:checked {
+   background-color: var(--colorPrincipal) !important;
+
+}
