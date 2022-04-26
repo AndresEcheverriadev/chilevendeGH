@@ -22,8 +22,10 @@ function NavBar() {
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
             </button>
+            <p>Categorías</p>
             <p>Ofertas</p>
             <p>Recien llegados</p>
+            <p>Ayuda</p>
         </div>
     </nav>
     </>  

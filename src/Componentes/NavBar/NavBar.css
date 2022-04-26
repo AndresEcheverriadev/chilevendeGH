@@ -41,32 +41,40 @@
 
 .contenedorNav--contenedorTop--btnSearch {
     background-color: var(--colorContraste) !important;
+    color: var(--colorGrisClaro) !important;
+}
+
+.contenedorNav--contenedorTop--btnSearch:hover {
+    color: var(--colorBlanco) !important;
 }
 
 .contenedorNav--contenedorTop--UserControls {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     width: 20%;
     height: auto;
     padding: 10px;
+    color: var(--colorNegro);
 }
 
 .contenedorNav--contenedorTop--UserControls .avatar {
-    fill: var(--colorGrisClaro);
+    fill: var(--colorGrisOscuro);
 }
 
 .contenedorNav--contenedorTop--UserControls .cart {
-    fill: var(--colorGrisClaro);
+    fill: var(--colorGrisOscuro);
 }
 
 .contenedorNav--contenedorBottom {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 50%;
     height: auto;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
-    gap: 10px;
-    color: var(--colorGrisOscuro);
+    gap: 20px;
+    color: var(--colorGrisMedio);
 }

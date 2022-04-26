@@ -4,6 +4,7 @@ html {
   --colorBlanco: #ffffff;
   --colorNegro: #000000;
   --colorGrisClaro: #a7a7a7;
+  --colorGrisMedio: #757574;
   --colorGrisOscuro: #3b3b3a;
   --colorContraste: #02488e;
   --colorContrasteSecundario: #e4032d;
@@ -23,9 +24,18 @@ body {
   font-family: var(--fontPrincipal) !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;  
-  background-color: var(--colorPrincipalClaro) !important;
+  background-color: var(--colorPrincipalClaro) !important;  
 }
 
+body  ::selection {
+  color: var(--colorContraste);
+  background: var(--colorBlanco);
+}
+
+body  ::-moz-selection {
+  color: var(--colorContraste);
+  background: var(--colorBlanco);
+}
 
 body h1 {
   font-size: var(--h1);
