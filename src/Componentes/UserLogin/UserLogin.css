@@ -10,31 +10,49 @@
 .userLoginContainer {
     display: flex;
     flex-direction: column;
-    justify-content:space-between;
+    justify-content:space-around;
     align-items: center;
     background-color: var(--colorBlanco);
     width: 50%;
-    height: 500px;
+    min-height: 500px;
     border-radius: 5px;
     box-shadow: var(--Sombra);
     padding: 20px;
 }
 
-.userLoginContainer--bsFormContainer {
+.userLoginFormContainer {
     display: flex;
     flex-direction: column;
     justify-self: flex-end;
     width: 50%;
 }
 
-.form-check {
-    display: flex !important;
-    justify-content: space-between;
-    flex-direction: row !important;
+.form-label{
+    text-align: left !important;
 }
 
-.bsFormContainer--Btn {
+.form-check {
+    display: flex !important;
+    justify-content: space-between !important;
+    flex-direction: row !important;
+    align-items: center !important;
+}
+
+.userLoginForm--buttonsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.userLoginForm--btnSesion {
     background-color: var(--colorPrincipal) !important;
+    border-color: var(--colorPrincipal) !important;
+}
+
+.userLoginForm--btnCrear {
+    background-color: var(--colorBlanco) !important;
+    border-color: var(--colorPrincipal) !important;
+    color: var(--colorPrincipal) !important;
 }
 
 .form-check-label {

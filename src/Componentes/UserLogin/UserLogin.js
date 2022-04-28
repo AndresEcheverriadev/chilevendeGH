@@ -5,26 +5,29 @@ function UserLogin() {
   return (
     <div className='userLoginPage'>
       <div className='userLoginContainer'>
-        <h4>¡Hola!</h4> 
-        <h5>Para iniciar sesión ingresa tus datos</h5>
-          <form className='userLoginContainer--bsFormContainer'>
+        <div className='userLoginTitles'>
+          <h4>¡Hola!</h4> 
+          <h5>Para iniciar sesión ingresa tus datos</h5>
+        </div>
+          <form className='userLoginFormContainer'>
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Nombre de usuario o correo electrónico</label>
+              <label for="exampleInputEmail1" className="form-label">Nombre de usuario o correo electrónico</label>
               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
-              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
             </div>
             <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+              <label for="exampleInputPassword1" className="form-label">Contraseña</label>
               <input type="password" class="form-control" id="exampleInputPassword1"/>
             </div>
             <div class="mb-3 form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
-              <label class="form-check-label" for="exampleCheck1">Recordarme</label>
-              <a>¿Perdiste tu contraseña?</a>
+              <div className='form-check--passRecordar'>
+                <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
+                <label class="form-check-label" for="exampleCheck1">Recordarme</label>
+              </div>
+              <div className='form-check--passRecuperar'><a>¿Perdiste tu contraseña?</a></div>
             </div>
-            <div className=''>
-              <button type="submit" class="btn btn-primary bsFormContainer--Btn">Iniciar sesión</button>
-              <button type="submit" class="btn btn-primary bsFormContainer--Btn">Iniciar sesión</button>
+            <div className='userLoginForm--buttonsContainer'>
+              <button type="submit" class="btn btn-primary userLoginForm--btnSesion">Iniciar sesión</button>
+              <button type="submit" class="btn btn-outline-primary  userLoginForm--btnCrear">Crear cuenta</button>
             </div>
           </form>
         </div>
