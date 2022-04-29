@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import Logo from '../Logo/Logo'
 import Cart from './Cart'
 import './NavBar.css'
@@ -9,7 +10,7 @@ function NavBar() {
     <>
     <nav className="navbar navbar-expand-lg navbar-light contenedorNav">
         <div className='contenedorNav--contenedorTop'>
-            <div className='contenedorNav--contenedorTop--Logo'><Logo/></div>
+            <div className='contenedorNav--contenedorTop--Logo'><NavLink to='/'><Logo/></NavLink></div>
             <form className="d-flex contenedorNav--contenedorTop--Search">
                     <input className="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" />
                     <button className="btn btn-outline-success contenedorNav--contenedorTop--btnSearch" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-search" viewBox="0 0 16 16">

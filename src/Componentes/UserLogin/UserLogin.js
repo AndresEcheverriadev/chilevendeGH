@@ -1,9 +1,12 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
+import Logo from '../Logo/Logo'
 import './UserLogin.css'
 
 function UserLogin() {
   return (
     <div className='userLoginPage'>
+      <div className='userLoginLogo'><NavLink to='/'><Logo/></NavLink></div>
       <div className='userLoginContainer'>
         <div className='userLoginTitles'>
           <h4>¡Hola!</h4> 
