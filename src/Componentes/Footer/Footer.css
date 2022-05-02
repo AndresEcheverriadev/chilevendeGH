@@ -1,8 +1,34 @@
-.Footer {
+.footerContainer {
+    display: flex;
+    flex-direction: row;
     width: 100%;
     height: 100px;
     background-color: var(--colorPrincipal);
     border-top: solid;
     border-color: var(--colorGrisClaro);
     box-shadow: 0 -5px  10px var(--colorGrisClaro);
+    justify-content: center;
+    align-items: center;
+}
+
+.footerContent {
+    display: inherit;
+    width: 70%;
+    height: auto;
+    justify-content: space-between;
+}
+
+.footerContent--Columns {
+    color:var(--colorBlanco)
+}
+
+.footerContent--Logo {
+    display: inherit;
+    width: 15%;
+    height: auto;    
+}
+
+.footerContent--Logo #logo {
+    width: 100%;
+    height: auto;
 }

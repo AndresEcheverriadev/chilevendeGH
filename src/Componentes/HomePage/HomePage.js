@@ -7,9 +7,15 @@ function HomePage() {
   return (
     <div className='homePageContainer'>
         <NavBar/>
-        <div>HomePage</div>
+          <section className='homePage--mainBanner'>
+            Banner Principal
+          </section>
+          <section className='homePage--body'>
+            Cuerpo del home
+          </section>
         <Footer/>
     </div>
+
   )
 }
 

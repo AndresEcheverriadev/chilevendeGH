@@ -1,6 +1,28 @@
 .homePageContainer {
-    font-display: flex;
+    display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100%;
+    height: auto;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.homePage--mainBanner {
+    display: inherit;
+    align-items: center;
+    justify-content: center;
+    background-color: brown;
+    height: 300px;
+    width: 90%;
+    color: var(--colorBlanco);
+}
+
+.homePage--body {
+    display: inherit;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 1000px;
+    background-color: yellowgreen;
+
 }

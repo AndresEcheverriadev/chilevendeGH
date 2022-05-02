@@ -1,9 +1,19 @@
 import React from 'react'
+import Logo from '../Logo/Logo'
 import './Footer.css'
 
 function Footer() {
   return (
-    <div className='Footer'>Footer</div>
+    <footer className='footerContainer'>
+      <div className='footerContent'>
+        <div className='footerContent--Logo'><Logo/></div>
+        <div className='footerContent--Columns'>Footer</div>
+        <div className='footerContent--Columns'>Footer</div>
+        <div className='footerContent--Columns'>Footer</div>
+        <div className='footerContent--Columns'>Footer</div>
+        <div className='footerContent--Columns'>Footer</div>
+      </div>
+    </footer>
   )
 }
 
