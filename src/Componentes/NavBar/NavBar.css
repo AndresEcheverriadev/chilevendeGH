@@ -70,11 +70,52 @@
 
 .contenedorNav--contenedorBottom {
     display: flex;
-    flex-direction: row;
-    width: 50%;
-    height: auto;
-    justify-content:center;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 20px;
-    color: var(--colorGrisMedio);
+    width: 55%;
+    height: auto;
+}
+
+.container-fluid{
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    height: auto !important;
+}
+
+.contenedorBottom--Menu {
+    display: flex ;
+    flex-direction: row ;
+    width: 100% ;
+    height: auto ;
+    justify-content:space-between ;
+    align-items: center ;
+    gap: 10px;
+}
+
+.dropdownContenedor {
+    display: flex;
+    flex-direction: row;
+    width: calc(100%/2);
+    justify-content: center;
+    align-items: center;
+    border: solid 1px var(--colorGrisClaro);
+    border-radius: 5px;
+
+}
+
+.dropdownCategorias {
+    text-align: center;
+    width:50%;
+    color: var(--colorGrisOscuro) !important;
+}
+
+.listaColapsable {
+    text-align: left !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    width: 100% !important;
 }

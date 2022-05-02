@@ -12,6 +12,7 @@
 /build
 
 # misc
+notercode.js
 .DS_Store
 .env.local
 .env.development.local

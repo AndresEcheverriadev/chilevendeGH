@@ -69,7 +69,7 @@ body p {
 
 body a {
   font-size: var(--p);
-  color: var(--colorNegro);
+  color: var(--colorGrisOscuro);
   text-decoration: none;
 }
 
