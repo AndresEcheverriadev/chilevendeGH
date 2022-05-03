@@ -2,24 +2,26 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 100px;
+    height: auto;
     background-color: var(--colorPrincipal);
     border-top: solid;
     border-color: var(--colorGrisClaro);
     box-shadow: 0 -5px  10px var(--colorGrisClaro);
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
 .footerContent {
     display: inherit;
-    width: 70%;
+    width: 80%;
     height: auto;
     justify-content: space-between;
 }
 
 .footerContent--Columns {
-    color:var(--colorBlanco)
+    color:var(--colorGrisOscuro);
+    text-align: left;
 }
 
 .footerContent--Logo {
@@ -31,4 +33,24 @@
 .footerContent--Logo #logo {
     width: 100%;
     height: auto;
+}
+
+.columnSuscribe {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.btnSuscribe {
+    border-radius: 5px !important;
+    background-color: var(--colorContraste) !important;
+    color: var(--colorGrisClaro) !important;
+    border-color: transparent !important;
+}
+
+.btnSuscribe:hover {
+    color: var(--colorBlanco) !important;
 }

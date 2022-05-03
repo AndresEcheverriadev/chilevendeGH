@@ -16,6 +16,7 @@ html {
   --h5: 20px ;
   --h6: 16px ;
   --p:  16px ;
+  --li:  14px ;
   --bold : bold;
   --Sombra: 5px 5px 10px var(--colorGrisClaro); 
 }
@@ -77,7 +78,7 @@ body a:hover {
   color: var(--colorPrincipal);
 }
 
-
 li {
-  font-size: var(--p);
+  font-size: var(--li);
+  list-style: none;
 }
