@@ -8,7 +8,14 @@ import './NavBar.css'
 
 
 function NavBar() {
-  const navbarCategorias = categoriasSitio.map((categorias) => <li><NavLink className='listaCategorias' to={categorias[0]}>{categorias[0]}</NavLink></li> )
+  
+  const navbarCategorias = categoriasSitio.map(function (subarray) {
+
+    return subarray.map(function(number) {
+      return <li><NavLink className='listaCategorias' to={number}>{number}</NavLink></li>;
+    })
+  })
+  
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light contenedorNav">

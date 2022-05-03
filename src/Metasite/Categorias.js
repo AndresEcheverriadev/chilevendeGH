@@ -17,3 +17,4 @@ const categoriasSitio = [
 ] 
 
 export default categoriasSitio
+
