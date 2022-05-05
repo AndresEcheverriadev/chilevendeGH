@@ -15,6 +15,25 @@ function NavBar() {
       return <li><NavLink className='listaCategorias' to={number}>{number}</NavLink></li>;
     })
   })
+
+  // const navbarCategorias = categoriasSitio.map(function (subarray) {
+
+  //   return subarray.map(function(number) {
+
+  //     if(subarray.length == 1) {
+  //       return <li>{number}</li>
+  //     }
+  //     else if(subarray.length > 1) {
+  //       return <><li>{number}</li></>
+
+  //     }
+  //   })
+  // })
+
+  
+
+
+  
   
   return (
     <>
@@ -45,7 +64,7 @@ function NavBar() {
                       Categorías
                     </a>
                     <ul className="dropdown-menu listaColapsable" aria-labelledby="navbarDropdown">
-                      {navbarCategorias}
+                    {navbarCategorias}
                     </ul>
                   </li>
                   <li className="nav-item linksContenedor">

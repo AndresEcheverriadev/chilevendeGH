@@ -6,8 +6,10 @@ html {
   --colorGrisClaro: #a7a7a7;
   --colorGrisMedio: #757574;
   --colorGrisOscuro: #3b3b3a;
-  --colorContraste: #02488e;
-  --colorContrasteSecundario: #e4032d;
+  --colorAzulContraste: #02488e;
+  --colorAmarilloContraste: #ffdd00;
+  --colorError: #e4032d;
+  --colorOk: #009d4e;
   --fontPrincipal:'Tahoma', sans-serif; 
   --h1: 48.83px ;
   --h2: 39.06px ;
@@ -16,6 +18,7 @@ html {
   --h5: 20px ;
   --h6: 16px ;
   --p:  16px ;
+  --notification:12px;
   --li:  14px ;
   --bold : bold;
   --Sombra: 5px 5px 10px var(--colorGrisClaro); 
@@ -31,12 +34,12 @@ body {
 }
 
 body  ::selection {
-  color: var(--colorContraste);
+  color: var(--colorAzulContraste);
   background: var(--colorBlanco);
 }
 
 body  ::-moz-selection {
-  color: var(--colorContraste);
+  color: var(--colorAzulContraste);
   background: var(--colorBlanco);
 }
 

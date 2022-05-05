@@ -40,7 +40,7 @@
 }
 
 .contenedorNav--contenedorTop--btnSearch {
-    background-color: var(--colorContraste) !important;
+    background-color: var(--colorAzulContraste) !important;
     color: var(--colorGrisClaro) !important;
 }
 

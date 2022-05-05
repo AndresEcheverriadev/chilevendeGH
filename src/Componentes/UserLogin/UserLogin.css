@@ -27,7 +27,7 @@
     justify-content:space-around;
     align-items: center;
     background-color: var(--colorBlanco);
-    width: 50%;
+    width: 40%;
     min-height: 500px;
     border-radius: 5px;
     box-shadow: var(--Sombra);
@@ -77,4 +77,11 @@
 .form-check-input:checked {
    background-color: var(--colorPrincipal) !important;
 
+}
+
+.userLoginForm--error{
+    padding: 2px;
+    font-size: var(--notification);
+    color: var(--colorError);
+    border-radius: 5px;
 }
