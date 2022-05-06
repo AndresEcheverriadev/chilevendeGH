@@ -1,0 +1,36 @@
+.suscribeMail--Container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.suscribeMail--Inputs {
+    display: flex;
+    flex-direction: row;
+    min-width: 50%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.btnSuscribe {
+    border-radius: 5px !important;
+    background-color: var(--colorAzulContraste) !important;
+    color: var(--colorGrisClaro) !important;
+    border-color: transparent !important;
+}
+
+.btnSuscribe:hover {
+    color: var(--colorBlanco) !important;
+}
+
+.suscribeMail--InputError{
+    font-size: var(--notification);
+    color: var(--colorError);
+}

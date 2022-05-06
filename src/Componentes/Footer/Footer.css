@@ -48,35 +48,3 @@
     width: auto;
     height: auto;
 }
-
-.columnSuscribe {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
-.columnSuscribeInputs {
-    display: flex;
-    flex-direction: row;
-}
-
-.btnSuscribe {
-    border-radius: 5px !important;
-    background-color: var(--colorAzulContraste) !important;
-    color: var(--colorGrisClaro) !important;
-    border-color: transparent !important;
-}
-
-.btnSuscribe:hover {
-    color: var(--colorBlanco) !important;
-}
-
-.userLoginForm--error{
-    padding: 2px;
-    font-size: var(--notification);
-    color: var(--colorError);
-    border-radius: 5px;
-}
