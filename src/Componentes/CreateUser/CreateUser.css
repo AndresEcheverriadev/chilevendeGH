@@ -1,13 +1,15 @@
-.userLoginPage {
+.createUserPage {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100%;
+    height: auto;
     justify-content: flex-start;
     align-items: center;
+    background-color: var(--colorAzulContraste);
+    padding-bottom: 200px;
 }
 
-.userLoginLogo {
+.createUserLogo {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,12 +19,11 @@
     padding: 20px;
 }
 
-.userLoginLogo img {
+.createUserLogo img {
     width: 50%;
     height: auto;
 }
-
-.userLoginContainer {
+.createUserContainer {
     display: flex;
     flex-direction: column;
     justify-content:space-around;
@@ -35,13 +36,23 @@
     padding: 20px;
 }
 
-.userLoginTitles--WelcomeEmoji {
+.createUserTitles--chileEmoji {
     width: 30%;
     height: auto;
     margin: 10px;
 }
 
-.userLoginFormContainer {
+.createUserSelector {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60%;
+    height: auto;
+    gap: 10px;
+    margin: 30px;
+}
+
+.createUserFormContainer {
     display: flex;
     flex-direction: column;
     justify-self: flex-end;
@@ -60,28 +71,23 @@
     align-items: center !important;
 }
 
-.userLoginForm--buttonsContainer {
+.createUserForm--buttonsContainer {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.disabledBtn {
-    background-color: var(--colorGrisClaro) !important;
-    border-color: var(--colorGrisClaro) !important;
-}
-
-.userLoginForm--btnSession {
+.createUserForm--btnCreate {
     background-color: var(--colorPrincipal) !important;
     border-color: var(--colorPrincipal) !important;
 }
 
-.userLoginForm--btnCreate {
+.createUserForm--btnSession {
+    width: 100%;
+    height: auto;
     background-color: var(--colorBlanco) !important;
     border-color: var(--colorPrincipal) !important;
     color: var(--colorPrincipal) !important;
-    width: 100%;
-    height: auto;
 }
 
 .form-check-label {
@@ -94,9 +100,13 @@
 
 }
 
-.userLoginForm--emailError , .userLoginForm--inputError {
-    padding: 2px;
+.checkTerms--link {
+    text-decoration: underline;
+}
+
+.createUserForm--emailError, .createUserForm--inputError {
+    padding-top: 10px;
+    padding-bottom: 10px;
     font-size: var(--notification);
     color: var(--colorError);
-    border-radius: 5px;
 }

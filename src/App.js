@@ -2,6 +2,7 @@ import React from 'react';
 import {BrowserRouter, Navigate, Route, Routes} from 'react-router-dom';
 import HomePage from './Componentes/HomePage/HomePage';
 import UserLogin from './Componentes/UserLogin/UserLogin';
+import CreateUser from './Componentes/CreateUser/CreateUser';
 import './App.css';
 
 
@@ -13,6 +14,7 @@ function App() {
           <Routes>
             <Route path='/' element={<HomePage/>} />
             <Route path='/login' element={<UserLogin/>} /> 
+            <Route path='/crear-cuenta' element={<CreateUser/>} />
             <Route path='/*' element={<Navigate to='/'/>} /> 
           </Routes>
         </div>

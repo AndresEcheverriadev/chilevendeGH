@@ -7,7 +7,7 @@ function Footer() {
   return (
     <footer className='footerContainer'>
       <div className='footerLogoContainer'>
-        <img src={logoFooter} className='footerLogoContainer--Logo'></img>
+        <img src={logoFooter} className='footerLogoContainer--Logo' alt=''></img>
       </div>
       <div className='footerContent'>
         <div className='footerContent--Columns'>

@@ -85,3 +85,8 @@ li {
   font-size: var(--li);
   list-style: none;
 }
+
+* button {
+  background-color:transparent;
+  border-style: none;
+}

@@ -60,9 +60,9 @@ function NavBar() {
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0 contenedorBottom--Menu">
                   
                   <li className="nav-item dropdown dropdownContenedor">
-                    <a className="nav-link dropdown-toggle dropdownCategorias" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button className="nav-link dropdown-toggle dropdownCategorias" href="#" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                       Categorías
-                    </a>
+                    </button>
                     <ul className="dropdown-menu listaColapsable" aria-labelledby="navbarDropdown">
                     {navbarCategorias}
                     </ul>
