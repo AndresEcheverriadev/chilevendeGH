@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import Logo from '../Logo/Logo'
+import Logo from '../Footer/LogoCVHorizontalbn.png'
 import Cart from './Cart'
 import UserControls from './UserControls'
 import categoriasSitio from '../../Metasite/Categorias'
