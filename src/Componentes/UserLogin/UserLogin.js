@@ -8,8 +8,6 @@ import validator from 'validator'
 import './UserLogin.css'
 
 function UserLogin() {
-
-  const checkMailIngresado = () => { document.querySelector('#userLoginInputEmail').value = localStorage.getItem('Email') };
   const [inputPassword, setinputPassword] = useState('');
   const [validatedPassword, setvalidatedPassword] = useState(false);
   const [inputEmail, setinputEmail] = useState('');
@@ -30,7 +28,7 @@ function UserLogin() {
 
   const validateEmail = (e) => {
     const inputEmail = e.target.value;
-    if (validator.isEmail(inputEmail) && inputEmail) {
+    if (validator.isEmail(inputEmail)) {
       setEmailError('');
       setinputEmail(inputEmail);
       setvalidatedEmail(true);
@@ -90,7 +88,7 @@ function UserLogin() {
           <form className='userLoginFormContainer'>
             <div class="mb-3">
               <label for="exampleInputEmail1" className="form-label">Nombre de usuario o correo electrónico</label>
-              <input type="email" class="form-control" id="userLoginInputEmail" aria-describedby="emailHelp" onChange={(e) => validateEmail(e)}/>
+              <input type="email" class="form-control" id="userLoginInputEmail" aria-describedby="emailHelp"  onChange={(e) => validateEmail(e)}/>
               <div className='userLoginForm--emailError'><span>{emailError}</span></div>
             </div>
             <div class="mb-3">

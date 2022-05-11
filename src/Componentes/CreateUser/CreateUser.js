@@ -16,6 +16,7 @@ function createUser() {
   const [checkedTerms, setcheckedTerms] = useState(false);
   const [checkedVendedor, setcheckedVendedor] = useState(false);
   const [emailError, setEmailError] = useState('');
+  const [passwordError, setPasswordError] = useState('');
   const [inputError, setInputError] = useState('');
   const [createUserEmoji, setcreateUserEmoji] = useState(CompraEmoji);
   const [inputType, setinputType] = useState('');
@@ -32,6 +33,11 @@ function createUser() {
   <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
   </svg> {textError} </span>;
 
+  const passwordErrorMesagge = <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+  </svg> La contraseña debe tener al menos una letra, un número, un símbolo y una longitud de 8 caracteres</span>;
+
   const validateEmail = (e) => {
     const inputEmail = e.target.value;
     if (validator.isEmail(inputEmail)) {
@@ -46,11 +52,13 @@ function createUser() {
 
   const validatePassword = (e) => {
     const inputPassword = e.target.value;
-    if(inputPassword) {
+    if(validator.isStrongPassword(inputPassword)) {
+      setPasswordError('');
       setinputPassword(inputPassword);
       setvalidatedPassword(true);
     }else {
-      setvalidatedPassword(false)
+      setPasswordError(passwordErrorMesagge);
+      setvalidatedPassword(false);
     }
   }
 
@@ -69,7 +77,7 @@ function createUser() {
       setInputError(inputErrorMesagge('Debes aceptar los Términos y Condiciones'));
     }
     else {
-      setInputError(inputErrorMesagge('Debes ingresar tus datos para crear tu cuenta'));
+      setInputError(inputErrorMesagge('Debes ingresar tus datos correctamente'));
     }
     
   };
@@ -112,6 +120,7 @@ function createUser() {
           <div className="mb-3">
             <label htmlfor="exampleInputPassword1" className="form-label">Contraseña</label>
             <input type="password" className="form-control" id="exampleInputPassword1"onChange={(e) => validatePassword(e)}/>
+            <div className='createUserForm--passwordError'><span>{passwordError}</span></div>
           </div>
           <div className="mb-3 form-check">
             <div className='form-check--checkTerms'>
@@ -131,6 +140,9 @@ function createUser() {
             <NavLink to='/login'><button type="submit" className="btn btn-outline-primary  createUserForm--btnSession">Iniciar sesión</button></NavLink>
           </div>
         </form>
+        <div className='createUserPrivacyDisclaimer'>
+          <p>Sus datos personales se utilizarán para respaldar su experiencia en este sitio web, para administrar el acceso a su cuenta y para otros fines descritos en nuestro política de privacidad.</p>
+        </div>
         </div>
       </div>
   )

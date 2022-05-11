@@ -111,9 +111,20 @@
     text-decoration: underline;
 }
 
-.createUserForm--emailError, .createUserForm--inputError {
+.createUserForm--emailError, .createUserForm--inputError, .createUserForm--passwordError {
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: var(--notification);
     color: var(--colorError);
+}
+
+.createUserPrivacyDisclaimer {
+    width: 60%;
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.createUserPrivacyDisclaimer p {
+    font-size: var(--notification);
 }
