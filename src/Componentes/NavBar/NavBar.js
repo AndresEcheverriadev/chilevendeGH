@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 import Logo from '../Logo/Logo'
 import Cart from './Cart'
 import UserControls from './UserControls'
@@ -9,32 +9,9 @@ import './NavBar.css'
 
 function NavBar() {
   
-  const navbarCategorias = categoriasSitio.map(function (subarray) {
-
-    return subarray.map(function(number) {
-      return <li><NavLink className='listaCategorias' to={number}>{number}</NavLink></li>;
-    })
-  })
-
-  // const navbarCategorias = categoriasSitio.map(function (subarray) {
-
-  //   return subarray.map(function(number) {
-
-  //     if(subarray.length == 1) {
-  //       return <li>{number}</li>
-  //     }
-  //     else if(subarray.length > 1) {
-  //       return <><li>{number}</li></>
-
-  //     }
-  //   })
-  // })
-
-  
-
-
-  
-  
+  const navbarCategorias = categoriasSitio.map((categoria) => {
+      return <li><NavLink className='listaCategorias' to={categoria[0]}>{categoria[0]}</NavLink></li>;
+  })  
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light contenedorNav">

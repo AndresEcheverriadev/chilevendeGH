@@ -36,20 +36,27 @@
     padding: 20px;
 }
 
-.createUserTitles--chileEmoji {
-    width: 30%;
+.createUserTitles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     height: auto;
     margin: 10px;
+}
+
+.createUserTitles--userEmoji {
+    width: 10%;
+    height: auto;
 }
 
 .createUserSelector {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    width: 60%;
+    justify-content: flex-start;
+    width: 100%;
     height: auto;
-    gap: 10px;
-    margin: 30px;
 }
 
 .createUserFormContainer {

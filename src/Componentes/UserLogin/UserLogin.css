@@ -35,10 +35,19 @@
     padding: 20px;
 }
 
-.userLoginTitles--WelcomeEmoji {
-    width: 30%;
+.userLoginTitles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     height: auto;
     margin: 10px;
+}
+
+.userLoginTitles--WelcomeEmoji {
+    width: 10%;
+    height: auto;
 }
 
 .userLoginFormContainer {
