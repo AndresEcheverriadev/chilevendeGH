@@ -59,6 +59,12 @@
     height: auto;
 }
 
+.socialIconsContainer {
+    display: inherit;
+    flex-direction: row;
+    gap: 10px;
+}
+
 .socialIcon:hover {
     color: var(--colorBlanco);
 }

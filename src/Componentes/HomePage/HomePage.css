@@ -7,14 +7,16 @@
     align-items: center;
 }
 
-.homePage--mainBanner {
-    display: inherit;
-    align-items: center;
-    justify-content: center;
-    background-color: brown;
-    height: 300px;
+.homePage--carrouselHome {
+    height: auto;
     width: 90%;
-    color: var(--colorBlanco);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: var(--Sombra);
+    background-color: transparent;
+    border: 10px;
+    border-color: transparent;
+    border-radius: 20px;
 }
 
 .homePage--body {
@@ -26,10 +28,19 @@
     background-color: yellowgreen;
 }
 
-.homePage--copyright, .homePage--address {
+.corpinfoContainer {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: inherit;
+    flex-direction: column;
+    background-color: var(--colorGrisOscuro);
+    width: 100%;
+    height: auto;
+}
+
+.corpinfo--copyright, .corpinfo--address {
     width: 100%;
     height: auto;
     color: var(--colorBlanco);
-    background-color: var(--colorGrisOscuro);
     font-size: var(--notification);
 }
