@@ -16,6 +16,9 @@ function HomePage() {
         </main>
         <SuscribeMail/>
         <Footer/>
+        <div className='homePage--copyright'>Copyright © 2021-2002 Chilevende.cl</div>
+        <div className='homePage--address'>Avenida Providencia 1208 Oficina 1603, Providencia, Santiago, Chile</div>
+        
     </div>
 
   )

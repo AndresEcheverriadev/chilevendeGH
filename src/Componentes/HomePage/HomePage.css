@@ -24,5 +24,12 @@
     width: 90%;
     height: 1000px;
     background-color: yellowgreen;
+}
 
+.homePage--copyright, .homePage--address {
+    width: 100%;
+    height: auto;
+    color: var(--colorBlanco);
+    background-color: var(--colorGrisOscuro);
+    font-size: var(--notification);
 }
