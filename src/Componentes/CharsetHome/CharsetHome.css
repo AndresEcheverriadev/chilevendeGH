@@ -1,0 +1,45 @@
+
+.charset {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.charsetSeparator {
+    border-left: solid 1px var(--colorAzulContraste);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.charsetIconContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+}
+
+.charsetIcon {
+    width: 30px;
+    height: auto;
+    color: var(--colorAzulContraste);
+}
+
+.charsetIconFront {
+    position: relative;
+    left: -10px;
+    bottom: -10px;;
+}
+
+.charsetLink {
+    width: 100%;
+    color: var(--colorBlanco);
+    font-size: var(--notification);
+}
+
+.charsetLink:hover {
+    color:var(--colorAzulContraste);
+}

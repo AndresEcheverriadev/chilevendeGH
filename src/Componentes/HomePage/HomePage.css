@@ -10,13 +10,28 @@
 .homePage--carrouselHome {
     height: auto;
     width: 90%;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     box-shadow: var(--Sombra);
     background-color: transparent;
     border: 10px;
     border-color: transparent;
     border-radius: 20px;
+}
+
+.homePage--charsetHome {
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    width: 90%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: var(--colorPrincipal);
+    border-color: transparent;
+    border-style: hidden;
+    border-radius: 10px;
+    color: var(--colorBlanco);
+    box-shadow: var(--Sombra);
 }
 
 .homePage--body {
@@ -25,7 +40,6 @@
     justify-content: center;
     width: 90%;
     height: 1000px;
-    background-color: yellowgreen;
 }
 
 .corpinfoContainer {

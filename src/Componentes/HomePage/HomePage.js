@@ -1,8 +1,9 @@
 import React from 'react'
 import NavBar from '../NavBar/NavBar'
-import Footer from '../Footer/Footer'
-import SuscribeMail from '../SuscribeEmail/SuscribeMail'
 import CarrouselHome from '../CarrouselHome/CarrouselHome'
+import CharsetHome from '../CharsetHome/CharsetHome'
+import SuscribeMail from '../SuscribeEmail/SuscribeMail'
+import Footer from '../Footer/Footer'
 import './HomePage.css'
 
 function HomePage() {
@@ -11,6 +12,9 @@ function HomePage() {
         <NavBar/>
         <section className='homePage--carrouselHome'>
           <CarrouselHome/>
+        </section>
+        <section className='homePage--charsetHome'>
+          <CharsetHome/>
         </section>
         <main className='homePage--body'>
           Cuerpo del home
