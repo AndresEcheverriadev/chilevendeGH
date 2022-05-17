@@ -1,0 +1,89 @@
+.productCard {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    border-color:var(--colorBlanco);
+    border-style: solid;
+    border-radius: 10px;
+}
+
+.productCard:hover {
+    box-shadow: var(--Sombra);
+}
+
+.productCardImageContainer {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+
+.productCardImage {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: -1;
+    background-color: var(--colorBlanco);
+}
+
+.productCardBody {
+    display: flex;
+    flex-direction: column;
+    height: 6rem;
+    width: 100%;
+    background-color:var(--colorBlanco) ;
+    border-top: 1px solid var(--colorGrisClaro) ;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: left;
+}
+
+.bodyPrices {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.bodyBeforePrice {
+    font-size: var(--notification);
+    text-decoration: line-through; 
+    color: var(--colorGrisClaro); 
+    margin: 0;
+    padding: 0;
+    height: 1rem;
+    width: 100%;
+}
+
+.bodyPriceContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: baseline;
+    width: 100%;
+    height: 1.5rem;
+}
+
+.bodyDiscount {
+    background-color: var(--colorAzulContraste);
+    color: var(--colorBlanco);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-color:transparent;
+    border-style: transparent;
+    border-radius: 10px;  
+    text-align: center;  
+}
+
+.cardTitle {
+    height: 3rem;
+}
+
+

@@ -2,6 +2,7 @@ import React from 'react'
 import NavBar from '../NavBar/NavBar'
 import CarrouselHome from '../CarrouselHome/CarrouselHome'
 import CharsetHome from '../CharsetHome/CharsetHome'
+import SaleHome from '../SaleHome/SaleHome'
 import SuscribeMail from '../SuscribeEmail/SuscribeMail'
 import Footer from '../Footer/Footer'
 import './HomePage.css'
@@ -17,7 +18,7 @@ function HomePage() {
           <CharsetHome/>
         </section>
         <main className='homePage--body'>
-          Cuerpo del home
+          <SaleHome/>
         </main>
         <SuscribeMail/>
         <Footer/>
