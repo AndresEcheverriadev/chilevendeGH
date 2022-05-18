@@ -3,6 +3,7 @@ import NavBar from '../NavBar/NavBar'
 import CarrouselHome from '../CarrouselHome/CarrouselHome'
 import CharsetHome from '../CharsetHome/CharsetHome'
 import SaleHome from '../SaleHome/SaleHome'
+import CategoriesHome from '../CategoriesHome/CategoriesHome'
 import SuscribeMail from '../SuscribeEmail/SuscribeMail'
 import Footer from '../Footer/Footer'
 import './HomePage.css'
@@ -19,6 +20,7 @@ function HomePage() {
         </section>
         <main className='homePage--body'>
           <SaleHome/>
+          <CategoriesHome/>
         </main>
         <SuscribeMail/>
         <Footer/>

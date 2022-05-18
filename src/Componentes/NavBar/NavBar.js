@@ -6,11 +6,9 @@ import UserControls from './UserControls'
 import categoriasSitio from '../../Metasite/Categorias'
 import './NavBar.css'
 
-
 function NavBar() {
-  
   const navbarCategorias = categoriasSitio.map((categoria) => {
-      return <li><NavLink className='listaCategorias' to={categoria[0]}>{categoria[0]}</NavLink></li>;
+      return <li><NavLink className='listaCategorias' to={categoria[1]}>{categoria[1]}</NavLink></li>;
   })  
   return (
     <>

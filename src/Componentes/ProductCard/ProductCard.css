@@ -8,6 +8,8 @@
     border-color:var(--colorBlanco);
     border-style: solid;
     border-radius: 10px;
+    box-shadow: var(--sombraSmall);
+
 }
 
 .productCard:hover {

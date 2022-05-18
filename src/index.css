@@ -2,7 +2,8 @@ html {
   --colorPrincipal: #0098ce;
   --colorPrincipalClaro: #cceaf5;
   --colorBlanco: #ffffff;
-  --colorNegro: #000000;
+  --colorNegro: #000000; 
+  --colorGrisSuave: #f0f1f3;
   --colorGrisClaro: #a7a7a7;
   --colorGrisMedio: #757574;
   --colorGrisOscuro: #3b3b3a;
@@ -22,6 +23,7 @@ html {
   --li:  14px ;
   --bold : bold;
   --Sombra: 5px 5px 10px var(--colorGrisClaro); 
+  --sombraSmall: 2px 2px 2px var(--colorGrisClaro); 
 }
 
 body {

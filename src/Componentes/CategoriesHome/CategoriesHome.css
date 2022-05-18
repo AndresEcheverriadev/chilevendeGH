@@ -1,0 +1,59 @@
+.categoriesHomeContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.categoriesHomeTitles {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.categoriesHomeCards {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 5px;
+    border-radius: 10px;
+}
+
+.categoriesCardContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 162px;
+    height: 162px;
+    color: var(--colorAzulContraste) ;
+    background-color: var(--colorBlanco);
+    border-color: transparent;
+    border-width: 5px;
+    border-radius: 10px;
+    box-shadow: var(--sombraSmall);
+}
+
+.categoriesCardContainer:hover {
+    background-color: var(--colorAzulContraste);
+    color: var(--colorBlanco);
+}
+
+.categoriesCardContainer span {
+    font-size: 50px;
+}
