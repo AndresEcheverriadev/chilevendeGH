@@ -1,9 +1,9 @@
 import React from 'react'
-import logo from '../Footer/Logocvhorizontalbn.png'
+import logoNavBar from './LogoHorizBN.png'
 
 function Logo() {
   return (
-    <img src={logo} id='logo' alt=''></img>
+    <img src={logoNavBar} id='logo' alt=''></img>
   )
 }
 

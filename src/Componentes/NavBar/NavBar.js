@@ -43,13 +43,13 @@ function NavBar() {
                     </ul>
                   </li>
                   <li className="nav-item linksContenedor">
+                    <NavLink to='/Historial'>Historial</NavLink>
+                  </li>
+                  <li className="nav-item linksContenedor">
                     <NavLink to='/Ofertas'>Ofertas</NavLink>
                   </li>
                   <li className="nav-item linksContenedor">
                     <NavLink to='/Recien-llegados'>Recien llegados</NavLink>
-                  </li>
-                  <li className="nav-item linksContenedor">
-                    <NavLink to='/Como-vender'>Ofertas</NavLink>
                   </li>
                   <li className="nav-item linksContenedor">
                     <NavLink to='/Ayuda'>Ayuda</NavLink>

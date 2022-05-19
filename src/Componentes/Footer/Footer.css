@@ -3,14 +3,14 @@
     flex-direction: column;
     width: 100%;
     height: auto;
-    background-color: var(--colorPrincipal);
     border-top: solid;
     border-color: var(--colorGrisClaro);
     box-shadow: 0 -5px  10px var(--colorGrisClaro);
     justify-content: center;
     align-items: center;
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 10px; 
+    background-color: var(--colorPrincipal);
 }
 
 .footerLogo {
@@ -27,11 +27,12 @@
 }
 
 .footerContent {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto;
     width: 90%;
     height: auto;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: flex-start;
     font-size: var(--p);
     gap: 10px;
@@ -44,18 +45,15 @@
     justify-content: flex-start;
     align-items: flex-start;
     text-align: left;
-    width: 25%;
-    height: auto;
 }
 
-.footerContent--socialIcons {
+.socialIcons {
     display: flex;
     flex-direction: column;
     color:var(--colorGrisOscuro);
     justify-content: center;
     align-items: center;
     text-align: left;
-    width:25%;
     height: auto;
 }
 
