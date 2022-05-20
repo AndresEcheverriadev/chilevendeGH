@@ -41,7 +41,6 @@ function HomePage() {
           <div className='corpinfo--address'>Avenida Providencia 1208 Oficina 1603, Providencia, Santiago, Chile</div>
         </div>
     </div>
-
   )
 }
 

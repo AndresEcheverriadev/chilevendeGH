@@ -1,3 +1,26 @@
+.charsetModal {
+    color: var(--colorNegro);
+}
+
+.modal-header {
+    background-color: var(--colorPrincipal);
+    color: var(--colorBlanco);
+    width: 100%;
+    border-radius: 10px ;
+    border-style: hidden ;
+}
+
+.modalBodyText {
+    margin-top: 1rem;
+}
+
+.modalFooterBtn {
+    background-color: var(--colorAzulContraste);
+    color: var(--colorBlanco);
+    padding: 1rem;
+    border-radius: 10px ;
+    border-style: hidden ;
+}
 
 .charset {
     display: flex;

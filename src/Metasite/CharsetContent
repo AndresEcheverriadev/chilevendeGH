@@ -1,0 +1,8 @@
+const charsetContent = [
+    {title: 'Publica tus productos gratis',body:'Asi es, totalmente gratis. Puedes publicar los productos que quieras'},
+    {title: 'Compra donde todo Chile vende',body:'Porque es para todo chile, aquí todo chilevende'},
+    {title: 'Vende donde todo Chile compra',body:'Porque tiene los mejores precios'},
+    {title: 'Paga menos comisión por venta',body:'Queremos que te vaya bien por eso te cobramos la menor comisión: solo un 1% de tu venta'}
+    ]
+
+    export default charsetContent
