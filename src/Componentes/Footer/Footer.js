@@ -4,21 +4,26 @@ import './Footer.css'
 import { NavLink } from 'react-router-dom'
 
 function Footer() {
-  const me = "contacto";
-  const place = "chilevende.cl";
-  useEffect(() => {
-    const elink = document.getElementById('mlink');
-    elink.href = `mailto:${me}@${place}`;
-  }, [])
-  
+      const me = "contacto";
+      const place = "chilevende.cl";
+      const cVentas = ' +569 42911 991';
+      const cCompras = ' +569 42911 939';
+      useEffect(() => {
+          const elink = document.getElementById('mlinkFooter');
+          const soporteVentasLink = document.getElementById('ventaslink');
+          const soporteComprasLink = document.getElementById('compraslink');
+          elink.href = `mailto:${me}@${place}`;
+          soporteVentasLink.href = `tel:${cVentas}`;
+          soporteComprasLink.href = `tel:${cCompras}`;
+      }, []);
   return (
     <footer className='footerContainer'>
       <div className='footerContent'>
         <div className='footerContent--Columns'>
           <img src={logo}  className='footerLogo'></img>
-          <li>Contacto Ventas: +56 9 4291 1991</li>
-          <li>Contacto Compras: +56 9 4291 1939</li>
-          <a id='mlink' href='mail@domain.com' ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-envelope footerMail" viewBox="0 0 16 16">
+          <a id='ventaslink' href='tel:'><li>Contacto Ventas:{cVentas}</li></a>
+          <a id='compraslink' href='tel:'><li>Contacto Compras:{cCompras}</li></a>
+          <a id='mlinkFooter' href='mail@domain.com' ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-envelope footerMail" viewBox="0 0 16 16">
           <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
           </svg> {`${me}@${place}`}
           </a>

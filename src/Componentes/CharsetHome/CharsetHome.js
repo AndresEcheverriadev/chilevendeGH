@@ -1,8 +1,22 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { NavLink } from 'react-router-dom'
 import './CharsetHome.css'
 
 function CharsetHome() {
+        const me = "contacto";
+        const place = "chilevende.cl";
+        const soporteVentas = 'https://api.whatsapp.com/send?phone=56942911991&text=Hola%20!%20Queria%20preguntarles%20algo%20...';
+        const soporteCompras = 'https://api.whatsapp.com/send?phone=56942911939&text=Hola%20!%20Queria%20preguntarles%20algo%20...';
+        const numSoporteVentas = '+569 4291 1991'
+        const numSoporteCompras = '+569 4291 1939'
+        useEffect(() => {
+            const elink = document.getElementById('mlinkCharset');
+            const soporteVentasLink = document.getElementById('ventaslink');
+            const soporteComprasLink = document.getElementById('compraslink');
+            elink.href = `mailto:${me}@${place}`;
+            soporteVentasLink.href = `${soporteVentas}`;
+            soporteComprasLink.href = `${soporteCompras}`;
+        }, []);
   return (
     <>
         {/* Modal 1 start */}
@@ -24,7 +38,13 @@ function CharsetHome() {
                                 </svg>
                             </div>
                             <div className='modalBodyText'  >
-                                <h6>Publicar sus productos es gratis. No cobramos ninguna tasa de publicación. Puedes publicar tantos productos como quieras.</h6>
+                                <ul>
+                                    <h6><b>En Chilevende.cl publicar sus productos <u>es gratis.</u></b></h6>
+                                    <h6>¡Así es! No cobramos ninguna tasa de publicación para que solo te preocupes de presentar tus productos de la forma que tu quieras.</h6>
+                                    <hr></hr>
+                                    <h6><b>Puedes publicar tantos productos como quieras.</b></h6>
+                                    <h6>No importa la cantidad de productos que quieras vender. Mientras mas productes publiques mas ventas puedes tener y eso es lo que mas nos importa.</h6>
+                                </ul>
                             </div>
                         </div>
                         <div class="modal-footer">
@@ -40,7 +60,7 @@ function CharsetHome() {
                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Publica tus productos gratis</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">Vende donde todo Chile compra</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -54,7 +74,13 @@ function CharsetHome() {
                                 </svg>
                             </div>
                             <div className='modalBodyText'  >
-                                <h6>Publicar sus productos es gratis. No cobramos ninguna tasa de publicación. Puedes publicar tantos productos como quieras.</h6>
+                                <ul>
+                                    <h6><b>En Chilevende.cl publicar sus productos <u>es gratis.</u></b></h6>
+                                    <h6>Vender por internet en Chile nunca fue tan fácil. Aumenta tus ganancias accediendo a la comisión más baja del mercado. Inscríbete antes del 15 de abril de 2022 y obtén un 10% de descuento adicional sobre las comisiones publicadas durante todo el 2022.</h6>
+                                    <hr></hr>
+                                    <h6><b>Puedes publicar tantos productos como quieras.</b></h6>
+                                    <h6>No importa la cantidad de productos que quieras vender. Mientras mas productes publiques mas ventas puedes tener y eso es lo que mas nos importa.</h6>
+                                </ul>
                             </div>
                         </div>
                         <div class="modal-footer">
@@ -70,21 +96,44 @@ function CharsetHome() {
                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Publica tus productos gratis</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">Vende donde todo Chile compra</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <div className='charsetIconContainer'>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-dash-circle charsetIcon" viewBox="0 0 16 16">
-                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                                    <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                            <div className='charsetIconContainer'>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-shop charsetIcon" viewBox="0 0 16 16">
+                                    <path d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zM4 15h3v-5H4v5zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3zm3 0h-2v3h2v-3z"/>
                                 </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-currency-exchange charsetIconFront" viewBox="0 0 16 16">
-                                <path d="M0 5a5.002 5.002 0 0 0 4.027 4.905 6.46 6.46 0 0 1 .544-2.073C3.695 7.536 3.132 6.864 3 5.91h-.5v-.426h.466V5.05c0-.046 0-.093.004-.135H2.5v-.427h.511C3.236 3.24 4.213 2.5 5.681 2.5c.316 0 .59.031.819.085v.733a3.46 3.46 0 0 0-.815-.082c-.919 0-1.538.466-1.734 1.252h1.917v.427h-1.98c-.003.046-.003.097-.003.147v.422h1.983v.427H3.93c.118.602.468 1.03 1.005 1.229a6.5 6.5 0 0 1 4.97-3.113A5.002 5.002 0 0 0 0 5zm16 5.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0zm-7.75 1.322c.069.835.746 1.485 1.964 1.562V14h.54v-.62c1.259-.086 1.996-.74 1.996-1.69 0-.865-.563-1.31-1.57-1.54l-.426-.1V8.374c.54.06.884.347.966.745h.948c-.07-.804-.779-1.433-1.914-1.502V7h-.54v.629c-1.076.103-1.808.732-1.808 1.622 0 .787.544 1.288 1.45 1.493l.358.085v1.78c-.554-.08-.92-.376-1.003-.787H8.25zm1.96-1.895c-.532-.12-.82-.364-.82-.732 0-.41.311-.719.824-.809v1.54h-.005zm.622 1.044c.645.145.943.38.943.796 0 .474-.37.8-1.02.86v-1.674l.077.018z"/>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-person-lines-fill charsetIconFront" viewBox="0 0 16 16">
+                                    <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z"/>
                                 </svg>
                             </div>
+                            </div>
                             <div className='modalBodyText'  >
-                                <h6>Publicar sus productos es gratis. No cobramos ninguna tasa de publicación. Puedes publicar tantos productos como quieras.</h6>
+                                <ul>
+                                    <h6><b>Vender por internet en Chile nunca fue tan fácil.</b></h6>
+                                    <h6>Aumenta tus ganancias accediendo a la <u>comisión más baja del mercado.</u> Inscríbete antes del 15 de abril de 2022 y obtén un 10% de descuento adicional sobre las comisiones publicadas durante todo el 2022.</h6>
+                                    <hr></hr>
+                                    <h6><b>Soporte de calidad</b></h6>
+                                    <h6>Publicar tus productos es solo el comienzo: en cuanto empieces puedes consultar a nuestro equipo de soporte que te ayudrá a resolver cualquier duda.</h6>
+                                    <li>
+                                        <a id='ventaslink' href=''>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                                            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                                            </svg> Soporte Ventas {numSoporteVentas}
+                                        </a><br/>
+                                        <a id='compraslink' href=''>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                                            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                                            </svg> Soporte Compras {numSoporteCompras}
+                                        </a><br/>
+                                        <a id='mlinkCharset' href='mail@domain.com'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-envelope" viewBox="0 0 16 16">
+                                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                                        </svg> {`${me}@${place}`}
+                                        </a>
+                                    </li>    
+                                </ul>
                             </div>
                         </div>
                         <div class="modal-footer">
@@ -114,7 +163,30 @@ function CharsetHome() {
                                 </svg>
                             </div>
                             <div className='modalBodyText'  >
-                                <h6>Publicar sus productos es gratis. No cobramos ninguna tasa de publicación. Puedes publicar tantos productos como quieras.</h6>
+                                <ul>
+                                    <h6><b>Nadie te cobra menos comisión</b></h6>
+                                    <h6>Tenemos un esquema de comisiones muy convenientes para ti, dependiendo del valor comercial de tu producto.</h6>
+                                    <hr></hr>
+                                    <div className='modal--tablaComisiones'>
+                                        <div class="valorTitle"><b>Valor comercial de tu producto</b></div>
+                                        <div class="comisionTitle"><b>% Comisión</b></div>
+                                        <div class="valor">$4.000 hasta $50.000</div>
+                                        <div class="comision">9,7%</div>
+                                        <div class="valor">$50.001 hasta $150.000</div>
+                                        <div class="comision">9,2%</div>
+                                        <div class="valor">$150.001 hasta $500.000</div>
+                                        <div class="comision">8,7%</div>
+                                        <div class="valor">$500.001 hasta $1.000.000</div>
+                                        <div class="comision">8,2%</div>
+                                        <div class="valor">$1.000.001 hasta $2.500.000</div>
+                                        <div class="comision">7,2%</div>
+                                        <div class="valor">$2.500.001 hasta $5.000.000</div>
+                                        <div class="comision">6,2%</div>
+                                    </div>
+                                    <div className='calcComision'>
+                                        <h6><b>Calcula la comisión</b></h6>
+                                    </div>
+                                </ul>
                             </div>
                         </div>
                         <div class="modal-footer">

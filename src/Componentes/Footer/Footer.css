@@ -18,11 +18,11 @@
     height: auto;
 }
 
-#mlink {
+#mlinkFooter {
     font-size: var(--li);
 }
 
-#mlink:hover {
+#mlinkFooter:hover, #ventaslink:hover, #compraslink:hover  {
     color:var(--colorBlanco) ;
 }
 
