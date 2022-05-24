@@ -1,22 +1,32 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 import { NavLink } from 'react-router-dom'
 import './CharsetHome.css'
 
 function CharsetHome() {
-        const me = "contacto";
-        const place = "chilevende.cl";
-        const soporteVentas = 'https://api.whatsapp.com/send?phone=56942911991&text=Hola%20!%20Queria%20preguntarles%20algo%20...';
-        const soporteCompras = 'https://api.whatsapp.com/send?phone=56942911939&text=Hola%20!%20Queria%20preguntarles%20algo%20...';
-        const numSoporteVentas = '+569 4291 1991'
-        const numSoporteCompras = '+569 4291 1939'
-        useEffect(() => {
-            const elink = document.getElementById('mlinkCharset');
-            const soporteVentasLink = document.getElementById('ventaslink');
-            const soporteComprasLink = document.getElementById('compraslink');
-            elink.href = `mailto:${me}@${place}`;
-            soporteVentasLink.href = `${soporteVentas}`;
-            soporteComprasLink.href = `${soporteCompras}`;
-        }, []);
+    const me = "contacto";
+    const place = "chilevende.cl";
+    const soporteVentas = 'https://api.whatsapp.com/send?phone=56942911991&text=Hola%20!%20Queria%20preguntarles%20algo%20...';
+    const soporteCompras = 'https://api.whatsapp.com/send?phone=56942911939&text=Hola%20!%20Queria%20preguntarles%20algo%20...';
+    const numSoporteVentas = '+569 4291 1991';
+    const numSoporteCompras = '+569 4291 1939';
+    useEffect(() => {
+        const elink = document.getElementById('mlinkCharset');
+        const soporteVentasLink = document.getElementById('ventaslink');
+        const soporteComprasLink = document.getElementById('compraslink');
+        elink.href = `mailto:${me}@${place}`;
+        soporteVentasLink.href = `${soporteVentas}`;
+        soporteComprasLink.href = `${soporteCompras}`;
+    });
+
+    const [montoComision, setMontoComision] = useState(0);
+    const [montoGanancia, setMontoGanancia] = useState(0);
+    const calcComision = (e) => {
+        const inputValorComercial =  e.target.value;
+        const calcComision = inputValorComercial * 0.097; 
+        setMontoComision(parseInt(calcComision).toString().replace(/\B(?=(\d{3})+(?!\d))/g, "."));
+        const montoGanancia = (parseInt(inputValorComercial-calcComision).toString().replace(/\B(?=(\d{3})+(?!\d))/g, "."));
+        setMontoGanancia(montoGanancia);
+    }
   return (
     <>
         {/* Modal 1 start */}
@@ -183,8 +193,12 @@ function CharsetHome() {
                                         <div class="valor">$2.500.001 hasta $5.000.000</div>
                                         <div class="comision">6,2%</div>
                                     </div>
+                                    <hr></hr>
                                     <div className='calcComision'>
-                                        <h6><b>Calcula la comisión</b></h6>
+                                        <h6 className='calcComisionLine'><b>Calcula la comisión</b></h6>
+                                        <div className='calcComisionLine'><label>Valor comercial de tu producto $ <input className='calcComisionInput' type="number" onChange={(e) => calcComision(e)}/></label></div>
+                                        <div className='calcComisionLine'><p>Monto de comisión $ {montoComision}</p></div>
+                                        <div className='calcComisionLine'><b>Monto final de Venta $ {montoGanancia}</b></div> 
                                     </div>
                                 </ul>
                             </div>

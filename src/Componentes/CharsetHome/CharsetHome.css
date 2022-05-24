@@ -13,6 +13,7 @@
 .modalBodyText {
     margin-top: 1rem;
     text-align: left;
+    height: auto;
 }
 
 .modalBodyText a:hover {
@@ -74,16 +75,50 @@
 
 .modal--tablaComisiones {
     width: 100%;
-    height: 1rem;
+    height: auto;
     display: grid;
     grid:
       "valorTitle comisionTitle" 
-      "valor comision" 
-      / 1fr 1fr;
+      "valor comision"; 
     gap: 8px;
     font-size: var(--h7);
 }
 
+.calcComision {
+    font-size: var(--h7);
+}
+
+
 .comision, .comisionTitle  {
     text-align: right;
+}
+
+.calcComision {
+    display: flex ;
+    flex-direction: column ;
+    width: 100% ;
+    height: auto;
+}
+
+.calcComisionLine {
+    display: flex ;
+    flex-direction: row ;
+    width: 100% ;
+    height: auto;
+}
+
+.calcComisionInput {
+    width: 40% ;
+}
+
+/* Chrome, Safari, Edge, Opera - No input arrows*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox - No input arrows */
+input[type=number] {
+  -moz-appearance: textfield;
 }
