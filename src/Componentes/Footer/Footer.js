@@ -20,7 +20,7 @@ function Footer() {
     <footer className='footerContainer'>
       <div className='footerContent'>
         <div className='footerContent--Columns'>
-          <img src={logo}  className='footerLogo'></img>
+          <img src={logo}  className='footerLogo' alt=''></img>
           <a id='ventaslink' href='tel:'><li>Contacto Ventas:{cVentas}</li></a>
           <a id='compraslink' href='tel:'><li>Contacto Compras:{cCompras}</li></a>
           <a id='mlinkFooter' href='mail@domain.com' ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-envelope footerMail" viewBox="0 0 16 16">
