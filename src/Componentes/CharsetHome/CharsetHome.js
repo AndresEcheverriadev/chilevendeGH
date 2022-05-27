@@ -21,42 +21,50 @@ function CharsetHome() {
     const [montoComision, setMontoComision] = useState(0);
     const [montoGanancia, setMontoGanancia] = useState(0);
     const [comisionPorcentaje, setComisionPorcentaje] = useState(0);
+    const [comisionZero, setComisionZero] = useState(true);
 
     const calcComision = (e) => {
         const inputValorComercial =  e.target.value;
 
         if(inputValorComercial < 4000) {
+            setComisionZero(true)
             setComisionPorcentaje(0);
             setMontoComision(inputValorComercial * 0);
-            setMontoGanancia(inputValorComercial-(montoComision*0));
+            setMontoGanancia(inputValorComercial-(inputValorComercial * 0));
         }
         else if((inputValorComercial > 4000)&&( inputValorComercial <= 50000)) {
             setComisionPorcentaje(0.097);
+            setComisionZero(false);
             setMontoComision(inputValorComercial * 0.097);
             setMontoGanancia(inputValorComercial-(inputValorComercial * 0.097));
         }
         else if((inputValorComercial > 50000)&&( inputValorComercial <= 150000)) {
             setComisionPorcentaje(0.092);
+            setComisionZero(false);
             setMontoComision(inputValorComercial * 0.092);
             setMontoGanancia(inputValorComercial-(inputValorComercial * 0.092));
         }
         else if((inputValorComercial > 150000)&&( inputValorComercial <= 500000)) {
             setComisionPorcentaje(0.087);
+            setComisionZero(false);
             setMontoComision(inputValorComercial * 0.087);
             setMontoGanancia(inputValorComercial-(inputValorComercial * 0.087));
         }
         else if((inputValorComercial > 500000)&&( inputValorComercial <= 1000000)) {
             setComisionPorcentaje(0.082);
+            setComisionZero(false);
             setMontoComision(inputValorComercial * 0.082);
             setMontoGanancia(inputValorComercial-(inputValorComercial * 0.082));
         }
         else if((inputValorComercial > 1000000)&&( inputValorComercial <= 2500000)) {
             setComisionPorcentaje(0.072);
+            setComisionZero(false);
             setMontoComision(inputValorComercial * 0.072);
             setMontoGanancia(inputValorComercial-(inputValorComercial * 0.072));
         }
         else if(inputValorComercial > 2500000) {
             setComisionPorcentaje(0.062);
+            setComisionZero(false);
             setMontoComision(inputValorComercial * 0.062);
             setMontoGanancia(inputValorComercial-(inputValorComercial * 0.062));
         }
@@ -244,9 +252,9 @@ function CharsetHome() {
                                     <hr></hr>
                                     <div className='calcComision'>
                                         <h6 className='calcComisionLine'><b>Calcula la comisión</b></h6>
-                                        <div className='calcComisionLine'><p><label>Valor comercial de tu producto $ <input className='calcComisionInput' type="number" onChange={(e) => calcComision(e)}/></label></p></div>
+                                        <div className='calcComisionLine'><p><label>Valor comercial de tu producto $ <input className='calcComisionInput' type="number"  onChange={(e) => calcComision(e)}></input></label></p></div>
                                         <div className='calcComisionLine'><p>Monto de comisión $ {parseInt(montoComision).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}</p></div>
-                                        <div className='calcComisionLine'><p>% de comisión  {((comisionPorcentaje*100).toFixed(1)).replace(/\./g,',')}</p></div>
+                                        <div className='calcComisionLine'><p>% de comisión  {comisionZero === false ? ((comisionPorcentaje*100).toFixed(1)).replace(/\./g,',') : 0}</p></div>
                                         <div className='calcComisionLine'><b>Monto final de Venta $ {parseInt(montoGanancia).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}</b></div> 
                                     </div>
                                 </ul>
