@@ -12,8 +12,7 @@ const categoriasSitio = [
 ['toys','Juegos Infantiles','Bicicletas'],
 ['router','Tecnología'],
 ['styler','Vestuario y Calzado','Ropa Mujer'],
-['devices_other','Otras Categorías'],
-['explore','Sin Categorías']
+['explore','Todas las Categorías'],
 ] 
 
 export default categoriasSitio
