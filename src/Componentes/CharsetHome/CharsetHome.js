@@ -1,8 +1,16 @@
 import React, {useEffect, useState} from 'react'
 import { NavLink } from 'react-router-dom'
+import categoriasSitio from '../../Metasite/Categorias'
 import './CharsetHome.css'
 
 function CharsetHome() {
+    // Modal 2    
+    const modal2Categorias = categoriasSitio.map((categoria) => {
+        return <li><NavLink className='listaCategorias' to={categoria[1]} data-bs-dismiss="modal">{<span className="material-symbols-rounded">{categoria[0]}</span>}{categoria[1]}</NavLink></li>
+    });
+    // End Modal 2
+
+    // Modal3
     const me = "contacto";
     const place = "chilevende.cl";
     const soporteVentas = 'https://api.whatsapp.com/send?phone=56942911991&text=Hola%20!%20Queria%20preguntarles%20algo%20...';
@@ -17,12 +25,13 @@ function CharsetHome() {
         soporteVentasLink.href = `${soporteVentas}`;
         soporteComprasLink.href = `${soporteCompras}`;
     });
+    // End Modal 3
 
+    // Modal 4
     const [montoComision, setMontoComision] = useState(0);
     const [montoGanancia, setMontoGanancia] = useState(0);
     const [comisionPorcentaje, setComisionPorcentaje] = useState(0);
     const [comisionZero, setComisionZero] = useState(true);
-
     const calcComision = (e) => {
         const inputValorComercial =  e.target.value;
 
@@ -70,19 +79,8 @@ function CharsetHome() {
         }
         else {
         };
-
-
-   
-
-        // const calcComision = inputValorComercial * comisionPorcentaje; 
-        // setMontoComision(calcComision);
-        // const montoGanancia = inputValorComercial-calcComision;
-        // setMontoGanancia(montoGanancia);
-        // setMontoComision(parseInt(calcComision).toString().replace(/\B(?=(\d{3})+(?!\d))/g, "."));
-        // const montoGanancia = (parseInt(inputValorComercial-calcComision).toString().replace(/\B(?=(\d{3})+(?!\d))/g, "."));
-        // setMontoGanancia(montoGanancia);
     }
-
+    // End Modal 4
   return (
     <>
         {/* Modal 1 start */}
@@ -126,7 +124,7 @@ function CharsetHome() {
                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Vende donde todo Chile compra</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">Compra donde todo Chile vende</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -141,11 +139,17 @@ function CharsetHome() {
                             </div>
                             <div className='modalBodyText'  >
                                 <ul>
-                                    <h6><b>En Chilevende.cl publicar sus productos <u>es gratis.</u></b></h6>
-                                    <h6>Vender por internet en Chile nunca fue tan fácil. Aumenta tus ganancias accediendo a la comisión más baja del mercado. Inscríbete antes del 15 de abril de 2022 y obtén un 10% de descuento adicional sobre las comisiones publicadas durante todo el 2022.</h6>
+                                    <h6><b>El Marketplace donde <u>todo Chile</u> compra.</b></h6>
+                                    <h6>Comprar por internet en Chile nunca fue tan fácil y conveniente para todos. Queremos democratizar el e-commerce, ofrecer una experiencia de compra satisfactoria y ayudar a los emprendedores de Chile.</h6>
                                     <hr></hr>
-                                    <h6><b>Puedes publicar tantos productos como quieras.</b></h6>
-                                    <h6>No importa la cantidad de productos que quieras vender. Mientras mas productes publiques mas ventas puedes tener y eso es lo que mas nos importa.</h6>
+                                    <h6><b>Envíos a todo Chile.</b></h6>
+                                    <h6>Los distintos vendedores de chilevende.cl envían tu compra al lugar de Chile donde tu vivas. Siempre con el mayor cuidado y con la confianza en la fecha de entrega ya que trabajamos con las mejores empresas de envíos.</h6>
+                                    <hr></hr>
+                                    <h6><b>Gran variedad de productos.</b></h6>
+                                    <h6>Chilevende.cl es una excelente forma de encontrar los productos que necesitas. Revisa nuestras principales categorías:</h6>
+                                    <div>
+                                        {modal2Categorias}
+                                    </div>
                                 </ul>
                             </div>
                         </div>
