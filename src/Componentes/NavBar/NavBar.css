@@ -109,11 +109,40 @@
     flex-direction: row;
 }
 
+.userControls--sesion {
+    border: solid 1px;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
 .contenedorNav--cartControls {
     display: flex;
     flex-direction: column;
     fill: var(--colorGrisOscuro);
     justify-content: flex-start;
-    align-content: center;
+    align-items: center;
     height: 5rem;
+    padding-top: 15px;
+}
+
+.cartControls--container {
+    position: absolute;
+}
+
+
+.cartControls--qTip {
+    text-align: center;
+    position: relative;
+    font-size: var(--notification);
+    position: absolute;
+    left: 70%;
+    top: -5px;
+    border: solid 1px transparent;
+    border-radius: 100%;
+    background-color: var(--colorAzulContraste);
+    color: var(--colorBlanco);
+    width: 1.25rem;
+    height: 1.25rem;
 }
