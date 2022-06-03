@@ -49,16 +49,14 @@
 .mainMenu--bottom {
     display: flex;
     flex-direction: row;
-    justify-content:center;
-    align-items: center;
-    padding-right: 10px;
 }
 
 .mainMenu--bottom--linksMenu {
     display: flex ;
     flex-direction: row ;
-    align-items: center ;
-    justify-content: space-between ;    
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 30px;
 }
 
 .linksMenu--categoriesList {
@@ -86,11 +84,6 @@
     color: var(--colorGrisOscuro) !important;
 }
 
-.linksMenu--link {
-    width: 15% ;
-    height: auto;
-}
-
 .contenedorNav--userControls {
     display: flex;
     flex-direction: column;
@@ -98,6 +91,10 @@
     align-items: center;
     color: var(--colorNegro);
     height: 5rem;
+    border: solid 1px;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .userControls--resgistrarse a {
@@ -109,28 +106,20 @@
     flex-direction: row;
 }
 
-.userControls--sesion {
-    border: solid 1px;
-    border-radius: 5px;
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
-
 .contenedorNav--cartControls {
     display: flex;
     flex-direction: column;
     fill: var(--colorGrisOscuro);
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     height: 5rem;
-    padding-top: 15px;
+    padding-top: 20px;
+    margin-left: 18px;
 }
 
 .cartControls--container {
     position: absolute;
 }
-
 
 .cartControls--qTip {
     text-align: center;
