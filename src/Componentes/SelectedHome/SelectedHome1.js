@@ -15,7 +15,7 @@ function SelectedHome1() {
             <img className='selectedBannerImage' src={selectedBanner1} alt="" />
         </NavLink>
         <div className="selectedHomeCards">
-            <NavLink to='/' className='cardContainer'>
+            {/* <NavLink to='/' className='cardContainer'>
                 <ProductCard/>
             </NavLink>
             <NavLink to='/' className='cardContainer'>
@@ -26,7 +26,7 @@ function SelectedHome1() {
             </NavLink>
             <NavLink to='/' className='cardContainer'>
                 <ProductCard/>
-            </NavLink>
+            </NavLink> */}
         </div>
     </div>
   )

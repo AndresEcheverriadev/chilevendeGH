@@ -14,7 +14,7 @@ function SaleHome() {
             </NavLink>
         </div>
         <div className="saleHomeCards">
-            <NavLink to='/' className='cardContainer'>
+            {/* <NavLink to='/' className='cardContainer'>
                 <ProductCard/>
             </NavLink>
             <NavLink to='/' className='cardContainer'>
@@ -25,7 +25,7 @@ function SaleHome() {
             </NavLink>
             <NavLink to='/' className='cardContainer'>
                 <ProductCard/>
-            </NavLink>
+            </NavLink> */}
         </div>
     </div>
   )

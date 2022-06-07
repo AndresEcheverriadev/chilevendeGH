@@ -1,9 +1,15 @@
 import React from 'react'
 import {NavLink} from 'react-router-dom'
+import productSet from '../../Metasite/productSet'
 import ProductCard from '../ProductCard/ProductCard'
 import './VisitedHome.css'
 
 function VisitedHome() {
+    const productsCardsVisited = productSet.map((producto) => {
+        return  <NavLink to={producto.name}   className='cardContainer'>
+                    <ProductCard producto={producto} key={producto.id}/>
+                </NavLink>
+    }) 
   return (
     <div className="visitedHomeContainer">
         <div className="visitedHomeTitles">
@@ -13,20 +19,7 @@ function VisitedHome() {
                                     </svg><b>Ver historial</b></h6>
             </NavLink>
         </div>
-        <div className="visitedHomeCards">
-            <NavLink to='/' className='cardContainer'>
-                <ProductCard/>
-            </NavLink>
-            <NavLink to='/' className='cardContainer'>
-                <ProductCard/>
-            </NavLink>
-            <NavLink to='/' className='cardContainer'>
-                <ProductCard/>
-            </NavLink>
-            <NavLink to='/' className='cardContainer'>
-                <ProductCard/>
-            </NavLink>
-        </div>
+        <div className="visitedHomeCards">{productsCardsVisited}</div>
     </div>
   )
 }
