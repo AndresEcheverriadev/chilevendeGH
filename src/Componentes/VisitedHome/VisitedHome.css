@@ -38,7 +38,66 @@
 .cardContainer {
     display: flex;
     flex-direction: column;
-    width: 24%;
+    width: 329px!important;
     height: auto;
 }
+
+/* Carrousel css Start */
+    #wrapper {
+    width: 100%;
+    position: relative;
+  }
+  
+  #carousel {
+    overflow: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+  
+  #carousel::-webkit-scrollbar {
+    height: 0;
+  }
+  
+  #prev,
+  #next {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: var(--colorAzulContraste);
+    border: none;
+    padding: 8px;
+    border-radius: 50%;
+    outline: 0;
+    cursor: pointer;
+    position: absolute;
+    fill: var(--colorBlanco);
+  }
+  
+  #prev {
+    top: 50%;
+    left: -20px;
+    /* transform: translate(80%, -50%); */
+    display: none;
+  }
+  
+  #next {
+    top: 50%;
+    right: -20px;
+    /* transform: translate(-50%, -50%); */
+  }
+  
+  #content {
+    display: grid;
+    grid-gap: 15px;
+    grid-auto-flow: column;
+    margin: auto;
+    box-sizing: border-box;
+  }
+  
+  /* .item {
+    width: 500px;
+    height: 500px;
+    background: green;
+  } */
+  
 

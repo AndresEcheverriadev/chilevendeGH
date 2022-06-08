@@ -1,5 +1,5 @@
 const productSet = [{
-    image : './demoimg.jpg',
+    image : './demoimg0.jpg',
     isDiscount: true,
     beforePrice : 85990,
     price : 74990,
