@@ -11,32 +11,32 @@ function VisitedHome() {
                 </NavLink>
     }) 
     useEffect(() => {
-      const gap = 10;
-      const carousel = document.getElementById("carousel"),
-        content = document.getElementById("content"),
-        next = document.getElementById("next"),
-        prev = document.getElementById("prev");
+      const gapVisited = 10;
+      const carouselVisited = document.getElementById("carouselVisited"),
+        contentVisited = document.getElementById("contentVisited"),
+        nextVisited = document.getElementById("nextVisited"),
+        prevVisited = document.getElementById("prevVisited");
       
-      next.addEventListener("click", e => {
-        carousel.scrollBy(width + gap, 0);
-        if (carousel.scrollWidth !== 0) {
-          prev.style.display = "flex";
+      nextVisited.addEventListener("click", e => {
+        carouselVisited.scrollBy(width + gapVisited, 0);
+        if (carouselVisited.scrollWidth !== 0) {
+          prevVisited.style.display = "flex";
         }
-        if (content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
-          next.style.display = "none";
-        }
-      });
-      prev.addEventListener("click", e => {
-        carousel.scrollBy(-(width + gap), 0);
-        if (carousel.scrollLeft - width - gap <= 0) {
-          prev.style.display = "none";
-        }
-        if (!content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
-          next.style.display = "flex";
+        if (contentVisited.scrollWidth - width - gapVisited <= carouselVisited.scrollLeft + width) {
+          nextVisited.style.display = "none";
         }
       });
-      let width = carousel.offsetWidth;
-      window.addEventListener("resize", e => (width = carousel.offsetWidth));      
+      prevVisited.addEventListener("click", e => {
+        carouselVisited.scrollBy(-(width + gapVisited), 0);
+        if (carouselVisited.scrollLeft - width - gapVisited <= 0) {
+          prevVisited.style.display = "none";
+        }
+        if (!contentVisited.scrollWidth - width - gapVisited <= carouselVisited.scrollLeft + width) {
+          nextVisited.style.display = "flex";
+        }
+      });
+      let width = carouselVisited.offsetWidth;
+      window.addEventListener("resize", e => (width = carouselVisited.offsetWidth));      
     })
   return (
     <div className="visitedHomeContainer">
@@ -48,13 +48,14 @@ function VisitedHome() {
             </NavLink>
         </div>
         <div className="visitedHomeCards">
-          <div id="wrapper">
-            <div id="carousel">
-              <div id="content">
+
+          <div id="wrapperVisited">
+            <div id="carouselVisited">
+              <div id="contentVisited">
               {productsCardsVisited}
               </div>
             </div>
-            <button id="prev">
+            <button id="prevVisited">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -65,7 +66,7 @@ function VisitedHome() {
                 <path d="M15.61 7.41L14.2 6l-6 6 6 6 1.41-1.41L11.03 12l4.58-4.59z" />
               </svg>
             </button>
-            <button id="next">
+            <button id="nextVisited">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -76,8 +77,8 @@ function VisitedHome() {
                 <path d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z" />
               </svg>
             </button>
-
           </div>
+          
         </div>
     </div>
   )

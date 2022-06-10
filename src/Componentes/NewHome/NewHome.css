@@ -42,3 +42,52 @@
     height: auto;
 }
 
+/* Carrousel New Start */
+#wrapperNew {
+    width: 100%;
+    position: relative;
+  }
+  
+  #carouselNew {
+    overflow: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+  
+  #carouselNew::-webkit-scrollbar {
+    height: 0;
+  }
+  
+  #prevNew,
+  #nextNew {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: var(--colorAzulContraste);
+    border: none;
+    padding: 8px;
+    border-radius: 50%;
+    outline: 0;
+    cursor: pointer;
+    position: absolute;
+    fill: var(--colorBlanco);
+  }
+  
+  #prevNew {
+    top: 50%;
+    left: -20px;
+    display: none;
+  }
+  
+  #nextNew {
+    top: 50%;
+    right: -20px;
+  }
+  
+  #contentNew {
+    display: grid;
+    grid-gap: 15px;
+    grid-auto-flow: column;
+    margin: auto;
+    box-sizing: border-box;
+  }

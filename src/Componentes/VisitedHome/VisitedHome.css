@@ -42,24 +42,24 @@
     height: auto;
 }
 
-/* Carrousel css Start */
-    #wrapper {
+/* Carrousel Visited Start */
+    #wrapperVisited {
     width: 100%;
     position: relative;
   }
   
-  #carousel {
+  #carouselVisited {
     overflow: auto;
     scroll-behavior: smooth;
     scrollbar-width: none;
   }
   
-  #carousel::-webkit-scrollbar {
+  #carouselVisited::-webkit-scrollbar {
     height: 0;
   }
   
-  #prev,
-  #next {
+  #prevVisited,
+  #nextVisited {
     display: flex;
     justify-content: center;
     align-content: center;
@@ -73,31 +73,21 @@
     fill: var(--colorBlanco);
   }
   
-  #prev {
+  #prevVisited {
     top: 50%;
     left: -20px;
-    /* transform: translate(80%, -50%); */
     display: none;
   }
   
-  #next {
+  #nextVisited {
     top: 50%;
     right: -20px;
-    /* transform: translate(-50%, -50%); */
   }
   
-  #content {
+  #contentVisited {
     display: grid;
     grid-gap: 15px;
     grid-auto-flow: column;
     margin: auto;
     box-sizing: border-box;
   }
-  
-  /* .item {
-    width: 500px;
-    height: 500px;
-    background: green;
-  } */
-  
-

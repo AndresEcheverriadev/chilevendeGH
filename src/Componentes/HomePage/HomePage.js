@@ -26,13 +26,13 @@ function HomePage() {
         </section>
         <main className='homePage--body'>
           <VisitedHome/>
-          {/* <SaleHome/>
+          <SaleHome/>
           <NewHome/>
           <CategoriesHome/>
           <SelectedHome1/>
           <SelectedHome2/>
           <SelectedHome3/>
-          <SelectedHome4/> */}
+          <SelectedHome4/>
         </main>
         <SuscribeMail/>
         <Footer/>
