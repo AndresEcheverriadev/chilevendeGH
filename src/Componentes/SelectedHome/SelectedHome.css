@@ -52,15 +52,15 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .cardContainer {
     display: flex;
     flex-direction: column;
-    width: 24%;
-    height: auto;
+    width: 329px!important;
+    height: 415px !important;
 }
 
 /* Carrousel Sel1 Start */
