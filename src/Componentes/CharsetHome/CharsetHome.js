@@ -45,37 +45,37 @@ function CharsetHome() {
             setComisionPorcentaje(0.097);
             setComisionZero(false);
             setMontoComision(inputValorComercial * 0.097);
-            setMontoGanancia(inputValorComercial-(inputValorComercial * 0.097));
+            setMontoGanancia(inputValorComercial-(Math.trunc(inputValorComercial * 0.097)));
         }
         else if((inputValorComercial > 50000)&&( inputValorComercial <= 150000)) {
             setComisionPorcentaje(0.092);
             setComisionZero(false);
             setMontoComision(inputValorComercial * 0.092);
-            setMontoGanancia(inputValorComercial-(inputValorComercial * 0.092));
+            setMontoGanancia(inputValorComercial-(Math.trunc(inputValorComercial * 0.092)));
         }
         else if((inputValorComercial > 150000)&&( inputValorComercial <= 500000)) {
             setComisionPorcentaje(0.087);
             setComisionZero(false);
             setMontoComision(inputValorComercial * 0.087);
-            setMontoGanancia(inputValorComercial-(inputValorComercial * 0.087));
+            setMontoGanancia(inputValorComercial-(Math.trunc(inputValorComercial * 0.087)));
         }
         else if((inputValorComercial > 500000)&&( inputValorComercial <= 1000000)) {
             setComisionPorcentaje(0.082);
             setComisionZero(false);
             setMontoComision(inputValorComercial * 0.082);
-            setMontoGanancia(inputValorComercial-(inputValorComercial * 0.082));
+            setMontoGanancia(inputValorComercial-(Math.trunc(inputValorComercial * 0.082)));
         }
         else if((inputValorComercial > 1000000)&&( inputValorComercial <= 2500000)) {
             setComisionPorcentaje(0.072);
             setComisionZero(false);
             setMontoComision(inputValorComercial * 0.072);
-            setMontoGanancia(inputValorComercial-(inputValorComercial * 0.072));
+            setMontoGanancia(inputValorComercial-(Math.trunc(inputValorComercial * 0.072)));
         }
         else if(inputValorComercial > 2500000) {
             setComisionPorcentaje(0.062);
             setComisionZero(false);
             setMontoComision(inputValorComercial * 0.062);
-            setMontoGanancia(inputValorComercial-(inputValorComercial * 0.062));
+            setMontoGanancia(inputValorComercial-(Math.trunc(inputValorComercial * 0.062)));
         }
         else {
         };
