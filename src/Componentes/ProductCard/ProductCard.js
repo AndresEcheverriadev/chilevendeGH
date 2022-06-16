@@ -2,16 +2,16 @@ import React, { useEffect, useState } from 'react'
 import './ProductCard.css'
 
 function ProductCard({producto}) {
+
   const discountPercentage = Math.round(((producto.price-producto.beforePrice)/producto.beforePrice)*100);
-  const [visiblePercentage, setVisiblePercentage] = useState(true)
+  const [visiblePercentage, setVisiblePercentage] = useState(true);
 
   useEffect(() => {
     if(producto.beforePrice === 0){
       setVisiblePercentage(false);
     } 
-  }, [discountPercentage])
+  }, [discountPercentage]);
   
-
   return (
     < div className='productCard'>
             <div className='productCardImageContainer'><img className='productCardImage' src={producto.image} alt='' /></div>

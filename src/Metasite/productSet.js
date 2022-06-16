@@ -1,5 +1,5 @@
 const productSet = [{
-    image: ['./demoimg1.jpg'],
+    image: ['/demoimg1.jpg'],
     PublicationDate: 13062022,
     isDiscount: true,
     beforePrice: 85990,
@@ -17,7 +17,7 @@ const productSet = [{
     etiquetas: ['Herramientas'],
     categories: ['Construcción','Hogar y Muebles']
 },{
-    image: ['./demoimg2.png'],
+    image: ['/demoimg2.png'],
     PublicationDate: 13062022,
     isDiscount: false,
     beforePrice: 0,
@@ -32,10 +32,10 @@ const productSet = [{
     cantidad:1,
     description: 'Funda Para Cojín Terciopelo con Pompones 45x45cm Material: Terciopelo  Medidas: 45cm x 45cm. Cierre: Oculto.',
     id: '0002ab',
-    etiquetas: ['Hogar y Muebles'],
-    categories: ['cojin','decoracion','fundas','terciopelo','hogar']
+    categories: ['Hogar y Muebles'],
+    etiquetas: ['cojin','decoracion','fundas','terciopelo','hogar']
 },{
-    image: ['./demoimg3.jpeg'],
+    image: ['/demoimg3.jpeg'],
     PublicationDate: 13062022,    
     isDiscount: true,
     beforePrice: 165990,
@@ -50,10 +50,10 @@ const productSet = [{
     cantidad:1,
     description:'Marca: Tapiceria Moderna Modelo: Alejandria Tipo: Banquetas Hecho en: Chile  ',
     id: '0003ab',
-    etiquetas: ['Hogar y Muebles'],
-    categories: []
+    categories: ['Hogar y Muebles'],
+    etiquetas: []
 },{
-    image: ['./demoimg4.jpg'],
+    image: ['/demoimg4.jpg'],
     PublicationDate: 13062022,
     isDiscount: false,
     beforePrice: 0,
@@ -71,7 +71,7 @@ const productSet = [{
     etiquetas: [' automotrices','impreza','intercooler','repuestos','subaru','topmount','wrx','ypipe'],
     categories: ['Automóvil']
 },{
-    image: ['./demoimg5.jpeg'],
+    image: ['/demoimg5.jpeg'],
     PublicationDate: 13062022,
     isDiscount: false,
     beforePrice: 0,
@@ -89,7 +89,7 @@ const productSet = [{
     etiquetas: ['Alisadora','cabello','Cuidado del Cabello','vapor'],
     categories: ['Belleza y Cuidado Personal']
 },{
-    image: ['./demoimg6.jpg'],
+    image: ['/demoimg6.jpg'],
     PublicationDate: 13062022,
     isDiscount: false,
     beforePrice: 0,
@@ -108,7 +108,7 @@ const productSet = [{
     etiquetas: ['Notebook Dell inspirion'],
     categories: ['Tecnología']
 },{
-    image: ['./demoimg7.jpeg'],
+    image: ['/demoimg7.jpeg'],
     PublicationDate: 13062022,
     isDiscount: true,
     beforePrice: 24990,
@@ -127,7 +127,7 @@ const productSet = [{
     etiquetas: [],
     categories: ['Deportes y Fitness','Belleza y Cuidado Personal']
 },{
-    image: ['./demoimg8.png'],
+    image: ['/demoimg8.png'],
     PublicationDate: 13062022,
     isDiscount: true,
     beforePrice: 450000,
@@ -146,7 +146,7 @@ const productSet = [{
     etiquetas: ['oferta','Precios Bajos','Receiver','Yamaha'],
     categories: ['Electrónica,Audio y Video']
 },{
-    image: ['./demoimg9.jpg'],
+    image: ['/demoimg9.jpg'],
     PublicationDate: 13062022,
     isDiscount: true,
     beforePrice: 280000,
@@ -166,7 +166,7 @@ const productSet = [{
     categories: ['Vestuario y Calzado']
 },
 {
-    image: ['./demoimg10.jpeg'],
+    image: ['/demoimg10.jpeg'],
     PublicationDate: 13062022,
     isDiscount: true,
     beforePrice: 19900,
@@ -186,7 +186,7 @@ const productSet = [{
     categories: ['Cotillón y Fiestas']
 },
 {
-    image: ['./demoimg11.jpg'],
+    image: ['/demoimg11.jpg'],
     PublicationDate: 13062022,
     isDiscount: true,
     beforePrice: 280000,
