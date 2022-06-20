@@ -1,5 +1,5 @@
 const productSet = [{
-    image: ['/demoimg1.jpg'],
+    image: ['/demoimg1.jpg','/demoimg0.jpg'],
     PublicationDate: 13062022,
     isDiscount: true,
     beforePrice: 85990,
@@ -15,7 +15,7 @@ const productSet = [{
     description: 'Pistola Llave de Impacto 320NM 1/2 - 2 Baterias 21V.',
     id: '0001ab',
     etiquetas: ['Herramientas'],
-    categories: ['Construcción','Hogar y Muebles']
+    categories: ['Construcción','Hogar y Muebles','Herramientas Eléctricas']
 },{
     image: ['/demoimg2.png'],
     PublicationDate: 13062022,

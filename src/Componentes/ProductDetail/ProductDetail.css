@@ -1,81 +1,182 @@
-.productDetailContainer {
+.productDetailPage {
     display: flex;
     flex-direction: column;
     width: 100%;
     height: auto;
     justify-content: flex-start;
     align-items: center;
+    gap: 10px;
 }
 
-.productData {
+.productDetailContainer{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    width: 90%;
+    height: 1000px;
 }
 
-
 .breadcrumbData {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items:center;
     --bs-breadcrumb-divider: '>';
-    text-align: left;
+    width: 100%;
+    height: auto;
+}
+
+.breadcrumbLinks {
+    border-radius: 5px;
+    padding: 10px;
+    background-color: var(--colorGrisSuave);
 }
 
 .productDetail {
     display: flex;
     flex-direction: row;
-    background-color: var(--colorBlanco);
-    height: 1000px ;
-    width: 90% ;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
+    background-color: var(--colorBlanco);
     border-color:var(--colorBlanco);
     border-style: solid;
     border-radius: 10px;
     box-shadow: var(--sombraSmall);
-    margin-bottom: 30px;
+    width: 100%;
+    padding: 10px;
+    gap: 5px;
 }
 
 .productImages {
     display: flex;
     flex-direction: row;
-    width: 60%;
-    height: 100%;
-
+    width: 50%;
+    gap: 5px;
 }
 
-.productImages--Thumbnails {
+.productImages--thumbnails {
     display: flex;
     flex-direction: column;
-    width: 15%;
-    height: 10%;
+    width: auto;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+.thumbnailsContainer {
+    width: 100px;
+    height:100px;
     border-color:var(--colorGrisClaro);
     border-style: solid;
     border-width: 1px;
     border-radius: 5px;
-    margin: 10px;
-    position: absolute;
+    overflow: hidden;
 }
 
-.ThumbnailsContainer {
-    position: relative;
+ .thumbnailsImage {
     width: 100%;
-    height: au;
-}
+    object-fit:cover;
+ }
 
-.productImages--Main {
+.productImages--mainContainer {
     display: flex;
     flex-direction: column;
-    width: 70%;
-    height: auto;
-    margin: 10px;
+    width: auto;
+    overflow: hidden;
+    border-color:transparent;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+}
+
+.productImages--mainImage {
+    object-fit: contain;
 }
 
 .productInfo {
-    width: 40%;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
     border-color:var(--colorGrisClaro);
     border-style: solid ;
     border-width: 1px;
     border-radius: 5px;
-    margin: 10px;
+    width: 30%;
+    height: 1000px;
+    padding: 10px;
+    gap: 10px;
+}
+
+.productInfo--titles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+    height: auto;
+    width: 100%;
+    text-align: left;
+}
+
+
+
+
+.productInfo--prices {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+    text-align: left;
+    border-bottom: 1px solid var(--colorGrisClaro) ;
+    height: auto;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.prices--beforePrice {
+    text-decoration: line-through; 
+    color: var(--colorGrisClaro); 
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.prices--priceContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+}
+
+.productDiscount {
+    background-color: var(--colorAzulContraste);
+    color: var(--colorBlanco);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-color:transparent;
+    border-style: transparent;
+    border-radius: 10px;  
+    text-align: center;
+    visibility:visible;  
+}
+
+.productInfo--stock {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+.productBuyControls {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    border-color:var(--colorGrisClaro);
+    border-style: solid ;
+    border-width: 1px;
+    border-radius: 5px;
+    width: 20%;
 }

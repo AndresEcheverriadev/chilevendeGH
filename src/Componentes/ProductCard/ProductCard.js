@@ -14,7 +14,7 @@ function ProductCard({producto}) {
   
   return (
     < div className='productCard'>
-            <div className='productCardImageContainer'><img className='productCardImage' src={producto.image} alt='' /></div>
+            <div className='productCardImageContainer'><img className='productCardImage' src={producto.image[0]} alt='' /></div>
             <div class="productCardBody">
               <div className='bodyPrices'>
                 <p className='bodyBeforePrice'>{visiblePercentage === true ? `$${(producto.beforePrice).toLocaleString('es-CL')}` : ''}</p>

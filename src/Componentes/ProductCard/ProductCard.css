@@ -9,7 +9,6 @@
     border-style: solid;
     border-radius: 10px;
     box-shadow: var(--sombraSmall);
-
 }
 
 .productCard:hover {
@@ -22,7 +21,6 @@
     width: 100%;
     height: 300px;
 }
-
 
 .productCardImage {
     position: absolute;
@@ -87,5 +85,3 @@
 .cardTitle {
     height: 3rem;
 }
-
-
