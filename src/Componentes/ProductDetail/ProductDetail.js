@@ -3,7 +3,7 @@ import NavBar from '../NavBar/NavBar'
 import Footer from '../Footer/Footer'
 import productSet from '../../Metasite/productSet'
 import './ProductDetail.css'
-import { useParams } from 'react-router-dom'
+import { NavLink, useParams } from 'react-router-dom'
 
 function ProductDetail() {
 
@@ -12,20 +12,29 @@ function ProductDetail() {
     const productDetail = productFiltered.map((producto) => {
         const discountPercentage = Math.round(((producto.price-producto.beforePrice)/producto.beforePrice)*100);
         const [visiblePercentage, setVisiblePercentage] = useState(true);
+        const productTags = producto.etiquetas.map((etiquetas) => <NavLink to={etiquetas}><h6 className='productTags'>{etiquetas}</h6></NavLink>);
+
+
         useEffect(() => {
             if(producto.beforePrice === 0){
             setVisiblePercentage(false);
             document.querySelector('.productDiscount').style.visibility = 'hidden';
             } 
         }, [discountPercentage]);
+
+        
+
+
+
+
         return <div className='productDetailContainer ' producto={producto} key={producto.id}>
+            
 
             <div className='breadcrumbData'>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item "><a className='breadcrumbLinks headerLink' href={producto.categories[0]}><b>{producto.categories[0]}</b></a></li>
-                    <li class="breadcrumb-item " ><a className='breadcrumbLinks'  href={producto.categories[1]}>{producto.categories[1]}</a></li>
-                    <li class="breadcrumb-item " ><a className='breadcrumbLinks' href={producto.categories[2]}>{producto.categories[2]}</a></li>
+                    <li class="breadcrumb-item "><a className='breadcrumbLinks headerLink' href={producto.category}><b>{producto.category}</b></a></li>
+                    {producto.subcategories.map((subcategorias) => <li class="breadcrumb-item " ><a className='breadcrumbLinks'  href={subcategorias}>{subcategorias}</a></li>)}
                     <li class="breadcrumb-item active"></li>
                 </ol>
             </nav>
@@ -34,9 +43,8 @@ function ProductDetail() {
             <div className='productDetail'>
 
                 <div className='productImages'>
-                    <div className='productImages--thumbnails'>
-                        <div className='thumbnailsContainer'><img className='thumbnailsImage' src={producto.image[0]} alt="" /></div>
-                        <div className='thumbnailsContainer'><img className='thumbnailsImage' src={producto.image[1]} alt="" /></div>
+                    <div className='productImages--thumbnails'>{producto.image.map((image)=> <div className='thumbnailsContainer'><img className='thumbnailsImage' src={image} alt="" /></div>)}
+                        
                     </div>
                     <div className='productImages--mainContainer'>
                         <img className='productImages--mainImage'  src={producto.image[0]} alt="" />
@@ -60,8 +68,8 @@ function ProductDetail() {
                         </div>
                     </div>
 
-                    <div className="productInfo--description">
-                        <h6>{producto.etiquetas}</h6>
+                    <div className="productInfo--tags">
+                    {productTags}
                     </div>
 
                    
@@ -75,9 +83,7 @@ function ProductDetail() {
                 </div>
 
             </div>
-    </div>}
-
-    );
+    </div>});
 
   return (
     <div className='productDetailPage'>

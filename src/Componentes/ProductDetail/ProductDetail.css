@@ -169,6 +169,27 @@
     width: 100%;
 }
 
+.productInfo--tags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2px;
+}
+
+.productTags {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: var(--colorPrincipalClaro);
+    color: var(--colorGrisOscuro);
+    padding: 0.5rem;
+    border-color:transparent;
+    border-style: transparent;
+    border-radius: 10px;  
+    text-align: center;
+    visibility:visible;
+}
+
 .productBuyControls {
     display: flex;
     flex-direction: column;

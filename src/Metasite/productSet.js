@@ -15,7 +15,8 @@ const productSet = [{
     description: 'Pistola Llave de Impacto 320NM 1/2 - 2 Baterias 21V.',
     id: '0001ab',
     etiquetas: ['Herramientas'],
-    categories: ['Construcción','Hogar y Muebles','Herramientas Eléctricas']
+    category: 'Construcción',
+    subcategories: ['Hogar y Muebles','Herramientas Eléctricas']
 },{
     image: ['/demoimg2.png'],
     PublicationDate: 13062022,
@@ -32,7 +33,8 @@ const productSet = [{
     cantidad:1,
     description: 'Funda Para Cojín Terciopelo con Pompones 45x45cm Material: Terciopelo  Medidas: 45cm x 45cm. Cierre: Oculto.',
     id: '0002ab',
-    categories: ['Hogar y Muebles'],
+    category: 'Hogar y Muebles',
+    subcategories: [],
     etiquetas: ['cojin','decoracion','fundas','terciopelo','hogar']
 },{
     image: ['/demoimg3.jpeg'],
@@ -50,7 +52,8 @@ const productSet = [{
     cantidad:1,
     description:'Marca: Tapiceria Moderna Modelo: Alejandria Tipo: Banquetas Hecho en: Chile  ',
     id: '0003ab',
-    categories: ['Hogar y Muebles'],
+    category: 'Hogar y Muebles',
+    subcategories: [],
     etiquetas: []
 },{
     image: ['/demoimg4.jpg'],
@@ -69,7 +72,8 @@ const productSet = [{
     description:'INTERCOOLER TOP MOUNT IMPREZA WRX 2002 2003 2004 2005 2006 2007 + Y PIPE',
     id: '0004ab',
     etiquetas: [' automotrices','impreza','intercooler','repuestos','subaru','topmount','wrx','ypipe'],
-    categories: ['Automóvil']
+    category: 'Automóvil',
+    subcategories: []
 },{
     image: ['/demoimg5.jpeg'],
     PublicationDate: 13062022,
@@ -87,7 +91,8 @@ const productSet = [{
     description:'Calienta de manera rápida sin dañar, aplicable a todo tipo de cabello ya sea húmedo o en seco. Especificaciones:Plancha profesional.Luz de indicador.Placas de aluminio con recubrimiento de cerámica no se pega al cabello ni lo daña.Temperatura graduable a 170/190/210/230cºTamaño 34cm aprox',
     id: '0005ab',
     etiquetas: ['Alisadora','cabello','Cuidado del Cabello','vapor'],
-    categories: ['Belleza y Cuidado Personal']
+    category: 'Belleza y Cuidado Personal',
+    subcategories: []
 },{
     image: ['/demoimg6.jpg'],
     PublicationDate: 13062022,
@@ -106,7 +111,8 @@ const productSet = [{
     description:'Notebook DELL inspiron 14-3467. Estoy haciendo cambio de notebook porque necesito uno más pequeño. Hace menos de 1 año, se le hizo cambio de disco duro a un disco sólido. Cargador nuevo (4 meses de uso) Procesador: INTEL® CORE? i3 6006U @ 2.0 GHz Memoria Ram: 6GB Gráficos: INTEL® HD Graphics 520 Pantalla: 14″ HD ',
     id: '0006ab',
     etiquetas: ['Notebook Dell inspirion'],
-    categories: ['Tecnología']
+    category: 'Tecnología',
+    subcategories: []
 },{
     image: ['/demoimg7.jpeg'],
     PublicationDate: 13062022,
@@ -125,9 +131,10 @@ const productSet = [{
     description:'Modelo T61 Diseño Compacto. Capacidad Max Usuario 120 Kgs. Esfera Numérica. Plataforma Metálica, antideslizante y blanda.',
     id: '0007ab',
     etiquetas: [],
-    categories: ['Deportes y Fitness','Belleza y Cuidado Personal']
+    category: 'Deportes y Fitness',
+    subcategories: ['Belleza y Cuidado Personal']
 },{
-    image: ['/demoimg8.png'],
+    image: ['/demoimg8.png','/demoimg81.jpg','/demoimg82.jpg'],
     PublicationDate: 13062022,
     isDiscount: true,
     beforePrice: 450000,
@@ -144,7 +151,8 @@ const productSet = [{
     description:'Receiver Yamaha Rx-va465 5.1. Poco Uso, Excelente.',
     id: '0008ab',
     etiquetas: ['oferta','Precios Bajos','Receiver','Yamaha'],
-    categories: ['Electrónica,Audio y Video']
+    category: 'Electrónica,Audio y Video',
+    subcategories: ['Home Theater','Receiver','Audio 5.1']
 },{
     image: ['/demoimg9.jpg'],
     PublicationDate: 13062022,
@@ -163,7 +171,8 @@ const productSet = [{
     description:'Se vende lindo Vestido de Novia Importado Strapless Color Ivoy, de tala Crep yoryet, estilo romántico',
     id: '0009ab',
     etiquetas: ['Vestido de Novia','strapless','color Ivory'],
-    categories: ['Vestuario y Calzado']
+    category: 'Vestuario y Calzado',
+    subcategories: []
 },
 {
     image: ['/demoimg10.jpeg'],
@@ -183,7 +192,8 @@ const productSet = [{
     description:'Se Pack 10 cajas 25x25x25 Con Visor Nuestras cajas son totalmente AUTOARMABLES. Todas se abren por la parte delantera para mayor comodidad. Fabricadas en Cartulina Reverso Blanco DUPLEX de 350grs Super resistentes y fuertes También fabricamos en otras medidasvende lindo Vestido de Novia Importado Strapless Color Ivoy, de tala Crep yoryet, estilo romántico',
     id: '0010ab',
     etiquetas: ['Packaging'],
-    categories: ['Cotillón y Fiestas']
+    category: 'Cotillón y Fiestas',
+    subcategories: []
 },
 {
     image: ['/demoimg11.jpg'],
@@ -203,7 +213,8 @@ const productSet = [{
     description:'Bicicleta Eléctrica Plegable',
     id: '0011ab',
     etiquetas: [],
-    categories: ['Juegos Infantiles','Bicicletas']
+    category: 'Juegos Infantiles',
+    subcategories: ['Bicicletas']
 }
 ]
 
