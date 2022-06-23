@@ -52,7 +52,6 @@ function ProductDetail() {
                 </div>
 
                 <div className='productInfo'>
-
                     <div className='productInfo--titles'>
                         <h5 className='productName'><b>{producto.name}</b></h5>
                     </div>
@@ -68,12 +67,23 @@ function ProductDetail() {
                         </div>
                     </div>
 
-                    <div className="productInfo--tags">
-                    {productTags}
+                    <div className="productInfo--charSet">
+                        <h6 className="productCharTitle">Características principales:</h6>
+                        <div className='productChar'><p className='productCharName'>Alto</p><p className='productCharUnit'>{producto.alto}</p></div>
+                        <div className='productChar'><p className='productCharName'>Ancho</p><p className='productCharUnit'>{producto.ancho}</p></div>
+                        <div className='productChar'><p className='productCharName'>Largo</p><p className='productCharUnit'>{producto.largo}</p></div>
+                        <div className='productChar'><p className='productCharName'>Peso</p><p className='productCharUnit'>{producto.peso}</p></div>
+                        <div className='productChar'><p className='productCharName'>Diametro</p><p className='productCharUnit'>{producto.diametro}</p></div>
+                        <div className='productChar'><p className='productCharName'>Profundidad</p><p className='productCharUnit'>{producto.profundidad}</p></div>
+                        <div className='productChar'><p className='productCharName'>Cantidad por envase</p><p className='productCharUnit'>{producto.cantidad}</p></div>
+                        <div className='productChar'><p className='productCharName'>Colores disponibles</p><p className='productCharUnit'>{producto.coloresDisponibles}</p></div>
+                        <div className='productChar'><p className='productCharName'>Materiales</p><p className='productCharUnit'>{producto.materiales}</p></div>
                     </div>
 
-                   
-
+                    <div className="productInfo--tags">
+                        <h6 className="productTagsTitle">Etiquetas:</h6>
+                        <div className="productTagsContainer">{productTags}</div>
+                    </div>
                 </div>
 
                 <div className='productBuyControls'>
@@ -83,6 +93,28 @@ function ProductDetail() {
                 </div>
 
             </div>
+
+            <div className="productQA">
+
+                <div className="productDescription">
+                    <h6 className="productDescriptionTitle"><b>Descripción del producto</b></h6>
+                    <p>{producto.description}</p>
+
+
+
+                </div>
+
+                <div className="productQuestions">
+                <h6 className="productQuestionsTitle"><b>¿Tienes una pregunta?</b></h6>
+
+
+                </div>
+
+
+
+            </div>
+
+
     </div>});
 
   return (
