@@ -189,6 +189,35 @@
     width: 100%;
 }
 
+.productCharMateriales {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: var(--colorNegro);
+    text-align: left;
+    visibility:visible;  
+    height: 100%;
+    width: 100%;
+}
+
+.productCharUnitMateriales {
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    color: var(--colorNegro);
+    background-color: var(--colorGrisSuave);
+    text-align: left;
+    min-height: 1.5rem;
+    width: 50%;
+    padding-left: 1rem;
+    border-top-right-radius: 5px ;
+    border-bottom-right-radius: 5px ;
+    border-color: var(--colorGrisSuave);
+    border-style: solid;
+}
+
 .productCharTitle {
     text-align: left;
     width: 100%;
@@ -258,7 +287,7 @@
     visibility:visible;
 }
 
-.productQA {
+.productComplimentaryInfo {
     display: flex;
     flex-direction: row;
     background-color: var(--colorBlanco);
@@ -277,33 +306,173 @@
     display: flex;
     flex-direction: column;
     width: 50%;
+    padding: 10px;
 }
 
-.productQuestions {
+.productQA {
     display: flex;
     flex-direction: column;
     width: 50%;
     background-color: var(--colorGrisSuave);
+    padding: 10px;
+    border-color:var(--colorBlanco);
+    border-style: solid;
+    border-radius: 5px;
+    gap: 5px;
+}
+
+.productQuestionInput {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.inputQuestion {
+    width: 50%;
+    border-color:var(--colorBlanco);
+    border-style: solid;
+    border-radius: 5px;
+}
+
+.btnQuestion {
+    color: var(--colorBlanco);
+    border-color:transparent;
+    border-style: solid;
+    border-radius: 5px;
+    background-color: var(--colorAzulContraste);
+}
+
+.productQuestion {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 
+.questionBullet {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: baseline;
+}
 
-
-
-
-
-
-
-
+.answerBullet {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-left: 10px;
+    background-color: var(--colorBlanco);
+    border-color:var(--colorBlanco);
+    border-style: solid;
+    border-radius: 5px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
 
 .productBuyControls {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items:center;
+    width: 20%;
+    gap: 10px;
+
+}
+
+.productBuy--btnContainer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+}
+
+.btnBuyNow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    width: 100%;
+    height: 50px;
+    background-color: var(--colorAzulContraste);
+    border-color: transparent;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+.btnBuyNow a {
+    color: var(--colorBlanco);
+}
+
+.btnBuyLater {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    border-color: var(--colorAzulContraste);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.productBuy--quantityContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:baseline;
+    width: 100%;
+    height: auto;
+}
+
+.quantityInput {
+    width: 50px;
     border-color:var(--colorGrisClaro);
-    border-style: solid ;
+    border-style: solid;
+    border-radius: 5px;
+    margin-left: 2px;
+    margin-right: 2px;
+    border-bottom: 1px solid var(--colorGrisClaro) ;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.productBuy--paymentsContainer {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--colorGrisClaro) ;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.paymentsTitle {
+    text-align: left;
+}
+
+
+.paymentsIcons {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.cardImage {
+    border-color: var(--colorGrisClaro);
+    border-style: solid;
     border-width: 1px;
     border-radius: 5px;
-    width: 20%;
+    padding-left: 2px;
+    padding-right: 2px;
+
 }
