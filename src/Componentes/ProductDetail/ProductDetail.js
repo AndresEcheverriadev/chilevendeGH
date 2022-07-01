@@ -14,9 +14,6 @@ function ProductDetail() {
         const [visiblePercentage, setVisiblePercentage] = useState(true);
         const productTags = producto.etiquetas.map((etiquetas) => <NavLink to={etiquetas}><h6 className='productTags'>{etiquetas}</h6></NavLink>);
         const productMateriales = producto.materiales.map((materiales) => <h6 className='productMateriales'>{materiales}</h6>);
-
-
-
         useEffect(() => {
             if(producto.beforePrice === 0){
             setVisiblePercentage(false);
@@ -24,13 +21,7 @@ function ProductDetail() {
             } 
         }, [discountPercentage]);
 
-        
-
-
-
-
         return <div className='productDetailContainer ' producto={producto} key={producto.id}>
-            
 
             <div className='breadcrumbData'>
             <nav aria-label="breadcrumb">
@@ -71,17 +62,17 @@ function ProductDetail() {
 
                     <div className="productInfo--charSet">
                         <h6 className="productCharTitle">Características principales:</h6>
-                        <div className='productChar'><p className='productCharName'>Marca</p><p className='productCharUnit'>{producto.marca}</p></div>
-                        <div className='productChar'><p className='productCharName'>Modelo</p><p className='productCharUnit'>{producto.modelo}</p></div>
-                        <div className='productChar'><p className='productCharName'>Alto</p><p className='productCharUnit'>{producto.alto}</p></div>
-                        <div className='productChar'><p className='productCharName'>Ancho</p><p className='productCharUnit'>{producto.ancho}</p></div>
-                        <div className='productChar'><p className='productCharName'>Largo</p><p className='productCharUnit'>{producto.largo}</p></div>
-                        <div className='productChar'><p className='productCharName'>Peso</p><p className='productCharUnit'>{producto.peso}</p></div>
-                        <div className='productChar'><p className='productCharName'>Diametro</p><p className='productCharUnit'>{producto.diametro}</p></div>
-                        <div className='productChar'><p className='productCharName'>Profundidad</p><p className='productCharUnit'>{producto.profundidad}</p></div>
-                        <div className='productChar'><p className='productCharName'>Cantidad por compra</p><p className='productCharUnit'>{producto.cantidad}</p></div>
-                        <div className='productChar'><p className='productCharName'>Colores disponibles</p><p className='productCharUnit'>{producto.coloresDisponibles}</p></div>
-                        <div className='productCharMateriales'><p className='productCharName'>Materiales</p><p className='productCharUnitMateriales'>{productMateriales}</p></div>
+                        { producto.marca === '' ? null : <div className='productChar'><p className='productCharName'>Marca</p><p className='productCharUnit'>{producto.marca}</p></div>}
+                        { producto.modelo === '' ? null : <div className='productChar' ><p  className='productCharName'>Modelo</p><p className='productCharUnit'>{producto.modelo}</p></div>}
+                        { producto.alto === '' ? null : <div className='productChar' ><p  className='productCharName'>Alto</p><p className='productCharUnit'>{producto.alto}</p></div>}
+                        { producto.ancho === '' ? null : <div className='productChar' ><p  className='productCharName'>Ancho</p><p className='productCharUnit'>{producto.ancho}</p></div>}
+                        { producto.largo === '' ? null : <div className='productChar' ><p className='productCharName'>Largo</p><p className='productCharUnit'>{producto.largo}</p></div>}
+                        { producto.peso === '' ? null : <div className='productChar' ><p className='productCharName'>Peso</p><p className='productCharUnit'>{producto.peso}</p></div>}
+                        { producto.diametro === '' ? null : <div className='productChar' ><p className='productCharName'>Diametro</p><p className='productCharUnit'>{producto.diametro}</p></div>}
+                        { producto.profundidad === '' ? null : <div className='productChar' ><p className='productCharName'>Profundidad</p><p className='productCharUnit'>{producto.profundidad}</p></div>}
+                        { producto.cantidad === '' ? null : <div className='productChar' ><p className='productCharName'>Cantidad por compra</p><p className='productCharUnit'>{producto.cantidad}</p></div>}
+                        { producto.coloresDisponibles.length === 0 ? null : <div className='productChar' ><p className='productCharName'>Colores disponibles</p><p className='productCharUnit'>{producto.coloresDisponibles}</p></div>}
+                        { producto.materiales.length === 0 ? null : <div className='productCharMateriales'><p className='productCharName'>Materiales</p><p className='productCharUnitMateriales'>{productMateriales}</p></div>}
                     </div>
 
                     <div className="productInfo--tags">
@@ -91,25 +82,23 @@ function ProductDetail() {
                 </div>
 
                 <div className='productBuyControls'>
-                    {/* <div className='productBuy--titles'>
-                        <h5 className='productBuy'>{producto.name}</h5>
-                    </div> */}
+                
                     <div className='productBuy--btnContainer'>
-                        <div className="btnBuyNow"><NavLink to={'/'}>Comprar ahora
+                        <NavLink to={'/'} className="btnBuyNow">Comprar ahora
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
                             <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"/>
                             <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
                             </svg>
-                        </NavLink></div>
-                        <div className="btnBuyLater"><NavLink to={'/'}>Agregar al carro</NavLink></div>
+                        </NavLink>
+                        <NavLink to={'/'} className="btnBuyLater">Agregar al carro</NavLink>
                     </div>
 
                     <div className="productBuy--quantityContainer">
-                        <p className='quantityTitle'>Cantidad:</p><input className='quantityInput' type="number" /><p className='quantityTitle'>unidades</p>
+                        <p className='quantityTitle'>Cantidad:</p><div className='quantityPlusBtns'><button id='plusbtn'>+</button><input className='quantityInput' type="number" placeholder='1' /><button id='minusbtn'>-</button></div><p className='quantityTitle'>unidades</p>
                     </div>
 
                     <div className="productBuy--paymentsContainer">
-                        <h6 className="paymentsTitle">Medios de pago:</h6>
+                        <h6 className="paymentsTitle">Medios de pago</h6>
                         <div className='webpayIcons'><img src="/webpay.png" alt="" /></div>
                         <div className='paymentsIcons'>
                             <img className='cardImage' src="/visa.png" alt="" />
@@ -117,15 +106,19 @@ function ProductDetail() {
                             <img className='cardImage' src="/american.png" alt="" />
                             <img className='cardImage' src="/magna.png" alt="" />
                         </div>
-
+                        <div className="paymentsSecure">
+                            <h6 className='paymentsSecureTitle'>Transacción segura</h6>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-lock" viewBox="0 0 16 16">
+                            <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/>
+                            </svg>
+                        </div>
                     </div>
 
                     <div className="productBuy--deliveryContainer">
-                        <h6 className="deliveryTitle">Envío:</h6>
-                        <h6 className="deliveryTitle">Entrega:</h6>
-
-
-
+                        <h6 className="deliveryTitle">Calcular costo de envío</h6>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
+                        <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                        </svg>
                     </div>
 
 

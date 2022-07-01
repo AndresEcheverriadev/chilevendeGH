@@ -37,7 +37,7 @@
 .productDetail {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: flex-start;
     border-color:var(--colorBlanco);
     border-style: solid;
@@ -175,6 +175,9 @@
     width: 100%;
     height: auto;
     border-bottom: 1px solid var(--colorGrisClaro) ;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    gap: 0px;
 }
 
 .productChar {
@@ -231,11 +234,7 @@
     width: 50%;
     height: 1.5rem;
     padding-left: 1rem;
-    border-style:solid;
-    border-color: var(--colorGrisSuave);
-    border-width: 1px;
-    border-top-left-radius: 5px; 
-    border-bottom-left-radius: 5px; 
+    background-color: var(--colorPrincipalClaro);
 }
 
 .productCharUnit {
@@ -379,8 +378,8 @@
     flex-direction: column;
     justify-content: center;
     align-items:center;
-    width: 20%;
     gap: 10px;
+    width: auto;
 
 }
 
@@ -397,7 +396,7 @@
 
 .btnBuyNow {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items:center;
     width: 100%;
@@ -406,11 +405,15 @@
     border-color: transparent;
     border-style: solid;
     border-radius: 10px;
-}
-
-.btnBuyNow a {
     color: var(--colorBlanco);
 }
+
+.btnBuyNow:hover {
+    border-color: var(--colorBlanco);
+    box-shadow: var(--Sombra);
+    color: var(--colorPrincipalClaro);
+}
+
 
 .btnBuyLater {
     display: flex;
@@ -427,51 +430,115 @@
     padding-right: 2px;
 }
 
+.btnBuyLater:hover {
+    color: var(--colorAzulContraste);
+    box-shadow: var(--Sombra);
+
+}
+
 .productBuy--quantityContainer {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items:baseline;
+    justify-content: space-around;
+    align-items:center;
     width: 100%;
     height: auto;
+    padding-bottom: 25px;
+    border-bottom: 1px solid var(--colorGrisClaro) ;
+    gap: 10px;
+}
+
+.quantityPlusBtns {
+    display: flex;
+    flex-direction: row;
+    width: 20px;
+    height: 20px;
+    justify-content: center;
+    align-items:center;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+#plusbtn:hover,#minusbtn:hover {
+    background-color: var(--colorAzulContraste);
+    color: var(--colorBlanco);
+}
+
+#plusbtn,#minusbtn {
+    line-height: 0;
+    min-width: 20px;
+    height: 25px;
+    text-align: center;
+    padding: 0;
+    color: var(--colorAzulContraste);
+}
+
+#plusbtn  {
+   border-style: solid;
+   border-width: 2px;
+   border-color:var(--colorAzulContraste);
+   border-top-left-radius: 10px;
+   border-bottom-left-radius: 10px;
+   border-right-style: hidden ;
+}
+
+#minusbtn {
+    border-style: solid;
+   border-width: 2px;
+   border-color:var(--colorAzulContraste);
+   border-top-right-radius: 10px;
+   border-bottom-right-radius: 10px;
+   border-left-style: hidden ;
 }
 
 .quantityInput {
-    width: 50px;
-    border-color:var(--colorGrisClaro);
-    border-style: solid;
-    border-radius: 5px;
-    margin-left: 2px;
-    margin-right: 2px;
-    border-bottom: 1px solid var(--colorGrisClaro) ;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
+    line-height: 0;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    border-top: solid 2px var(--colorAzulContraste) ;
+    border-bottom: solid 2px var(--colorAzulContraste) ;
+    border-right-style:hidden ;
+    border-left-style:hidden ;
+    color: var(--colorAzulContraste);
 }
 
 .productBuy--paymentsContainer {
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid var(--colorGrisClaro) ;
-    padding-bottom: 10px;
+    padding-bottom: 25px;
     margin-bottom: 10px;
+    gap: 10px;
 }
 
 .paymentsTitle {
-    text-align: left;
+    text-align: center;
 }
 
+.webpayIcons img {
+    width: 150px;
+    height: auto;
+}
 
 .paymentsIcons {
     display: flex;
     flex-direction: row;
+    width: 100%;
+    height: auto;
     gap: 5px;
 }
 
+.paymentsSecureTitle {
+    margin-bottom: 10px;
+}
+
+.deliveryTitle {
+    margin-bottom: 10px;
+}
+
 .cardImage {
-    border-color: var(--colorGrisClaro);
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 5px;
+    width: 50px;
     padding-left: 2px;
     padding-right: 2px;
 
