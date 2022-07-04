@@ -51,7 +51,7 @@ const productSet = [{
     beforePrice: 165990,
     price: 129990,
     name: 'Banqueta Alejandria Color Gris',
-    materiales:['Madera pino seco','Espuma poliuretano','Tela Felpa lisa'],
+    materiales:['Madera pino seco','Espuma poliuretano','Tela Felpa lisa','Madera pino seco','Espuma poliuretano','Tela Felpa lisa','Tela Felpa lisa','Madera pino seco','Espuma poliuretano','Tela Felpa lisa'],
     alto:'60 cm',
     ancho:'30 cm',
     largo:'26 cm',
