@@ -4,12 +4,12 @@ import NavBar from '../NavBar/NavBar'
 import Footer from '../Footer/Footer'
 import productSet from '../../Metasite/productSet'
 import SugestedProducts from '../SugestedProducts/SugestedProducts'
-import './ProductDetail.css'
+import './ProductsCategory.css'
 
-function ProductDetail() {
+function ProductsCategory() {
 
-    const {productoCategory,productoName} = useParams();
-    const productFiltered = productSet.filter(producto => (producto.category && producto.name) === (productoCategory && productoName));
+    const {productoCategory} = useParams();
+    const productFiltered = productSet.filter(producto => (producto.category ) === (productoCategory));
     const productDetail = productFiltered.map((producto) => {
         const discountPercentage = Math.round(((producto.price-producto.beforePrice)/producto.beforePrice)*100);
         const [visiblePercentage, setVisiblePercentage] = useState(true);
@@ -30,15 +30,7 @@ function ProductDetail() {
 
         return <div className='productDetailContainer ' producto={producto} key={producto.id}>
 
-            <div className='breadcrumbData'>
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item "><a className='breadcrumbLinks headerLink' href={`/${producto.category}`}><b>{producto.category}</b></a></li>
-                    {producto.subcategories.map((subcategorias) => <li class="breadcrumb-item " ><a className='breadcrumbLinks'  href={subcategorias}>{subcategorias}</a></li>)}
-                    <li class="breadcrumb-item active"></li>
-                </ol>
-            </nav>
-            </div>
+            
 
             <div className='productDetail'>
 
@@ -201,4 +193,4 @@ function ProductDetail() {
   )
 }
 
-export default ProductDetail
+export default ProductsCategory

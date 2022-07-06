@@ -1,0 +1,91 @@
+.sugestedContainer {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.sugestedTitles {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+
+
+.sugestedCards {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.cardContainer {
+    display: flex;
+    flex-direction: column;
+    width: 329px!important;
+    height: 415px !important;
+}
+
+/* Carrousel Sugested Start */
+    #wrapperSugested {
+    width: 100%;
+    position: relative;
+  }
+  
+  #carouselSugested {
+    overflow: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+  
+  #carouselSugested::-webkit-scrollbar {
+    height: 0;
+  }
+  
+  #prevSugested,
+  #nextSugested {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: var(--colorAzulContraste);
+    border: none;
+    padding: 8px;
+    border-radius: 50%;
+    outline: 0;
+    cursor: pointer;
+    position: absolute;
+    fill: var(--colorBlanco);
+  }
+  
+  #prevSugested {
+    top: 50%;
+    left: -20px;
+    display: none;
+  }
+  
+  #nextSugested {
+    top: 50%;
+    right: -20px;
+  }
+  
+  #contentSugested {
+    display: grid;
+    grid-gap: 15px;
+    grid-auto-flow: column;
+    margin: auto;
+    box-sizing: border-box;
+  }

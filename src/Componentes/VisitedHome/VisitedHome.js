@@ -6,7 +6,7 @@ import './VisitedHome.css'
 
 function VisitedHome() {
     const productsCardsVisited = productSet.map((producto) => {
-        return  <NavLink to={`/producto/${producto.id}`}   className='cardContainer'>
+        return  <NavLink to={`/${producto.category}/${producto.name}`}   className='cardContainer'>
                     <ProductCard producto={producto} key={producto.id}/>
                 </NavLink>
     }) 
