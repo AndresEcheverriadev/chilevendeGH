@@ -192,7 +192,6 @@
     align-items: flex-start;
     width: 100%;
     height: auto;
-    border-bottom: 1px solid var(--colorGrisClaro) ;
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -485,7 +484,7 @@
     width: 100%;
     height: auto;
     padding-bottom: 25px;
-    border-bottom: 1px solid var(--colorGrisClaro) ;
+    /* border-bottom: 1px solid var(--colorGrisClaro) ; */
     gap: 10px;
 }
 
@@ -547,7 +546,7 @@
 .productBuy--paymentsContainer {
     display: flex;
     flex-direction: column;
-    border-bottom: 1px solid var(--colorGrisClaro) ;
+    /* border-bottom: 1px solid var(--colorGrisClaro) ; */
     padding-bottom: 25px;
     margin-bottom: 10px;
     gap: 10px;

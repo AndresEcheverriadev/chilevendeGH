@@ -96,3 +96,7 @@ li {
   background-color:transparent;
   border-style: none;
 }
+
+.noBorder {
+  border-bottom: transparent !important;
+}
