@@ -18,7 +18,7 @@ const productSet = [{
     modelo:'',
     description: 'Pistola Llave de Impacto 320NM 1/2 - 2 Baterias 21V.',
     id: '0001ab',
-    etiquetas: ['Herramientas'],
+    etiquetas: ['Herramientas','Construcción','Hogar y Muebles','Herramientas Eléctricas'],
     category: 'Construcción',
     subcategories: ['Hogar y Muebles','Herramientas Eléctricas']
 },{
@@ -43,7 +43,7 @@ const productSet = [{
     id: '0002ab',
     category: 'Hogar y Muebles',
     subcategories: [],
-    etiquetas: ['cojin','decoracion','fundas','terciopelo','hogar']
+    etiquetas: ['Cojin','Decoracion','Fundas','Terciopelo','Hogar','Hogar y Muebles']
 },{
     image: ['/demoimg3.jpeg'],
     PublicationDate: 13062022,    
@@ -66,7 +66,7 @@ const productSet = [{
     id: '0003ab',
     category: 'Hogar y Muebles',
     subcategories: [],
-    etiquetas: []
+    etiquetas: ['Hogar y Muebles']
 },{
     image: ['/demoimg4.jpg'],
     PublicationDate: 13062022,
@@ -87,7 +87,7 @@ const productSet = [{
     modelo:'',
     description:'Intercooler Top Mount Impreza Wrx 02 07 + Y Pipe',
     id: '0004ab',
-    etiquetas: [' automotrices','impreza','intercooler','repuestos','subaru','topmount','wrx','ypipe'],
+    etiquetas: ['Automóvil','Automotrices','Impreza','Intercooler','Repuestos','Subaru','Topmount','Wrx','Ypipe'],
     category: 'Automóvil',
     subcategories: []
 },{
@@ -110,7 +110,7 @@ const productSet = [{
     coloresDisponibles:[],
     description:'Calienta de manera rápida sin dañar, aplicable a todo tipo de cabello ya sea húmedo o en seco. Especificaciones:Plancha profesional.Luz de indicador.Placas de aluminio con recubrimiento de cerámica no se pega al cabello ni lo daña.Temperatura graduable a 170/190/210/230cºTamaño 34cm aprox',
     id: '0005ab',
-    etiquetas: ['Alisadora','cabello','Cuidado del Cabello','vapor'],
+    etiquetas: ['Belleza y Cuidado Personal','Alisadora','Cabello','Cuidado del cabello','Vapor'],
     category: 'Belleza y Cuidado Personal',
     subcategories: []
 },{
@@ -133,7 +133,7 @@ const productSet = [{
     modelo:'inspiron 14-3467',
     description:'Notebook DELL inspiron 14-3467. Estoy haciendo cambio de notebook porque necesito uno más pequeño. Hace menos de 1 año, se le hizo cambio de disco duro a un disco sólido. Cargador nuevo (4 meses de uso) Procesador: INTEL® CORE? i3 6006U @ 2.0 GHz Memoria Ram: 6GB Gráficos: INTEL® HD Graphics 520 Pantalla: 14″ HD ',
     id: '0006ab',
-    etiquetas: ['Notebook Dell inspirion'],
+    etiquetas: ['Tecnología','Notebook Dell inspirion'],
     category: 'Tecnología',
     subcategories: []
 },{
@@ -156,7 +156,7 @@ const productSet = [{
     modelo:'Modelo T61',
     description:'Modelo T61 Diseño Compacto. Capacidad Max Usuario 120 Kgs. Esfera Numérica. Plataforma Metálica, antideslizante y blanda.',
     id: '0007ab',
-    etiquetas: [],
+    etiquetas: ['Deportes y Fitness','Belleza y Cuidado Personal'],
     category: 'Deportes y Fitness',
     subcategories: ['Belleza y Cuidado Personal']
 },{
@@ -179,7 +179,7 @@ const productSet = [{
     modelo:'Rx-va465',
     description:'Receiver Yamaha Rx-va465 5.1. Poco Uso, Excelente. Oportunidad Equipo Yamaha en perfecto estado, con sus accesorios. Se vende por no uso. También tengo para ofrecer 5 parlantes Sony y un SubWoofer genérico a la venta. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab odit, maxime molestiae id culpa unde, fuga iste accusamus labore, inventore corrupti sint qui aliquam consequuntur vitae maiores porro sed sunt?',
     id: '0008ab',
-    etiquetas: ['oferta','Precios Bajos','Receiver','Yamaha'],
+    etiquetas: ['Electrónica,Audio y Video','Oferta','Precios bajos','Receiver','Yamaha','Home Theater','Receiver','Audio 5.1'],
     category: 'Electrónica,Audio y Video',
     subcategories: ['Home Theater','Receiver','Audio 5.1']
 },{
@@ -202,7 +202,7 @@ const productSet = [{
     modelo:'',
     description:'Se vende lindo Vestido de Novia Importado Strapless Color Ivoy, de tala Crep yoryet, estilo romántico',
     id: '0009ab',
-    etiquetas: ['Vestido de Novia','strapless','color Ivory'],
+    etiquetas: ['Vestuario y Calzado','Vestido de novia','Strapless','Color ivory'],
     category: 'Vestuario y Calzado',
     subcategories: []
 },
@@ -226,7 +226,7 @@ const productSet = [{
     modelo:'',
     description:'Se Pack 10 cajas 25x25x25 Con Visor Nuestras cajas son totalmente AUTOARMABLES. Todas se abren por la parte delantera para mayor comodidad. Fabricadas en Cartulina Reverso Blanco DUPLEX de 350grs Super resistentes y fuertes También fabricamos en otras medidasvende lindo Vestido de Novia Importado Strapless Color Ivoy, de tala Crep yoryet, estilo romántico',
     id: '0010ab',
-    etiquetas: ['Packaging'],
+    etiquetas: ['Cotillón y Fiestas','Packaging'],
     category: 'Cotillón y Fiestas',
     subcategories: []
 },
@@ -250,7 +250,7 @@ const productSet = [{
     modelo:'',
     description:'Bicicleta Eléctrica Plegable',
     id: '0011ab',
-    etiquetas: [],
+    etiquetas: ['Juegos Infantiles','Bicicletas'],
     category: 'Juegos Infantiles',
     subcategories: ['Bicicletas']
 }

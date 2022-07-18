@@ -77,6 +77,15 @@
     gap: 10px;
 }
 
+.filterBtnContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+    flex-wrap: wrap;
+}
+
 .filterBtn {
     border-color:var(--colorPrincipalClaro);
     border-style: solid;
