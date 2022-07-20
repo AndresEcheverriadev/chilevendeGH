@@ -40,6 +40,32 @@
     color: var(--colorBlanco);
 }
 
+.productsSortingContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.sortBtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 24%;
+    height: 30px;
+    align-self: flex-end;
+    border-color:var(--colorBlanco);
+    border-style: solid;
+    border-radius: 10px;
+    box-shadow: var(--sombraSmall);
+    background-color: var(--colorBlanco);
+    padding: 10px;
+}
+
 .productsCategoryContainer{
     display: flex;
     flex-direction: row;
@@ -77,6 +103,21 @@
     gap: 10px;
 }
 
+.productsLengthContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.productsLength {
+    border-color:transparent;
+    border-style: solid;
+    border-radius: 10px;
+    background-color: var(--colorGrisSuave);
+}
+
 .filterBtnContainer {
     display: flex;
     flex-direction: row;
@@ -90,26 +131,52 @@
     border-color:var(--colorPrincipalClaro);
     border-style: solid;
     border-radius: 10px;
-    background-color: var(--colorGrisSuave);
+    background-color: var(--colorAzulContraste);
+    color: var(--colorBlanco);
 }
 
 .filterBtn:hover {
-    background-color: var(--colorAzulContraste);
+    cursor: default;
+}
+
+.clearFiltersBtn {
+    border-color:var(--colorAzulContraste);
+    border-style: solid;
+    border-radius: 10px;
+    background-color: var(--colorGrisSuave);
+    color: var(--colorAzulContraste);
+}
+
+.clearFiltersBtn:hover {
+    border-color:var(--colorAzulContraste);
     color: var(--colorBlanco);
     box-shadow: var(--sombraSmall);
+    background-color: var(--colorGrisMedio);
+
 }
 
 .sideBarSeparator {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: left;
     width: 100%;
     height: auto;
     padding: 20px;
     gap: 10px;
+    text-align: left;
     /* border-bottom: 2px solid var(--colorGrisSuave) ; */
 }
+
+.checkContainers {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+
 
 .sideBarBtn {
     width: 50%;
