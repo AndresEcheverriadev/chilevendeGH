@@ -31,7 +31,14 @@ function ProductsCategory() {
     useEffect(() => {
       if(activatedFilters.length === 0) {
         setExistFilter(false);
-        setCheckedPrice(false);
+        setCheckedPrice1(false);
+        setCheckedPrice2(false);
+        setCheckedPrice3(false);
+        setCheckedPrice4(false);
+        setCheckedPrice5(false);
+        setCheckedPrice6(false);
+        setCheckedPrice7(false);
+        setCheckedPrice8(false);
         setCheckedSale(false);
         setCheckedNew(false);
         setChecked5stars(false); 
@@ -52,7 +59,6 @@ function ProductsCategory() {
       updateFilterSet([]);
     };
 
-    const [checkedPrice,setCheckedPrice] = useState(false);
     const [checkedSale,setCheckedSale] = useState(false);
     const [checkedNew,setCheckedNew] = useState(false);
     const [checked5stars,setChecked5stars] = useState(false);
@@ -60,20 +66,106 @@ function ProductsCategory() {
     const [checked3stars,setChecked3stars] = useState(false);
     const [checked2stars,setChecked2stars] = useState(false);
     const [checked1stars,setChecked1stars] = useState(false);
+    const [checkedPrice1,setCheckedPrice1] = useState(false);
+    const [checkedPrice2,setCheckedPrice2] = useState(false);
+    const [checkedPrice3,setCheckedPrice3] = useState(false);
+    const [checkedPrice4,setCheckedPrice4] = useState(false);
+    const [checkedPrice5,setCheckedPrice5] = useState(false);
+    const [checkedPrice6,setCheckedPrice6] = useState(false);
+    const [checkedPrice7,setCheckedPrice7] = useState(false);
+    const [checkedPrice8,setCheckedPrice8] = useState(false);
 
     const activateFilter = (filterBtn) => {
       switch(filterBtn) {
-        case '<10000':
-          setCheckedPrice(true);
+        case '10000':
+          setCheckedPrice1(true);
           for( var i = 0; i < filterSet.length; i++){ 
-            if (filterSet[i].name === 'Menos de $ 10.000') {
+            if (filterSet[i].name === 'Hasta $ 10.000') {
               filterSet.splice(i, 1); 
-              setCheckedPrice(false); 
+              setCheckedPrice1(false); 
               return
             };
           };
-          updateFilterSet(filterSet =>[...filterSet,{name:'Menos de $ 10.000',id:filterBtn}]);
+          updateFilterSet(filterSet =>[...filterSet,{name:'Hasta $ 10.000',id:filterBtn}]);
           break;
+        case '25000':
+          setCheckedPrice2(true);
+          for( var i = 0; i < filterSet.length; i++){ 
+            if (filterSet[i].name === 'Hasta $ 25.000') {
+              filterSet.splice(i, 1); 
+              setCheckedPrice2(false); 
+              return
+            };
+          };
+          updateFilterSet(filterSet =>[...filterSet,{name:'Hasta $ 25.000',id:filterBtn}]);
+          break;
+        case '50000':
+          setCheckedPrice3(true);
+          for( var i = 0; i < filterSet.length; i++){ 
+            if (filterSet[i].name === 'Hasta $ 50.000') {
+              filterSet.splice(i, 1); 
+              setCheckedPrice3(false); 
+              return
+            };
+          };
+          updateFilterSet(filterSet =>[...filterSet,{name:'Hasta $ 50.000',id:filterBtn}]);
+          break;
+        case '100000':
+        setCheckedPrice4(true);
+        for( var i = 0; i < filterSet.length; i++){ 
+          if (filterSet[i].name === 'Hasta $ 100.000') {
+            filterSet.splice(i, 1); 
+            setCheckedPrice4(false); 
+            return
+          };
+        };
+        updateFilterSet(filterSet =>[...filterSet,{name:'Hasta $ 100.000',id:filterBtn}]);
+        break;
+      case '250000':
+        setCheckedPrice5(true);
+        for( var i = 0; i < filterSet.length; i++){ 
+          if (filterSet[i].name === 'Hasta $ 250.000') {
+            filterSet.splice(i, 1); 
+            setCheckedPrice5(false); 
+            return
+          };
+        };
+        updateFilterSet(filterSet =>[...filterSet,{name:'Hasta $ 250.000',id:filterBtn}]);
+        break;
+      case '500000':
+        setCheckedPrice6(true);
+        for( var i = 0; i < filterSet.length; i++){ 
+          if (filterSet[i].name === 'Hasta $ 500.000') {
+            filterSet.splice(i, 1); 
+            setCheckedPrice6(false); 
+            return
+          };
+        };
+        updateFilterSet(filterSet =>[...filterSet,{name:'Hasta $ 500.000',id:filterBtn}]);
+        break;
+      case '1000000':
+        setCheckedPrice7(true);
+        for( var i = 0; i < filterSet.length; i++){ 
+          if (filterSet[i].name === 'Hasta $ 1.000.000') {
+            filterSet.splice(i, 1); 
+            setCheckedPrice7(false); 
+            return
+          };
+        };
+        updateFilterSet(filterSet =>[...filterSet,{name:'Hasta $ 1.000.000',id:filterBtn}]);
+        break;
+      case '+1000000':
+        setCheckedPrice8(true);
+        for( var i = 0; i < filterSet.length; i++){ 
+          if (filterSet[i].name === 'Más de $ 1.000.000') {
+            filterSet.splice(i, 1); 
+            setCheckedPrice8(false); 
+            return
+          };
+        };
+        updateFilterSet(filterSet =>[...filterSet,{name:'Más de $ 1.000.000',id:filterBtn}]);
+        break;
+  
         case 'oferta':
           setCheckedSale(true);
           for( var i = 0; i < filterSet.length; i++){ 
@@ -151,7 +243,6 @@ function ProductsCategory() {
           };
           updateFilterSet(filterSet =>[...filterSet,{name:'1stars',id:filterBtn}]);          
           break;
-
       }
     };
 
@@ -170,9 +261,15 @@ function ProductsCategory() {
 
         </div>
         <div className='productsSortingContainer'>
-          <div className='sortBtn'>
+          <div className='sortOptionsContainer'>
             <h6>Ordenar por</h6>
-            <button>Precio mayor</button>
+            <select className='sortOptions'>
+              <option value="">Mas Relevantes</option>
+              <option value="">Precio Menor</option>
+              <option value="">Precio Mayor</option>
+              <option value="">Últimos Agregados</option>
+              <option value="">Mejor Valorados</option>
+            </select>
           </div>
         </div>
 
@@ -180,7 +277,7 @@ function ProductsCategory() {
         <div className="productsCategoryContainer">
 
           <div className='productsCategorySideBar'>
-            <div className='sideBarElem'>
+            <div className='sideBarElem filtersElem'>
               <div className='productsLengthContainer'>
               {productCardsCategory.length > 1? <><div className='productsLength'>{productCardsCategory.length}</div><h6>productos encontrados</h6></>  : <><div className='productsLength'>{productCardsCategory.length}</div><h6>producto encontrado</h6></>}
               </div>
@@ -196,72 +293,72 @@ function ProductsCategory() {
               <div className='sideBarSeparator'>
                 <h6><b>Rango de precio</b></h6>
                 <div className='checkContainers'>
-                  <input class="form-check-input sideBarBtn" type="checkbox" value=""  checked={checkedPrice} onChange={() => activateFilter('10000')}></input>
+                  <input class="filterCheck" type="checkbox" value=""  checked={checkedPrice1} onChange={() => activateFilter('10000')}></input>
                   <label class="form-check-label" for="flexCheckDefault">hasta $ 10.000</label>
                 </div>
                 <div className='checkContainers'>
-                  <input class="form-check-input sideBarBtn" type="checkbox" value=""  checked={checkedPrice} onChange={() => activateFilter('10000')}></input>
+                  <input class="filterCheck" type="checkbox" value=""  checked={checkedPrice2} onChange={() => activateFilter('25000')}></input>
                   <label class="form-check-label" for="flexCheckDefault">hasta $ 25.000</label>
                 </div>
                 <div className='checkContainers'>
-                  <input class="form-check-input sideBarBtn" type="checkbox" value=""  checked={checkedPrice} onChange={() => activateFilter('10000')}></input>
+                  <input class="filterCheck" type="checkbox" value=""  checked={checkedPrice3} onChange={() => activateFilter('50000')}></input>
                   <label class="form-check-label" for="flexCheckDefault">hasta $ 50.000</label>
                 </div>
                 <div className='checkContainers'>
-                  <input class="form-check-input sideBarBtn" type="checkbox" value=""  checked={checkedPrice} onChange={() => activateFilter('10000')}></input>
+                  <input class="filterCheck" type="checkbox" value=""  checked={checkedPrice4} onChange={() => activateFilter('100000')}></input>
                   <label class="form-check-label" for="flexCheckDefault">hasta $ 100.000</label>
                 </div>
                 <div className='checkContainers'>
-                  <input class="form-check-input sideBarBtn" type="checkbox" value=""  checked={checkedPrice} onChange={() => activateFilter('10000')}></input>
+                  <input class="filterCheck" type="checkbox" value=""  checked={checkedPrice5} onChange={() => activateFilter('250000')}></input>
                   <label class="form-check-label" for="flexCheckDefault">hasta $ 250.000</label>
                 </div>
                 <div className='checkContainers'>
-                  <input class="form-check-input sideBarBtn" type="checkbox" value=""  checked={checkedPrice} onChange={() => activateFilter('10000')}></input>
+                  <input class="filterCheck" type="checkbox" value=""  checked={checkedPrice6} onChange={() => activateFilter('500000')}></input>
                   <label class="form-check-label" for="flexCheckDefault">hasta $ 500.000</label>
                 </div>
                 <div className='checkContainers'>
-                  <input class="form-check-input sideBarBtn" type="checkbox" value=""  checked={checkedPrice} onChange={() => activateFilter('10000')}></input>
+                  <input class="filterCheck" type="checkbox" value=""  checked={checkedPrice7} onChange={() => activateFilter('1000000')}></input>
                   <label class="form-check-label" for="flexCheckDefault">hasta $ 1.000.000</label>
                 </div>
                 <div className='checkContainers'>
-                  <input class="form-check-input sideBarBtn" type="checkbox" value=""  checked={checkedPrice} onChange={() => activateFilter('10000')}></input>
+                  <input class="filterCheck" type="checkbox" value=""  checked={checkedPrice8} onChange={() => activateFilter('+1000000')}></input>
                   <label class="form-check-label" for="flexCheckDefault">Más de $ 1.000.000</label>
                 </div>
               </div>
               <div className='sideBarSeparator'>
                 <h6><b>En oferta</b></h6>
                 <div className='checkContainers'>
-                  <input class="form-check-input sideBarBtn" type="checkbox" value="" checked={checkedSale} onChange={() => activateFilter('oferta')}></input>
+                  <input class="filterCheck" type="checkbox" value="" checked={checkedSale} onChange={() => activateFilter('oferta')}></input>
                   <label class="form-check-label" for="flexCheckDefault">En oferta</label>
                 </div>
               </div>
               <div className='sideBarSeparator'>
                 <h6><b>Nuevos productos</b></h6>
                 <div className='checkContainers'>
-                  <input class="form-check-input sideBarBtn" type="checkbox" value="" checked={checkedNew} onChange={() => activateFilter('nuevos')}></input>
+                  <input class="filterCheck" type="checkbox" value="" checked={checkedNew} onChange={() => activateFilter('nuevos')}></input>
                   <label class="form-check-label" for="flexCheckDefault">Recien llegados</label>
                 </div>
               </div>
               <div className='sideBarSeparator'>
                 <h6><b>Mejor valorados</b></h6>
                 <div className='checkContainers'>
-                  <input class="form-check-input sideBarBtn" type="checkbox" value="" checked={checked5stars} onChange={() => activateFilter('5stars')}></input>
+                  <input class="filterCheck" type="checkbox" value="" checked={checked5stars} onChange={() => activateFilter('5stars')}></input>
                   <label class="form-check-label" for="flexCheckDefault">{star}{star}{star}{star}{star}</label>
                 </div>
                 <div className='checkContainers'>
-                  <input class="form-check-input sideBarBtn" type="checkbox" value="" checked={checked4stars} onChange={() => activateFilter('4stars')}></input>
+                  <input class="filterCheck" type="checkbox" value="" checked={checked4stars} onChange={() => activateFilter('4stars')}></input>
                   <label class="form-check-label" for="flexCheckDefault">{star}{star}{star}{star}</label>
                 </div>
                 <div className='checkContainers'>
-                  <input class="form-check-input sideBarBtn" type="checkbox" value="" checked={checked3stars} onChange={() => activateFilter('3stars')}></input>
+                  <input class="filterCheck" type="checkbox" value="" checked={checked3stars} onChange={() => activateFilter('3stars')}></input>
                   <label class="form-check-label" for="flexCheckDefault">{star}{star}{star}</label>
                 </div>
                 <div className='checkContainers'>
-                  <input class="form-check-input sideBarBtn" type="checkbox" value="" checked={checked2stars} onChange={() => activateFilter('2stars')}></input>
+                  <input class="filterCheck" type="checkbox" value="" checked={checked2stars} onChange={() => activateFilter('2stars')}></input>
                   <label class="form-check-label" for="flexCheckDefault">{star}{star}</label>
                 </div>
                 <div className='checkContainers'>
-                  <input class="form-check-input sideBarBtn" type="checkbox" value="" checked={checked1stars} onChange={() => activateFilter('1stars')}></input>
+                  <input class="filterCheck" type="checkbox" value="" checked={checked1stars} onChange={() => activateFilter('1stars')}></input>
                   <label class="form-check-label" for="flexCheckDefault">{star}</label>
                 </div>
 

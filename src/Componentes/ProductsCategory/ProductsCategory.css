@@ -46,24 +46,35 @@
     justify-content: center;
     align-items: center;
     width: 90%;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
-.sortBtn {
+.sortOptionsContainer{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    width: 24%;
-    height: 30px;
+    align-items: baseline;
+    width: 25%;
+    height: 50px;
     align-self: flex-end;
     border-color:var(--colorBlanco);
     border-style: solid;
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: var(--sombraSmall);
     background-color: var(--colorBlanco);
-    padding: 10px;
+    padding: 5px;
+}
+
+.sortOptions {
+    width: 60%;
+    border-color:var(--colorGrisMedio);
+    border-style: solid;
+    border-radius: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .productsCategoryContainer{
@@ -103,6 +114,10 @@
     gap: 10px;
 }
 
+.filtersElem {
+    min-height: 200px;
+}
+
 .productsLengthContainer {
     display: flex;
     flex-direction: row;
@@ -112,9 +127,11 @@
 }
 
 .productsLength {
+    width: 30px;
+    height: 30px;
     border-color:transparent;
     border-style: solid;
-    border-radius: 10px;
+    border-radius: 50%;
     background-color: var(--colorGrisSuave);
 }
 
@@ -172,30 +189,14 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
     gap: 10px;
 }
 
-
-
-.sideBarBtn {
-    width: 50%;
-    border-color:transparent;
-    border-style: solid;
-    border-radius: 5px;
-    background-color: var(--colorPrincipalClaro);
+.filterCheck {
+    width: 25px;
+    height: 25px;
 }
-
-.sideBarBtn:hover {
-    box-shadow: var(--sombraSmall);
-    background-color: var(--colorAzulContraste);
-    color: var(--colorBlanco);
-} 
-
-.sideBarBtn:active {
-    background-color: var(--colorAzulContraste);
-    color: var(--colorBlanco);
-} 
 
 .productsCategoryCards{
     flex-grow: 1;
