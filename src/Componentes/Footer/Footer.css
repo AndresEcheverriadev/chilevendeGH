@@ -10,7 +10,7 @@
     align-items: center;
     padding-top: 10px;
     padding-bottom: 10px; 
-    background-color: var(--colorPrincipal);
+    background-color: var(--colorAzulContraste);
 }
 
 .footerLogo {
@@ -18,12 +18,13 @@
     height: auto;
 }
 
-#mlinkFooter {
+#mlinkFooter, #compraslink, #ventaslink {
+    color: var(--colorBlanco);
     font-size: var(--li);
 }
 
 #mlinkFooter:hover, #ventaslink:hover, #compraslink:hover  {
-    color:var(--colorBlanco) ;
+    color:var(--colorGrisClaro) ;
 }
 
 .footerContent {
@@ -41,7 +42,7 @@
 .footerContent--Columns {
     display: flex;
     flex-direction: column;
-    color:var(--colorGrisOscuro);
+    color:var(--colorBlanco);
     justify-content: flex-start;
     align-items: flex-start;
     text-align: left;
@@ -50,7 +51,6 @@
 .socialIcons {
     display: flex;
     flex-direction: column;
-    color:var(--colorGrisOscuro);
     justify-content: center;
     align-items: center;
     text-align: left;
@@ -63,6 +63,10 @@
     gap: 10px;
 }
 
-.socialIcon:hover {
+.socialIcon {
     color: var(--colorBlanco);
+}
+
+.socialIcon:hover {
+    color: var(--colorGrisClaro);
 }

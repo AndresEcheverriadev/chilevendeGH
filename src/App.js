@@ -17,6 +17,7 @@ function App() {
             <Route path='/' element={<HomePage/>} />
             <Route path='/:productoCategory/:productoName' element={<ProductDetail/>} />
             <Route path='/:productoCategory' element={<ProductsCategory/>} />
+            <Route path='/:productoSubCategory' element={<ProductsCategory/>} />
             <Route path='/login' element={<UserLogin/>} /> 
             <Route path='/crear-cuenta' element={<CreateUser/>} />
             <Route path='/*' element={<Navigate to='/'/>} /> 

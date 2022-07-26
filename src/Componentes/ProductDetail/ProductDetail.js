@@ -8,7 +8,7 @@ import './ProductDetail.css'
 
 function ProductDetail() {
 
-    const {productoCategory,productoName} = useParams();
+    const {productoCategory,productoName,productoSubcategory} = useParams();
     const productFiltered = productSet.filter(producto => (producto.category && producto.name) === (productoCategory && productoName));
     const productDetail = productFiltered.map((producto) => {
         const discountPercentage = Math.round(((producto.price-producto.beforePrice)/producto.beforePrice)*100);
@@ -34,7 +34,7 @@ function ProductDetail() {
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item "><a className='breadcrumbLinks headerLink' href={`/${producto.category}`}><b>{producto.category}</b></a></li>
-                    {producto.subcategories.map((subcategorias) => <li class="breadcrumb-item " ><a className='breadcrumbLinks'  href={subcategorias}>{subcategorias}</a></li>)}
+                    {producto.subcategories.map((subcategorias) => <li class="breadcrumb-item " ><a className='breadcrumbLinks'  href={`/${producto.subcategories[0]}`}>{subcategorias}</a></li>)}
                     <li class="breadcrumb-item active"></li>
                 </ol>
             </nav>

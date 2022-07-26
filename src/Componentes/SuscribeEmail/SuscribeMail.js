@@ -23,12 +23,12 @@ function SuscribeMail() {
 
   return (
     <div className='suscribeMail--Container'>
-        <h5>Suscríbete a nuestro boletín de noticias</h5>
+        <h5 className='suscribeMail--Title'>Suscríbete a nuestro boletín de noticias</h5>
         <div className='suscribeMail--Inputs'>
             <input type='email' class="form-control" placeholder="Tu correo electrónico" onChange={(e) => validateEmail(e)}></input>
             <button class="btn btn-outline-secondary btnSuscribe" type="button" id="button-addon2">Suscribirse</button>
         </div>
-        <div className='suscribeMail--InputError'><span>{emailError}</span></div>
+        <div className='suscribeMail--InputError'><b><span>{emailError}</span></b></div>
     </div>
   )
 }

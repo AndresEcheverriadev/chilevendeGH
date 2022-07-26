@@ -9,10 +9,19 @@
     margin-bottom: 40px;
 }
 
+.suscribeMail--Title {
+    text-align: left;
+    width: 45%;
+    padding-left: 10px;
+}
+
+
+
+
 .suscribeMail--Inputs {
     display: flex;
     flex-direction: row;
-    min-width: 50%;
+    min-width: 45%;
     height: auto;
     justify-content: center;
     align-items: center;
@@ -22,15 +31,19 @@
 .btnSuscribe {
     border-radius: 5px !important;
     background-color: var(--colorAzulContraste) !important;
-    color: var(--colorGrisClaro) !important;
+    color: var(--colorBlanco) !important;
     border-color: transparent !important;
 }
 
 .btnSuscribe:hover {
-    color: var(--colorBlanco) !important;
+    color: var(--colorGrisClaro) !important;
 }
 
 .suscribeMail--InputError{
+    padding-top: 5px;
+    padding-left: 10px;
+    width: 45%;
+    text-align: left;
     font-size: var(--notification);
     color: var(--colorError);
 }
