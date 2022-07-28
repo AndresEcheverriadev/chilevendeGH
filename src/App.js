@@ -3,26 +3,31 @@ import {BrowserRouter, Navigate, Route, Routes} from 'react-router-dom';
 import HomePage from './Componentes/HomePage/HomePage';
 import ProductDetail from './Componentes/ProductDetail/ProductDetail';
 import ProductsCategory from './Componentes/ProductsCategory/ProductsCategory';
+import CartPage from './Componentes/CartPage/CartPage';
 import UserLogin from './Componentes/UserLogin/UserLogin';
 import CreateUser from './Componentes/CreateUser/CreateUser';
 import './App.css';
+import CartContextProvider from './Componentes/CartContext/CartContext';
 
 
 
 function App() {
   return (
     <BrowserRouter>
-        <div className='App'>
-          <Routes>
-            <Route path='/' element={<HomePage/>} />
-            <Route path='/:productoCategory/:productoName' element={<ProductDetail/>} />
-            <Route path='/:productoCategory' element={<ProductsCategory/>} />
-            <Route path='/:productoSubCategory' element={<ProductsCategory/>} />
-            <Route path='/login' element={<UserLogin/>} /> 
-            <Route path='/crear-cuenta' element={<CreateUser/>} />
-            <Route path='/*' element={<Navigate to='/'/>} /> 
-          </Routes>
-        </div>
+        <CartContextProvider>
+          <div className='App'>
+            <Routes>
+              <Route path='/' element={<HomePage/>} />
+              <Route path='/:productoCategory/:productoName' element={<ProductDetail/>} />
+              <Route path='/:productoCategory' element={<ProductsCategory/>} />
+              <Route path='/:productoSubCategory' element={<ProductsCategory/>} />
+              <Route path='/carrito' element={<CartPage/>} />
+              <Route path='/login' element={<UserLogin/>} /> 
+              <Route path='/crear-cuenta' element={<CreateUser/>} />
+              <Route path='/*' element={<Navigate to='/'/>} /> 
+            </Routes>
+          </div>
+        </CartContextProvider>
     </BrowserRouter>
   );
 }

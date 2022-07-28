@@ -1,0 +1,74 @@
+.bagItemContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.bagItemData {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.bagItemImgContainer {
+    border-style:solid;
+    border-width: 2px;
+    border-color: #cccccc;
+    width: 10%;
+    height: auto;
+    border-radius: 5px;
+    padding: 1px;
+    background-color: #cccccc;
+}
+
+.bagItemImage {
+    max-width: 100% ;
+    max-height: 100%;
+}
+
+.bagItemTxtContainer {
+    display: flex;
+    flex-direction:column;
+    width: 70%;
+    text-align: start;
+}
+
+.bagItemTitle {
+    font-size: 16px;
+    color: #cccccc;
+}
+
+.bagItemProductTxtContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.bagItemPrice {
+    font-size: 14px;
+    color: #cccccc;
+}
+
+.bagItemQuantity {
+    font-size: 14px;
+    color: #cccccc;
+}
+
+.bagItemSubtotal {
+    font-size: 14px;
+    color: #cccccc;
+}
+
+.btnDeleteItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 30px;
+    font-size: 14px;
+    gap: 10px;
+ }
