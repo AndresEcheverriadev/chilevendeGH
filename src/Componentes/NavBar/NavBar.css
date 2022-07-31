@@ -134,6 +134,7 @@
 }
 
 .cartControls--qTip {
+    visibility: visible;
     text-align: center;
     position: relative;
     font-size: var(--notification);

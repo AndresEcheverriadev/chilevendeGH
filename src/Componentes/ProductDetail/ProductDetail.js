@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { NavLink, useParams } from 'react-router-dom'
 import NavBar from '../NavBar/NavBar'
-import Footer from '../Footer/Footer'
+import ProductQuantity from '../ProductQuantity/ProductQuantity'
 import productSet from '../../Metasite/productSet'
 import SugestedProducts from '../SugestedProducts/SugestedProducts'
+import Footer from '../Footer/Footer'
 import './ProductDetail.css'
 
 function ProductDetail() {
@@ -102,7 +103,7 @@ function ProductDetail() {
                     </div>
 
                     <div className="productBuy--quantityContainer">
-                        <p className='quantityTitle'>Cantidad:</p><div className='quantityPlusBtns'><button id='plusbtn'>+</button><input className='quantityInput' type="number" placeholder='1' /><button id='minusbtn'>-</button></div><p className='quantityTitle'>unidades</p>
+                        <ProductQuantity/>
                     </div>
 
                     <div className="productBuy--paymentsContainer">

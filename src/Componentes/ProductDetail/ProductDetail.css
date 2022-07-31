@@ -484,69 +484,12 @@
     width: 100%;
     height: auto;
     padding-bottom: 25px;
-    /* border-bottom: 1px solid var(--colorGrisClaro) ; */
     gap: 10px;
-}
-
-.quantityPlusBtns {
-    display: flex;
-    flex-direction: row;
-    width: 20px;
-    height: 20px;
-    justify-content: center;
-    align-items:center;
-    margin-left: 2px;
-    margin-right: 2px;
-}
-
-#plusbtn:hover,#minusbtn:hover {
-    background-color: var(--colorAzulContraste);
-    color: var(--colorBlanco);
-}
-
-#plusbtn,#minusbtn {
-    line-height: 0;
-    min-width: 20px;
-    height: 25px;
-    text-align: center;
-    padding: 0;
-    color: var(--colorAzulContraste);
-}
-
-#plusbtn  {
-   border-style: solid;
-   border-width: 2px;
-   border-color:var(--colorAzulContraste);
-   border-top-left-radius: 10px;
-   border-bottom-left-radius: 10px;
-   border-right-style: hidden ;
-}
-
-#minusbtn {
-    border-style: solid;
-   border-width: 2px;
-   border-color:var(--colorAzulContraste);
-   border-top-right-radius: 10px;
-   border-bottom-right-radius: 10px;
-   border-left-style: hidden ;
-}
-
-.quantityInput {
-    line-height: 0;
-    width: 25px;
-    height: 25px;
-    text-align: center;
-    border-top: solid 2px var(--colorAzulContraste) ;
-    border-bottom: solid 2px var(--colorAzulContraste) ;
-    border-right-style:hidden ;
-    border-left-style:hidden ;
-    color: var(--colorAzulContraste);
 }
 
 .productBuy--paymentsContainer {
     display: flex;
     flex-direction: column;
-    /* border-bottom: 1px solid var(--colorGrisClaro) ; */
     padding-bottom: 25px;
     margin-bottom: 10px;
     gap: 10px;

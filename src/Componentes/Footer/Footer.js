@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react'
 import logo from '../Logo/LogoHorizBN.png'
-import './Footer.css'
 import { NavLink } from 'react-router-dom'
+import './Footer.css'
+
 
 function Footer() {
       const me = "contacto";

@@ -6,3 +6,134 @@
     justify-content: flex-start;
     align-items: center;
 }
+
+.inCartContainer {
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    height: auto;
+    justify-content: center;
+    align-items: flex-start;
+    border-width: 1px;
+    border-color: transparent;
+    border-style: solid;
+    border-radius: 10px;
+    background-color: var(--colorGrisTransparente);
+}
+
+.cartListContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 80%;
+    height: auto;
+    gap: 10px;
+    margin: 10px ;
+}
+
+.cartListTitles {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    text-align: left;
+    border-width: 1px;
+    border-color: var(--colorAzulContraste);
+    border-style: solid;
+    border-radius: 10px;
+}
+
+.buyControlsContainer {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: auto;
+    margin: 10px ;
+    gap: 20px;
+}
+
+.toCheckoutContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+    width: 100%;
+    height: 50px;
+    border-width: 1px;
+    border-color: transparent;
+    border-style: solid;
+    border-radius: 10px;
+    background-color: var(--colorAzulContraste);
+}
+
+.toCheckoutContainer:hover {
+    border-color: var(--colorBlanco);
+    box-shadow: var(--Sombra);
+    color: var(--colorPrincipalClaro);
+}
+
+.toCheckoutContainer button {
+    color: var(--colorBlanco);
+}
+
+.tocheckoutIcon {
+    color: var(--colorBlanco);
+}
+
+.sumsContainer {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    text-align: left;
+    border-width: 1px;
+    border-color: var(--colorAzulContraste);
+    border-style: solid;
+    border-radius: 10px;
+}
+
+.buyControls--paymentsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    border-width: 1px;
+    border-color: var(--colorAzulContraste);
+    border-style: solid;
+    border-radius: 10px;
+    gap: 10px;
+}
+
+.paymentsTitle {
+    text-align: center;
+}
+
+.webpayIcons img {
+    width: 150px;
+    height: auto;
+}
+
+.paymentsIcons {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    gap: 5px;
+}
+
+.cardImage {
+    width: 50px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.paymentsSecure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
