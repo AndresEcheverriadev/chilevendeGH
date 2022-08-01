@@ -26,6 +26,7 @@ html {
   --bold : bold;
   --Sombra: 5px 5px 10px var(--colorGrisClaro); 
   --sombraSmall: 2px 2px 2px var(--colorGrisClaro); 
+  --widthCartList: 80%;
 }
 
 body {
@@ -100,3 +101,4 @@ li {
 .noBorder {
   border-bottom: transparent !important;
 }
+

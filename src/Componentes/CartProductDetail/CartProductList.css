@@ -1,0 +1,37 @@
+.cartItemData--checkout {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 5px;
+    border-bottom-width: 1px;
+    border-bottom-color: var(--colorGrisClaro);
+    border-bottom-style: solid;
+    margin: 5px;
+}
+
+.cartItemTitle--checkout {
+    color: var(--colorAzulContraste);
+}
+
+.cartItemThumb--checkout {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: flex-start;
+    width: 100%;
+    height: auto;
+}
+
+.cartItemQuantity--checkout {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: flex-start;
+    width: 100%;
+    height: auto;
+}
+
+.cartItemSubtotal--checkout {
+    color: var(--colorAzulContraste);
+}

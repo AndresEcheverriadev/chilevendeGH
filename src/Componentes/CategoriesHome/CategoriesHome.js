@@ -11,8 +11,8 @@ function CategoriesHome() {
     })  
   return (
     <div className="categoriesHomeContainer">
-        <div className="categoriesHomeTitles">
-            <h5 className="categoriesTitle">Categorias</h5>
+        <div className="categoriesHomeTitles categoriescartPageTitles">
+            <h5 className="categoriesTitle">Categorías de producto</h5>
         </div>
         <div className="categoriesHomeCards">{selectorCategorias}</div>
     </div>

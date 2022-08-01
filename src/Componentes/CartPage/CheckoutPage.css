@@ -91,7 +91,7 @@
     background-color: var(--colorGrisTransparente);
 }
 
-.cartListContainer {
+.inputInfoCheckoutContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;

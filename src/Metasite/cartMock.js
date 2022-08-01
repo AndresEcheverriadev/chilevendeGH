@@ -1,7 +1,7 @@
 const cartMock = [{
     image: ['/demoimg2.png'],
     price: 3990,
-    name: 'Funda Para Cojin Terciopelo con Pompones 45x45cm Funda Para Cojin Terciopelo con Pompones 45x45cm Funda Para Cojin Terciopelo con Pompones 45x45cm Funda Para Cojin Terciopelo con Pompones 45x45cm Funda Para Cojin Terciopelo con Pompones 45x45cm Funda Para Cojin Terciopelo con Pompones 45x45cm',
+    name: 'Funda Para Cojin Terciopelo con Pompones 45x45cm',
     id: '0002ab',
     cantidadCompra: 1
 },

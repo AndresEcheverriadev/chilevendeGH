@@ -4,10 +4,12 @@ import HomePage from './Componentes/HomePage/HomePage';
 import ProductDetail from './Componentes/ProductDetail/ProductDetail';
 import ProductsCategory from './Componentes/ProductsCategory/ProductsCategory';
 import CartPage from './Componentes/CartPage/CartPage';
+import CartContextProvider from './Componentes/CartContext/CartContext';
+import CheckoutPage from './Componentes/CartPage/CheckoutPage';
 import UserLogin from './Componentes/UserLogin/UserLogin';
 import CreateUser from './Componentes/CreateUser/CreateUser';
 import './App.css';
-import CartContextProvider from './Componentes/CartContext/CartContext';
+
 
 
 
@@ -22,6 +24,7 @@ function App() {
               <Route path='/:productoCategory' element={<ProductsCategory/>} />
               <Route path='/:productoSubCategory' element={<ProductsCategory/>} />
               <Route path='/carrito' element={<CartPage/>} />
+              <Route path='/checkout' element={<CheckoutPage/>} />
               <Route path='/login' element={<UserLogin/>} /> 
               <Route path='/crear-cuenta' element={<CreateUser/>} />
               <Route path='/*' element={<Navigate to='/'/>} /> 

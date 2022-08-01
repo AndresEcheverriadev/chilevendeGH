@@ -2,16 +2,19 @@ import React from 'react'
 import { useContext } from 'react'
 import {Link} from "react-router-dom";
 import NavBar from '../NavBar/NavBar'
-import CategoriesHome from '../CategoriesHome/CategoriesHome'
-import VisitedHome from '../VisitedHome/VisitedHome';
 import Footer from '../Footer/Footer'
-import {CartContext}  from '../CartContext/CartContext'
 import CartProductDetail from '../CartProductDetail/CartProductDetail';
-import noItems from './noItems_emoji.png'
-import './CartPage.css'
+import { CartContext } from '../CartContext/CartContext';
+import noItems from './noItems_emoji.png';
 import productSet from '../../Metasite/productSet';
+import CategoriesHome from '../CategoriesHome/CategoriesHome';
+import VisitedHome from '../VisitedHome/VisitedHome';
+import validator from 'validator'
+import './CheckoutPage.css';
+import CartProductList from '../CartProductDetail/CartProductList';
 
-function CartPage() {
+
+function CheckoutPage() {
   
   const {cartList,clearCart,cartTotalItems,cartTotalBuy} = useContext(CartContext);
   const totalProductos = productSet.length
@@ -31,10 +34,10 @@ function CartPage() {
                   : 
                   <>
                   <div className="checkoutIndicatorContainer">
-                      <div className='checkoutIndicatorCart indicatorActive'>
+                      <div className='checkoutIndicatorCart'>
                         <h5>Carro de compras</h5>
                       </div>
-                      <div className='checkoutIndicatorInfo'>
+                      <div className='checkoutIndicatorInfo indicatorActive'>
                         <h5>Datos de facturación</h5>
                       </div>
                       <div className='checkoutIndicatorReady'>
@@ -42,18 +45,43 @@ function CartPage() {
                       </div>
                   </div>
                   <div className='inCartContainer' >
-                    <div className='cartListContainer'>
-                      <div className='cartListTitles'>
-                        <h6 className='totalProductos'>{cartTotalItems} productos</h6>
-                      </div>
-                      
-                      {
-                        cartList.map((product) => <CartProductDetail key={product.id} product={product}/>)
-                      }
+                    <div className='inputInfoCheckoutContainer'>
+                      {/* <form className='createUserFormContainer'>
+                        <div className="mb-3">
+                          <label htmlfor="exampleInputEmail1" className="form-label">Correo electrónico</label>
+                          <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" onChange={(e) => validateEmail(e)}/>
+                          <div className='createUserForm--emailError'><span>{emailError}</span></div>
+                        </div>
+                        <div className="mb-3">
+                          <label htmlfor="exampleInputPassword1" className="form-label">Contraseña</label>
+                          <input type="password" className="form-control" id="exampleInputPassword1"onChange={(e) => validatePassword(e)}/>
+                          <div className='createUserForm--passwordError'><span>{passwordError}</span></div>
+                        </div>
+                        <div className="mb-3 form-check">
+                          <div className='form-check--checkTerms'>
+                            <input type="checkbox" className="form-check-input" id="exampleCheck1" checked={checkedTerms} onClick={handleTermsCheckbox}/>
+                            <label class="form-check-label" htmlfor="exampleCheck1">Leí y acepto los&nbsp;<NavLink to='/' className='checkTerms--link'>Términos y Condiciones</NavLink></label>
+                          </div>
+                        </div>
+                        <div className='createUserSelector'>
+                          <div className="form-check">
+                            <input className="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault2" onChange={() => setcheckedVendedor(!checkedVendedor)}/>
+                            <label className="form-check-label" htmlfor="flexRadioDefault1">&nbsp;Quiero vender</label>
+                          </div>   
+                        </div>  
+                        <div className='createUserForm--inputError'><span>{inputError}</span></div>
+                        <div className='createUserForm--buttonsContainer'>
+                          <button type="submit" className='btn btn-primary createUserForm--btnCreate' onClick={createCheck}>Crear cuenta {isVendedor}</button>
+                          <NavLink to='/login'><button type="submit" className="btn btn-outline-primary  createUserForm--btnSession">Iniciar sesión</button></NavLink>
+                        </div>
+                      </form> */}
                     </div>
                     <div className='buyControlsContainer'>
                         <div className='sumsContainer'>
                           <h5>Resumen de compra</h5>
+                            {
+                              cartList.map((product) => <CartProductList key={product.id} product={product}/>)
+                            }
                           <h6 className='subtotalSum'><b>Total ${cartTotalBuy}</b></h6>
                           <Link to='/checkout' className='toCheckoutContainer'>
                             <button variant='light' className='btnToCheckout' id="clickCheckout">Proceder al pago</button>
@@ -88,4 +116,4 @@ function CartPage() {
   )
 }
 
-export default CartPage
+export default CheckoutPage
