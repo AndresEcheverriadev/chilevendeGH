@@ -1,6 +1,6 @@
 import React from 'react'
 import { useContext } from 'react'
-import {Link} from "react-router-dom";
+import {Link,NavLink} from "react-router-dom";
 import NavBar from '../NavBar/NavBar'
 import Footer from '../Footer/Footer'
 import CartProductDetail from '../CartProductDetail/CartProductDetail';
@@ -9,18 +9,54 @@ import noItems from './noItems_emoji.png';
 import productSet from '../../Metasite/productSet';
 import CategoriesHome from '../CategoriesHome/CategoriesHome';
 import VisitedHome from '../VisitedHome/VisitedHome';
-import validator from 'validator'
+import useValidator from '../../Metasite/useValidator';
+import CheckoutProductList from '../CheckoutProductList/CheckoutProductList';
+import NewAddressInput from '../NewAddressInput/NewAddressInput';
 import './CheckoutPage.css';
-import CartProductList from '../CartProductDetail/CartProductList';
+import ErrorTip from '../ErrorTip/ErrorTip';
 
 
 function CheckoutPage() {
   
-  const {cartList,clearCart,cartTotalItems,cartTotalBuy} = useContext(CartContext);
+  const {cartList,clearCart,cartTotalItems,cartTotalBuy,isLogged,mockLogin} = useContext(CartContext);
   const totalProductos = productSet.length
+  const { inputPassword,
+    validatedPassword,
+    inputEmail,
+    validatedEmail,
+    checkedTerms,
+    checkedVendedor,
+    emailError,
+    passwordError,
+    inputError,
+    createUserEmoji,
+    inputType,
+    isVendedor,
+    setinputPassword,
+    setvalidatedPassword,
+    setinputEmail,
+    setvalidatedEmail,
+    setcheckedTerms,
+    setcheckedVendedor,
+    setEmailError,
+    setPasswordError,
+    setInputError,
+    setcreateUserEmoji,
+    setinputType,
+    setIsVendedor,
+    vendedorTitle,
+    emailErrorMesagge,
+    inputErrorMesagge,
+    passwordErrorMesagge,
+    validateEmail,
+    validatePassword,
+    handleTermsCheckbox,
+    createCheck,
+    iconVendeEmoji,
+    iconCompraEmoji } = useValidator();
 
   return (
-    <div className='cartPageContainer'>
+    <div className='checkoutPageContainer'>
         <NavBar/>
         {
                   cartTotalItems === 0  ?
@@ -44,43 +80,90 @@ function CheckoutPage() {
                         <h5>Pedido listo</h5>
                       </div>
                   </div>
-                  <div className='inCartContainer' >
-                    <div className='inputInfoCheckoutContainer'>
-                      {/* <form className='createUserFormContainer'>
-                        <div className="mb-3">
-                          <label htmlfor="exampleInputEmail1" className="form-label">Correo electrónico</label>
-                          <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" onChange={(e) => validateEmail(e)}/>
-                          <div className='createUserForm--emailError'><span>{emailError}</span></div>
-                        </div>
-                        <div className="mb-3">
-                          <label htmlfor="exampleInputPassword1" className="form-label">Contraseña</label>
-                          <input type="password" className="form-control" id="exampleInputPassword1"onChange={(e) => validatePassword(e)}/>
-                          <div className='createUserForm--passwordError'><span>{passwordError}</span></div>
-                        </div>
-                        <div className="mb-3 form-check">
-                          <div className='form-check--checkTerms'>
-                            <input type="checkbox" className="form-check-input" id="exampleCheck1" checked={checkedTerms} onClick={handleTermsCheckbox}/>
-                            <label class="form-check-label" htmlfor="exampleCheck1">Leí y acepto los&nbsp;<NavLink to='/' className='checkTerms--link'>Términos y Condiciones</NavLink></label>
+
+                  <div className='checkoutDataContainer' >
+
+                    <div className='inputInfoCheckout'>
+                      {isLogged === true? 
+                      <>
+                        
+                        <div className="buyerDataContainer">
+
+                          <div className='checkoutLoginData'>
+                            <h5>Dirección de envío</h5>
+                            <div className='loginDataName'><h6>{`${mockLogin.nombre} ${mockLogin.apellido}`}</h6></div>
+                            <div className='loginDataAddress'>
+                              <h6>{mockLogin.calle}</h6>
+                              <h6>{mockLogin.ciudad}</h6>
+                              <h6>{mockLogin.numeroTel}</h6>
+                              <h6>{mockLogin.pais}</h6>
+                              <h6>{mockLogin.region}</h6>
+                              <h6>{mockLogin.comuna}</h6>
+                              <button className='checkoutAddressEditBtn'>Editar dirección<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                                <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                                </svg>
+                              </button>
+                            </div>
+                            
                           </div>
+
+                          <div className='checkoutSelector'>
+                            <h5>Método de envío</h5>
+                            <select name="" id="">
+                              <option value="">Selecciona método de despacho</option>
+                              <optgroup label="Retiro en Tienda">
+                                <option value="">Retiro en Tienda $0</option>
+                              </optgroup>
+                              <optgroup label="Envío Región Metropolitana">
+                                <option value="">RM-Estandar 2 a 5 días hábiles $5.580</option>
+                              </optgroup>
+                              <optgroup label="Envío Nacional">
+                                <option value="">Nacional-Estandar 7 a 10 días hábiles $10.580</option>
+                              </optgroup>
+                            </select>
+                            <ErrorTip errorText={'Debes elegir método de despacho'}/>
+                          </div>
+
+                          <div className='billingLoginData'>
+                            <h5>Dirección de facturación</h5>
+                            <div className='billingCheckContainer'>
+                              <input class="billingCheck" type="checkbox" value=""></input>
+                              <label>La misma que la dirección de envío</label>
+                            </div>
+                            <div className='billingLoginDataName'><h6>{`${mockLogin.nombre} ${mockLogin.apellido}`}</h6></div>
+                            <div className='billingLoginDataAddress'>
+                              <h6>{mockLogin.calle}</h6>
+                              <h6>{mockLogin.ciudad}</h6>
+                              <h6>{mockLogin.numeroTel}</h6>
+                              <h6>{mockLogin.pais}</h6>
+                              <h6>{mockLogin.region}</h6>
+                              <h6>{mockLogin.comuna}</h6>
+                              <button className='billingAddressEditBtn'>Editar dirección<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                                <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                                </svg>
+                              </button>
+                            </div>
+                            
+                          </div>
+                         
+                          
+                          
                         </div>
-                        <div className='createUserSelector'>
-                          <div className="form-check">
-                            <input className="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault2" onChange={() => setcheckedVendedor(!checkedVendedor)}/>
-                            <label className="form-check-label" htmlfor="flexRadioDefault1">&nbsp;Quiero vender</label>
-                          </div>   
-                        </div>  
-                        <div className='createUserForm--inputError'><span>{inputError}</span></div>
-                        <div className='createUserForm--buttonsContainer'>
-                          <button type="submit" className='btn btn-primary createUserForm--btnCreate' onClick={createCheck}>Crear cuenta {isVendedor}</button>
-                          <NavLink to='/login'><button type="submit" className="btn btn-outline-primary  createUserForm--btnSession">Iniciar sesión</button></NavLink>
-                        </div>
-                      </form> */}
+                      </>
+                      : null
+
+
+
+                      }
+                      
+                     
                     </div>
+
                     <div className='buyControlsContainer'>
                         <div className='sumsContainer'>
                           <h5>Resumen de compra</h5>
                             {
-                              cartList.map((product) => <CartProductList key={product.id} product={product}/>)
+                              cartList.map((product) => <CheckoutProductList key={product.id} product={product}/>)
                             }
                           <h6 className='subtotalSum'><b>Total ${cartTotalBuy}</b></h6>
                           <Link to='/checkout' className='toCheckoutContainer'>

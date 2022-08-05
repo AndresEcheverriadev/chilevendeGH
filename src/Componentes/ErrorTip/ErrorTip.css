@@ -1,0 +1,19 @@
+.ErrorTipContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: auto;
+    height: 30px;
+    border-width: 1px;
+    border-color: var(--colorError);
+    border-style: solid;
+    border-radius: 5px;
+    background-color: var(--colorBlanco);
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: var(--colorError);
+    gap: 5px;
+}

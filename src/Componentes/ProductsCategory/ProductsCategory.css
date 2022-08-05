@@ -157,11 +157,17 @@
 }
 
 .clearFiltersBtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-width: 1px;
     border-color:var(--colorAzulContraste);
     border-style: solid;
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: var(--colorGrisSuave);
     color: var(--colorAzulContraste);
+    gap: 5px;
 }
 
 .clearFiltersBtn:hover {
@@ -182,7 +188,6 @@
     padding: 20px;
     gap: 10px;
     text-align: left;
-    /* border-bottom: 2px solid var(--colorGrisSuave) ; */
 }
 
 .checkContainers {

@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react'
 import {NavLink} from 'react-router-dom'
-// import fakeUsers from '../../Metasite/loginCheck'
 import Logo from '../Logo/Logo'
 import WelcomeEmoji from './welcome_emoji.png'
 import SuccessEmoji from './welcome_emoji_success.png'

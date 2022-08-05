@@ -1,0 +1,57 @@
+.newAddressFormContainer {
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    height: auto;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    text-align: left;
+}
+
+.newAddressFormInputs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width:100%;
+    height: auto;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.newAddressFormInputs input, .newAddressFormInputs select {
+    width: 45%;
+    height: 30px;
+    border-width: 1px;
+    border-color: var(--colorAzulContraste);
+    border-style: solid;
+    border-radius: 10px;
+}
+
+.btnAddAddress {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items:center;
+    width: 25%;
+    height: 30px;
+    border-width: 1px;
+    border-color: transparent;
+    border-style: solid;
+    border-radius: 10px;
+    background-color: var(--colorAzulContraste);
+    color: var(--colorBlanco);
+    padding: 10px;
+    gap: 20px;
+}
+
+.btnAddAddress:hover {
+    border-color: var(--colorBlanco);
+    box-shadow: var(--Sombra);
+    color: var(--colorPrincipalClaro);
+}
+
+
+
+

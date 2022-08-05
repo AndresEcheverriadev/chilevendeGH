@@ -1,4 +1,4 @@
-.cartPageContainer {
+.checkoutPageContainer {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -77,7 +77,7 @@
     color: var(--colorAzulContraste); 
 }
 
-.inCartContainer {
+.checkoutDataContainer {
     display: flex;
     flex-direction: row;
     width: 95%;
@@ -91,26 +91,112 @@
     background-color: var(--colorGrisTransparente);
 }
 
-.inputInfoCheckoutContainer {
+.inputInfoCheckout {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    width: var(--widthCartList);
+    flex-direction: row;
+    width: 80%;
     height: auto;
-    gap: 10px;
-    margin: 10px ;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
-.cartListTitles {
+.buyerDataContainer {
+    display: flex;
+    flex-direction: row;
     width: 100%;
     height: auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
     padding: 10px;
+    gap: 10px;
+}
+
+.checkoutLoginData, .billingLoginData {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.loginDataName, .billingLoginDataName {
+    width: 90%;
+    height: 40px;
     text-align: left;
+    border-width: 1px;
+    border-color: var(--colorGrisClaro);
+    border-style: solid;
+    border-radius: 10px;
+    background-color: var(--colorBlanco);
+    padding: 10px;
+}
+
+.loginDataAddress, .billingLoginDataAddress {
+    width: 90%;
+    height: auto;
+    text-align: left;
+    border-width: 1px;
+    border-color: transparent;
+    border-style: solid;
+    border-radius: 10px;
+    background-color: var(--colorGrisSuave);
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.checkoutSelector {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    height: auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.checkoutSelector select {
+    width: 90%;
+    height: 40px;
+    border-width: 2px;
+    border-color: var(--colorAzulContraste);
+    border-style: solid;
+    border-radius: 10px;
+    background-color: var(--colorBlanco);
+    padding: 5px;
+}
+
+.checkoutSelector select:hover {
+    box-shadow: var(--Sombra);
+}
+
+.checkoutAddressEditBtn, .billingAddressEditBtn {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px;
     border-width: 1px;
     border-color: var(--colorAzulContraste);
     border-style: solid;
     border-radius: 10px;
+    background-color: var(--colorBlanco);
+    gap: 10px;
+}
+
+.checkoutAddressEditBtn:hover, .billingAddressEditBtn:hover {
+    box-shadow: var(--Sombra);
+}
+
+.billingCheckContainer {
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
 }
 
 .buyControlsContainer {
@@ -120,6 +206,15 @@
     height: auto;
     margin: 10px ;
     gap: 20px;
+}
+
+.billingCheck {
+    width: 25px;
+    height: 25px;
+}
+
+.billingCheck:checked {
+    background-color: var(--colorAzulContraste) !important;
 }
 
 .toCheckoutContainer {
@@ -168,6 +263,7 @@
 .subtotalSum {
     margin-top: 10px;
     margin-bottom: 10px;
+    margin-left: 10px;
 }
 
 .buyControls--paymentsContainer {
@@ -220,3 +316,4 @@
 .footerContainer  {
     justify-self: flex-end;
 }
+

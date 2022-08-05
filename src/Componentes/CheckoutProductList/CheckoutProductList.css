@@ -3,11 +3,17 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    width: 100%;
+    height: auto;
     gap: 5px;
-    border-bottom-width: 1px;
-    border-bottom-color: var(--colorGrisClaro);
-    border-bottom-style: solid;
-    margin: 5px;
+    border-width: 1px;
+    border-color: var(--colorGrisClaro);
+    border-style: solid;
+    border-radius: 5px;
+    /* margin: 5px; */
+    margin-bottom: 5px;
+    margin-left: 5px;
+    padding: 5px;
 }
 
 .cartItemTitle--checkout {

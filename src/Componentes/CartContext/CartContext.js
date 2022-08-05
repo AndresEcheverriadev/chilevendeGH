@@ -6,7 +6,19 @@ export const CartContext = createContext([])
 
 function CartContextProvider({children}) {
 
-    const [cartList, setCartList] = useState(cartMock)
+    const [cartList, setCartList] = useState(cartMock);
+    const [isLogged,setIsLogged] =useState(true);
+
+    const mockLogin =  {
+        nombre: 'Andres',
+        apellido: 'Echeverria',
+        calle: 'Santa Victoria 340',
+        ciudad: 'Santiago',
+        numeroTel: 56992260895,
+        pais: 'Chile',
+        region: 'Metropolitana de Santiago',
+        comuna: 'Santiago Centro'
+    };
 
     const addToBag = (item,count)=>{
         const findDuplicates = cartList.find(
@@ -41,7 +53,7 @@ function CartContextProvider({children}) {
     },0);
 
     return (
-        <CartContext.Provider value={{cartList,deleteItem,addToBag,clearCart,subTotalItem,cartTotalItems,cartTotalBuy}}>
+        <CartContext.Provider value={{cartList,deleteItem,addToBag,clearCart,subTotalItem,cartTotalItems,cartTotalBuy,isLogged,mockLogin}}>
            {children}
         </CartContext.Provider>
     )

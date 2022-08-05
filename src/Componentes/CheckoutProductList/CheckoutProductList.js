@@ -1,9 +1,9 @@
 import React from 'react'
 import { useContext } from 'react'
 import { CartContext } from '../CartContext/CartContext';
-import './CartProductList.css'
+import './CheckoutProductList.css'
 
-function CartProductList({product}) {
+function CheckoutProductList({product}) {
     const {subTotalItem} = useContext(CartContext);
 
   return (
@@ -18,4 +18,4 @@ function CartProductList({product}) {
   )
 }
 
-export default CartProductList
+export default CheckoutProductList
