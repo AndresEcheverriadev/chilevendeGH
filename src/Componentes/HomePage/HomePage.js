@@ -2,7 +2,7 @@ import React from 'react'
 import NavBar from '../NavBar/NavBar'
 import CarrouselHome from '../CarrouselHome/CarrouselHome'
 import CharsetHome from '../CharsetHome/CharsetHome'
-import VisitedHome from '../VisitedHome/VisitedHome'
+import Carousel from '../Carousel/Carousel'
 import SaleHome from '../SaleHome/SaleHome'
 import NewHome from '../NewHome/NewHome'
 import CategoriesHome from '../CategoriesHome/CategoriesHome'
@@ -15,7 +15,9 @@ import Footer from '../Footer/Footer'
 import './HomePage.css'
 
 function HomePage() {
+
   return (
+    
     <div className='homePageContainer'>
         <NavBar/>
         <section className='homePage--carrouselHome'>
@@ -25,9 +27,9 @@ function HomePage() {
           <CharsetHome/>
         </section>
         <main className='homePage--body'>
-          <VisitedHome/>
-          <SaleHome/>
-          <NewHome/>
+          <Carousel title='Tu última visita' linktitle='Ver historial'/>
+          <Carousel title='Ofertas' linktitle='Ver todo'/>
+          <Carousel title='Recien llegados' linktitle='Ver todo'/>
           <CategoriesHome/>
           <SelectedHome1/>
           <SelectedHome2/>
@@ -36,11 +38,8 @@ function HomePage() {
         </main>
         <SuscribeMail/>
         <Footer/>
-        <div className='corpinfoContainer'>
-          <div className='corpinfo--copyright'>Copyright © 2021-2002 Chilevende.cl</div>
-          <div className='corpinfo--address'>Avenida Providencia 1208 Oficina 1603, Providencia, Santiago, Chile</div>
-        </div>
     </div>
+
   )
 }
 

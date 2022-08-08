@@ -1,4 +1,4 @@
-.visitedHomeContainer {
+.carouselContainer {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -9,7 +9,7 @@
     margin-bottom: 30px;
 }
 
-.visitedHomeTitles {
+.carouselTitles {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -19,11 +19,11 @@
     gap: 10px;
 }
 
-.visitedAll {
+.carouselAll {
     color: var(--colorAzulContraste);
 }
 
-.visitedHomeCards {
+.carouselCards {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -43,23 +43,23 @@
 }
 
 /* Carrousel Visited Start */
-    #wrapperVisited {
+    #wrapper {
     width: 100%;
     position: relative;
   }
   
-  #carouselVisited {
+  #carousel {
     overflow: auto;
     scroll-behavior: smooth;
     scrollbar-width: none;
   }
   
-  #carouselVisited::-webkit-scrollbar {
+  #carousel::-webkit-scrollbar {
     height: 0;
   }
   
-  #prevVisited,
-  #nextVisited {
+  #prev,
+  #next {
     display: flex;
     justify-content: center;
     align-content: center;
@@ -73,18 +73,18 @@
     fill: var(--colorBlanco);
   }
   
-  #prevVisited {
+  #prev {
     top: 50%;
     left: -20px;
     display: none;
   }
   
-  #nextVisited {
+  #next {
     top: 50%;
     right: -20px;
   }
   
-  #contentVisited {
+  #content {
     display: grid;
     grid-gap: 15px;
     grid-auto-flow: column;

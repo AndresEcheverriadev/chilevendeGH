@@ -50,6 +50,8 @@
     background-color: var(--colorBlanco);
 }
 
+/* Product Images */
+
 .productImages {
     display: flex;
     flex-direction: row;
@@ -112,6 +114,8 @@
     object-fit: contain;
     max-height:900px;
 }
+
+/* Product Info */
 
 .productInfo {
     display: flex;
@@ -413,6 +417,8 @@
     padding-right: 2px;
 }
 
+/* Product Buy */ 
+
 .productBuyControls {
     display: flex;
     flex-direction: column;
@@ -420,11 +426,10 @@
     align-items:center;
     gap: 10px;
     width: auto;
-
 }
 
 .productBuy--btnContainer {
-    width: 100%;
+    width: 90%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -454,7 +459,6 @@
     color: var(--colorPrincipalClaro);
 }
 
-
 .btnBuyLater {
     display: flex;
     flex-direction: column;
@@ -481,7 +485,7 @@
     flex-direction: row;
     justify-content: space-around;
     align-items:center;
-    width: 100%;
+    width: 90%;
     height: auto;
     padding-bottom: 25px;
     gap: 10px;
@@ -489,33 +493,11 @@
 
 .productBuy--paymentsContainer {
     display: flex;
-    flex-direction: column;
-    padding-bottom: 25px;
-    margin-bottom: 10px;
-    gap: 10px;
-}
-
-.paymentsTitle {
-    text-align: center;
-}
-
-.webpayIcons img {
-    width: 150px;
-    height: auto;
-}
-
-.paymentsIcons {
-    display: flex;
     flex-direction: row;
-    width: 100%;
+    justify-content: space-around;
+    align-items:center;
+    width: 90%;
     height: auto;
-    gap: 5px;
-}
-
-.cardImage {
-    width: 50px;
-    padding-left: 2px;
-    padding-right: 2px;
 }
 
 .productBuy--deliveryContainer {
@@ -523,12 +505,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 90%;
+    height: auto;
     border-width: 1px;
     border-color: var(--colorAzulContraste);
     border-style: solid;
     border-radius: 10px;
     padding: 10px;
-    color: var(--colorAzulContraste) !important;
 }
 
 .productBuy--deliveryContainer:hover {

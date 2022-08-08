@@ -1,0 +1,45 @@
+.paymentsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    border-width: 1px;
+    border-color: var(--colorAzulContraste);
+    border-style: solid;
+    border-radius: 10px;
+    gap: 10px;
+}
+
+.paymentsTitle {
+    text-align: center;
+}
+
+.webpayIcon {
+    width: 55%;
+    height: auto;
+}
+
+.paymentsIcons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.paymentsCardIcon {
+    width: 30px;
+    height: auto;
+}
+
+.paymentsSecure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}

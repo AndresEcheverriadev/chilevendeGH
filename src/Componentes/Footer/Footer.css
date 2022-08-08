@@ -8,8 +8,6 @@
     box-shadow: 0 -5px  10px var(--colorGrisClaro);
     justify-content: center;
     align-items: center;
-    padding-top: 10px;
-    padding-bottom: 10px; 
     background-color: var(--colorAzulContraste);
     margin-top: 20px;
 }
@@ -38,6 +36,8 @@
     align-items: flex-start;
     font-size: var(--p);
     gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .footerContent--Columns {
@@ -70,4 +70,23 @@
 
 .socialIcon:hover {
     color: var(--colorGrisClaro);
+}
+
+.corpinfoContainer {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--colorNegro);
+    width: 100%;
+    height: auto;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.corpinfo--copyright, .corpinfo--address {
+    width: 100%;
+    height: auto;
+    color: var(--colorGrisClaro);
+    font-size: var(--notification);
 }

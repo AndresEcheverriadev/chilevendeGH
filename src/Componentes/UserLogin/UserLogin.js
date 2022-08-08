@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react'
 import {NavLink} from 'react-router-dom'
 import Logo from '../Logo/Logo'
-import WelcomeEmoji from './welcome_emoji.png'
-import SuccessEmoji from './welcome_emoji_success.png'
+import WelcomeUser from '../imgs/WelcomeUser_emoji.png'
+import SuccessUser from '../imgs/WelcomeSuccess_emoji.png'
 import validator from 'validator'
 import './UserLogin.css'
 
@@ -13,7 +13,7 @@ function UserLogin() {
   const [validatedEmail, setvalidatedEmail] = useState(false);
   const [emailError, setEmailError] = useState('');
   const [inputError, setInputError] = useState('');
-  const [userLoginEmoji, setuserLoginEmoji] = useState(WelcomeEmoji);
+  const [userLoginEmoji, setuserLoginEmoji] = useState(WelcomeUser);
 
   const emailErrorMesagge = <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
                                 <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
@@ -56,10 +56,10 @@ function UserLogin() {
   useEffect(() => {
     if((validatedEmail === true) && (validatedPassword === true)) {
       setInputError('');
-      setuserLoginEmoji(SuccessEmoji);
+      setuserLoginEmoji(SuccessUser);
     }
     else {
-      setuserLoginEmoji(WelcomeEmoji);
+      setuserLoginEmoji(WelcomeUser);
     }
   }, [validatedEmail,validatedPassword]);
 

@@ -44,20 +44,3 @@
     margin-top: 5px;
     margin-bottom: 5px;
 }
-
-.corpinfoContainer {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    display: inherit;
-    flex-direction: column;
-    background-color: var(--colorNegro);
-    width: 100%;
-    height: auto;
-}
-
-.corpinfo--copyright, .corpinfo--address {
-    width: 100%;
-    height: auto;
-    color: var(--colorBlanco);
-    font-size: var(--notification);
-}

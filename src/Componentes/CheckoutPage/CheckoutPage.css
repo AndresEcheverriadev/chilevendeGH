@@ -73,7 +73,7 @@
 
 .indicatorActive {
     background-color: var(--colorBlanco);
-    border-color: var(--colorAzulContraste);   
+    border-color: transparent;   
     color: var(--colorAzulContraste); 
 }
 
@@ -217,7 +217,7 @@
     background-color: var(--colorAzulContraste) !important;
 }
 
-.toCheckoutContainer {
+.toPayContainer {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -231,17 +231,17 @@
     background-color: var(--colorAzulContraste);
 }
 
-.toCheckoutContainer:hover {
+.toPayContainer:hover {
     border-color: var(--colorBlanco);
     box-shadow: var(--Sombra);
     color: var(--colorPrincipalClaro);
 }
 
-.toCheckoutContainer button {
+.toPayContainer button {
     color: var(--colorBlanco);
 }
 
-.tocheckoutIcon {
+.toPayIcon {
     color: var(--colorBlanco);
 }
 
@@ -264,53 +264,6 @@
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 10px;
-}
-
-.buyControls--paymentsContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items:center;
-    width: 100%;
-    height: auto;
-    padding: 10px;
-    border-width: 1px;
-    border-color: var(--colorAzulContraste);
-    border-style: solid;
-    border-radius: 10px;
-    gap: 10px;
-}
-
-.paymentsTitle {
-    text-align: center;
-}
-
-.webpayIcons img {
-    width: 150px;
-    height: auto;
-}
-
-.paymentsIcons {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: auto;
-    gap: 5px;
-}
-
-.cardImage {
-    width: 50px;
-    padding-left: 2px;
-    padding-right: 2px;
-}
-
-.paymentsSecure {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: auto;
 }
 
 .footerContainer  {

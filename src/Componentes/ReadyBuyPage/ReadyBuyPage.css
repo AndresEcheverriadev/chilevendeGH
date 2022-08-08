@@ -1,4 +1,4 @@
-.cartPageContainer {
+.ReadyBuyPageContainer {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -73,104 +73,85 @@
 
 .indicatorActive {
     background-color: var(--colorBlanco);
-    border-color: var(--colorAzulContraste);   
+    border-color: transparent;   
     color: var(--colorAzulContraste); 
 }
 
-.inCartContainer {
+.readyMessaggeContainer {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 95%;
-    height: auto;
-    justify-content: center;
-    align-items: flex-start;
+    height: 1000px;
+    justify-content: flex-start;
+    align-items: center;
     border-width: 1px;
     border-color: transparent;
     border-style: solid;
     border-radius: 10px;
     background-color: var(--colorGrisTransparente);
+    padding: 20px;
 }
 
-.cartListContainer {
+.successEmoji {
+    width: 5%;
+    height: auto;
+    margin: 20px;
+}
+
+.successDataContainer {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
-    width: var(--widthCartList);
+    width: 40%;
     height: auto;
-    gap: 10px;
-    margin: 10px ;
-}
-
-.cartListTitles {
-    width: 100%;
-    height: auto;
-    padding: 10px;
-    text-align: left;
     border-width: 1px;
-    border-color: var(--colorAzulContraste);
+    border-color: var(--colorGrisMedio);
     border-style: solid;
-    border-radius: 10px;
+    border-radius: 5px;
+    padding: 10px;
 }
 
-.buyControlsContainer {
+.successDataShipping {
     display: flex;
     flex-direction: column;
-    width: 20%;
-    height: auto;
-    margin: 10px ;
-    gap: 20px;
-}
-
-.toCheckoutContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items:center;
+    justify-content: flex-start;
+    align-items: flex-start;
     width: 100%;
-    height: 50px;
-    border-width: 1px;
-    border-color: transparent;
-    border-style: solid;
-    border-radius: 10px;
-    background-color: var(--colorAzulContraste);
-    color: var(--colorBlanco);
+    height: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
-.toCheckoutContainer:hover {
-    border-color: var(--colorBlanco);
-    box-shadow: var(--Sombra);
-    color: var(--colorBlanco);
-}
-
-.toCheckoutContainer button {
-    color: var(--colorBlanco);
-}
-
-.toCheckoutIcon {
-    color: var(--colorBlanco);
-}
-
-.sumsContainer {
+.successDataAddress {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items:flex-start;
+    justify-content: flex-start;
+    align-items: flex-start;
     width: 100%;
     height: auto;
-    padding: 10px;
-    text-align: left;
     border-width: 1px;
-    border-color: var(--colorAzulContraste);
+    border-color: var(--colorGrisClaro);
     border-style: solid;
-    border-radius: 10px;
+    border-radius: 5px;
+    padding: 10px;
 }
 
-.subtotalSum {
-    margin-top: 10px;
-    margin-bottom: 10px;
+.successDataMethod {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: auto;
+    border-width: 1px;
+    border-color: var(--colorGrisClaro);
+    border-style: solid;
+    border-radius: 5px;
+    padding: 10px;
 }
 
-.footerContainer  {
-    justify-self: flex-end;
+.spacer  {
+    margin-top: 5px;
+    margin-bottom: 5px;
 }

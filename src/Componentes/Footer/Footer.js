@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react'
-import logo from '../Logo/LogoHorizBN.png'
-import { NavLink } from 'react-router-dom'
-import './Footer.css'
-
+import React, { useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
+import logo from '../Logo/LogoHorizBN.png';
+import './Footer.css';
 
 function Footer() {
+
       const me = "contacto";
       const place = "chilevende.cl";
       const cVentas = ' +569 42911 991';
@@ -17,8 +17,10 @@ function Footer() {
           soporteVentasLink.href = `tel:${cVentas}`;
           soporteComprasLink.href = `tel:${cCompras}`;
       }, []);
+
   return (
-    <footer className='footerContainer'>
+
+    <div className='footerContainer'>
       <div className='footerContent'>
         <div className='footerContent--Columns'>
           <img src={logo}  className='footerLogo' alt=''></img>
@@ -53,7 +55,12 @@ function Footer() {
           </div>
         </div>
       </div>
-    </footer>
+      <div className='corpinfoContainer'>
+          <div className='corpinfo--copyright'>Copyright © 2021-2002 Chilevende.cl</div>
+          <div className='corpinfo--address'>Avenida Providencia 1208 Oficina 1603, Providencia, Santiago, Chile</div>
+      </div>
+    </div>
+
   )
 }
 
