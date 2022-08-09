@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 import {CartContext}  from '../CartContext/CartContext'
 import NavBar from '../NavBar/NavBar'
 import CategoriesHome from '../CategoriesHome/CategoriesHome'
-import Carousel from '../Carousel/Carousel';
+import ProductCarousel from '../ProductCarousel/ProductCarousel';
 import Footer from '../Footer/Footer'
 import CartProductDetail from '../CartProductDetail/CartProductDetail';
 import CartNoItems from '../imgs/CartNoItems_emoji.png'
@@ -27,7 +27,7 @@ function CartPage() {
                     <h5> Aún no hay productos en tu carro de compras.  </h5>
                     <h5>Tenemos mas de {totalProductos} productos. ¡Seguro hay algo especial esperando por ti!</h5>
                     <CategoriesHome/>
-                    <Carousel/>
+                    <ProductCarousel title='Productos sugeridos' linktitle='Ver todos'/>
                   </div>
                   : 
                   <>

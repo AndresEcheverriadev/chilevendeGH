@@ -4,7 +4,7 @@ import NavBar from '../NavBar/NavBar';
 import ProductQuantity from '../ProductQuantity/ProductQuantity';
 import productSet from '../../Metasite/productSet';
 import Payments from '../Payments/Payments';
-import SugestedProducts from '../SugestedProducts/SugestedProducts';
+import ProductCarousel from '../ProductCarousel/ProductCarousel';
 import Footer from '../Footer/Footer';
 import './ProductDetail.css';
 
@@ -183,10 +183,11 @@ function ProductDetail() {
   return (
     <div className='productDetailPage'>
         <NavBar/>
-
             {productDetail}
-            <SugestedProducts/>
-
+            <div className='productDetailSugestedContainer'>
+                <ProductCarousel title='Productos sugeridos' linktitle='Ver todos'/>
+            </div>
+            
         <Footer/>
     </div>
   )

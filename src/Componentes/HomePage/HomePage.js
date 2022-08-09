@@ -2,7 +2,7 @@ import React from 'react'
 import NavBar from '../NavBar/NavBar'
 import CarrouselHome from '../CarrouselHome/CarrouselHome'
 import CharsetHome from '../CharsetHome/CharsetHome'
-import Carousel from '../Carousel/Carousel'
+import ProductCarousel from '../ProductCarousel/ProductCarousel'
 import SaleHome from '../SaleHome/SaleHome'
 import NewHome from '../NewHome/NewHome'
 import CategoriesHome from '../CategoriesHome/CategoriesHome'
@@ -27,9 +27,9 @@ function HomePage() {
           <CharsetHome/>
         </section>
         <main className='homePage--body'>
-          <Carousel title='Tu última visita' linktitle='Ver historial'/>
-          <Carousel title='Ofertas' linktitle='Ver todo'/>
-          <Carousel title='Recien llegados' linktitle='Ver todo'/>
+          <ProductCarousel  title='Tu última visita' linktitle='Ver historial' name='visited'/>
+          <ProductCarousel title='Ofertas' linktitle='Ver todo' name='sale'/>
+          <ProductCarousel title='Recien llegados' linktitle='Ver todo' name='new'/>
           <CategoriesHome/>
           <SelectedHome1/>
           <SelectedHome2/>

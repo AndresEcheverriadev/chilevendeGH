@@ -529,3 +529,8 @@
 .deliveryLink {
     color: var(--colorAzulContraste);
 }
+
+.productDetailSugestedContainer {
+    width: 90%;
+    height: auto;
+}
