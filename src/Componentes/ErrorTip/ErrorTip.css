@@ -4,7 +4,7 @@
     justify-content: flex-start;
     align-items: center;
     width: auto;
-    height: 30px;
+    height: auto;
     border-width: 1px;
     border-color: var(--colorError);
     border-style: solid;

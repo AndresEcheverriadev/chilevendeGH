@@ -1,4 +1,4 @@
-.newAddressFormContainer {
+.newUserFormContainer {
     display: flex;
     flex-direction: column;
     width:100%;
@@ -9,7 +9,7 @@
     text-align: left;
 }
 
-.newAddressFormInputs {
+.newUserFormInputs {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -20,7 +20,7 @@
     align-items: center;
 }
 
-.newAddressFormInputs input, .newAddressFormInputs select {
+.newUserFormInputs input, .newUserFormInputs select {
     width: 45%;
     height: 30px;
     border-width: 1px;
@@ -30,10 +30,15 @@
     padding-left: 10px;
 }
 
-.btnAddAddress {
+.newUserFormInputs label {
+    width: 45%;
+    height: 30px;
+}
+
+.btnUser {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content:center;
     align-items:center;
     width: auto;
     height: auto;
@@ -47,12 +52,8 @@
     gap: 10px;
 }
 
-.btnAddAddress:hover {
+.btnUser:hover {
     border-color: var(--colorBlanco);
     box-shadow: var(--Sombra);
     color: var(--colorPrincipalClaro);
 }
-
-
-
-

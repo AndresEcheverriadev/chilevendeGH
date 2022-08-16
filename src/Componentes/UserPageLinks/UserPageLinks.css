@@ -1,0 +1,32 @@
+.UserPageLinksContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.userPageLink {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    width: 100%;
+    border-width: 1px;
+    border-color: var(--colorGrisClaro);
+    background-color: var(--colorBlanco);
+    border-style: solid;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    gap: 10px;
+}
+
+.userPageLink:hover {
+    background-color: var(--colorAzulContraste);
+    color: var(--colorBlanco);
+    box-shadow: var(--Sombra);
+}

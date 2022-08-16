@@ -1,0 +1,120 @@
+.userPageContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+.userPageMain {
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    height: auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-width: 1px;
+    border-color: transparent;
+    border-style: solid;
+    border-radius: 10px;
+    background-color: var(--colorGrisTransparente);
+    padding: 20px;
+    gap: 10px;
+}
+
+.userPageSections {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 20%;
+    height: 500px;
+    border-width: 1px;
+    border-color: var(--colorAzulContraste);
+    border-style: solid;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.userPageData {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 500px;
+    border-width: 1px;
+    border-color: var(--colorAzulContraste);
+    border-style: solid;
+    border-radius: 10px;
+    text-align: left;
+    padding: 10px;
+}
+
+.userPersonalDataWrapper {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: auto;
+}
+
+
+.userPersonalData {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    background-color: var(--colorGrisSuave);
+    border-width: 1px;
+    border-color: transparent;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    flex-wrap: wrap;
+}
+
+.userPersonalDataName, .userPersonalDataLogin {
+    width: 40%;
+    height: auto;
+}
+
+.userPersonalDataName h6 {
+    border-width: 1px;
+    border-color: transparent;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 2px;
+}
+
+.userPersonalDataLogin h6 {
+    border-width: 1px;
+    border-color: var(--colorGrisClaro);
+    border-style: solid;
+    border-radius: 5px;
+    background-color:  var(--colorBlanco);
+    padding: 5px;
+    margin-left: 2px;
+}
+
+.personalDataEditBtn {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px;
+    border-width: 1px;
+    border-color: var(--colorAzulContraste);
+    border-style: solid;
+    border-radius: 10px;
+    background-color: var(--colorBlanco);
+    gap: 10px;
+}
+
+.personalDataEditBtn:hover {
+    box-shadow: var(--Sombra);
+}

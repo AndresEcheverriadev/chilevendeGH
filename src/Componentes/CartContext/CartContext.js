@@ -7,14 +7,22 @@ export const CartContext = createContext([])
 function CartContextProvider({children}) {
 
     const [cartList, setCartList] = useState(cartMock);
-    const [isLogged,setIsLogged] =useState(true);
+    const [isLogged,setIsLogged] = useState(true);
 
     const mockLogin =  {
         nombre: 'Andres',
         apellido: 'Echeverria',
+        rut: 162388827,
+        correo: 'andresecheverria@gmail.com',
         calle: 'Santa Victoria 340',
         ciudad: 'Santiago',
         numeroTel: 56992260895,
+        fechaNacimiento: {
+            dia: 17,
+            mes: 10,
+            año: 1985
+        },
+        genero: 'Masculino',
         pais: 'Chile',
         region: 'Metropolitana de Santiago',
         comuna: 'Santiago Centro'

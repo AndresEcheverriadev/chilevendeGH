@@ -102,3 +102,11 @@ li {
   border-bottom: transparent !important;
 }
 
+.modal-header {
+  background-color: var(--colorAzulContraste) !important;
+  border-radius: 5px !important;
+}
+
+.btn-close:hover {
+  color: var(--colorBlanco) !important;
+}
