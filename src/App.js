@@ -13,6 +13,7 @@ import UserLogin from './Componentes/UserLogin/UserLogin';
 import CreateUser from './Componentes/CreateUser/CreateUser';
 import UserPage from './Componentes/UserPage/UserPage';
 import UserPasswordPage from './Componentes/UserPasswordPage/UserPasswordPage';
+import UserAddressPage from './Componentes/UserAddressPage/UserAddressPage';
 import './App.css';
 
 
@@ -37,6 +38,7 @@ function App() {
               <Route path='/crear-cuenta' element={<CreateUser/>} />
               <Route path='/usuario' element={<UserPage/>} />
               <Route path='/usuario/password' element={<UserPasswordPage/>} />
+              <Route path='/usuario/direcciones' element={<UserAddressPage/>} />
               <Route path='/*' element={<Navigate to='/'/>} /> 
             </Routes>
           </div>

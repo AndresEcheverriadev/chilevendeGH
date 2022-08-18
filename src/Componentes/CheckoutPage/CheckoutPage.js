@@ -179,17 +179,12 @@ function CheckoutPage() {
                               
                             </div>
                           
-                            
-                            
                           </div>
                         </>
                         : null
 
-
-
                         }
                         
-                      
                       </div>
 
                       <div className='buyControlsContainer'>

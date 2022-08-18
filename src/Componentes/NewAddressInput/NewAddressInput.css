@@ -5,7 +5,6 @@
     height: auto;
     justify-content: center;
     align-items: flex-start;
-    gap: 10px;
     text-align: left;
 }
 
@@ -45,6 +44,7 @@
     color: var(--colorBlanco);
     padding: 5px;
     gap: 10px;
+    margin-top: 10px;
 }
 
 .btnAddAddress:hover {
@@ -52,7 +52,3 @@
     box-shadow: var(--Sombra);
     color: var(--colorPrincipalClaro);
 }
-
-
-
-

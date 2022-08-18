@@ -1,0 +1,128 @@
+.userAddressPageContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+.userAddressPageMain {
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    height: auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-width: 1px;
+    border-color: transparent;
+    border-style: solid;
+    border-radius: 10px;
+    background-color: var(--colorGrisTransparente);
+    padding: 20px;
+    gap: 10px;
+}
+
+.userAddressPageSections {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 20%;
+    min-height: 500px;
+    border-width: 1px;
+    border-color: var(--colorAzulContraste);
+    border-style: solid;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.userAddressPageData {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    min-height: 500px;
+    border-width: 1px;
+    border-color: var(--colorAzulContraste);
+    border-style: solid;
+    border-radius: 10px;
+    text-align: left;
+    padding: 10px;
+}
+
+.userAddressWrapper {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: auto;
+}
+
+.billingCheck {
+    width: 25px;
+    height: 25px;
+}
+
+.billingCheck:checked {
+    background-color: var(--colorAzulContraste) !important;
+}
+
+.userPageAddressLoginData, .userPageBillingLoginData {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.loginUserPageDataAddress, .billingUserPageLoginDataAddress {
+    width: 90%;
+    height: auto;
+    text-align: left;
+    border-width: 1px;
+    border-color: transparent;
+    border-style: solid;
+    border-radius: 10px;
+    background-color: var(--colorGrisSuave);
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.userPageAddressEditBtn, .userPageBillingAddressEditBtn {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px;
+    border-width: 1px;
+    border-color: var(--colorAzulContraste);
+    border-style: solid;
+    border-radius: 10px;
+    background-color: var(--colorBlanco);
+    gap: 10px;
+}
+
+.userPageBillingAddressEditBtn:hover, .userPageBillingAddressEditBtn:hover {
+    box-shadow: var(--Sombra);
+}
+
+.userPageBillingCheckContainer {
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.userPageBillingCheck {
+    width: 25px;
+    height: 25px;
+}
+
+.billingCheck:checked {
+    background-color: var(--colorAzulContraste) !important;
+}

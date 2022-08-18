@@ -110,3 +110,8 @@ li {
 .btn-close:hover {
   color: var(--colorBlanco) !important;
 }
+
+.spacerL {
+  margin-top:10px;
+  margin-bottom: 10px;
+}
