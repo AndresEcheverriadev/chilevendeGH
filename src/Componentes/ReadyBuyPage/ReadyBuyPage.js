@@ -8,7 +8,7 @@ import Footer from '../Footer/Footer';
 import CartNoItems from '../imgs/CartNoItems_emoji.png';
 import Success from '../imgs/Success_emoji.png';
 import productSet from '../../Metasite/productSet';
-import CheckoutProductList from '../CheckoutProductList/CheckoutProductList';
+import ProductList from '../ProductList/ProductList';
 import './ReadyBuyPage.css';
 
 function ReadyBuyPage() {
@@ -48,7 +48,7 @@ function ReadyBuyPage() {
                     <div className='successDataContainer'>
                           <h5>Resumen de compra</h5>
                             {
-                              cartList.map((product) => <CheckoutProductList key={product.id} product={product}/>)
+                              cartList.map((product) => <ProductList key={product.id} product={product}/>)
                             }
                           <div className='successDataShipping'>
                             <h5>Dirección de envío</h5>

@@ -1,0 +1,63 @@
+.userHistoryPageContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+.userHistoryPageMain {
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    height: auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-width: 1px;
+    border-color: transparent;
+    border-style: solid;
+    border-radius: 10px;
+    background-color: var(--colorGrisTransparente);
+    padding: 20px;
+    gap: 10px;
+}
+
+.userHistoryPageSections {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 20%;
+    min-height: 500px;
+    border-width: 1px;
+    border-color: var(--colorAzulContraste);
+    border-style: solid;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.userHistoryPageData {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+    width: 80%;
+    min-height: 500px;
+    border-width: 1px;
+    border-color: var(--colorAzulContraste);
+    border-style: solid;
+    border-radius: 10px;
+    text-align: left;
+    padding: 10px;
+}
+
+.userHistoryPageData--products {
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}

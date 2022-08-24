@@ -9,7 +9,7 @@ import productSet from '../../Metasite/productSet';
 import CategoriesHome from '../CategoriesHome/CategoriesHome';
 import ProductCarousel from '../ProductCarousel/ProductCarousel';
 import useValidator from '../../Metasite/useValidator';
-import CheckoutProductList from '../CheckoutProductList/CheckoutProductList';
+import ProductList from '../ProductList/ProductList';
 import NewAddressInput from '../NewAddressInput/NewAddressInput';
 import Payments from '../Payments/Payments';
 import ErrorTip from '../ErrorTip/ErrorTip';
@@ -191,7 +191,7 @@ function CheckoutPage() {
                           <div className='sumsContainer'>
                             <h5>Resumen de compra</h5>
                               {
-                                cartList.map((product) => <CheckoutProductList key={product.id} product={product}/>)
+                                cartList.map((product) => <ProductList key={product.id} product={product}/>)
                               }
                             <h6 className='subtotalSum'><b>Total ${cartTotalBuy}</b></h6>
                             <Link to='/ready' className='toPayContainer'>

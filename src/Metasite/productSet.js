@@ -20,7 +20,8 @@ const productSet = [{
     id: '0001ab',
     etiquetas: ['Herramientas','Construcción','Hogar y Muebles','Herramientas Eléctricas'],
     category: 'Construcción',
-    subcategories: ['Hogar y Muebles','Herramientas Eléctricas']
+    subcategories: ['Hogar y Muebles','Herramientas Eléctricas'],
+    seller: 'Bob Herramientas'
 },{
     image: ['/demoimg2.png'],
     PublicationDate: 13062022,
@@ -43,7 +44,8 @@ const productSet = [{
     id: '0002ab',
     category: 'Hogar y Muebles',
     subcategories: [],
-    etiquetas: ['Cojin','Decoracion','Fundas','Terciopelo','Hogar','Hogar y Muebles']
+    etiquetas: ['Cojin','Decoracion','Fundas','Terciopelo','Hogar','Hogar y Muebles'],
+    seller: 'Casa Ideal'
 },{
     image: ['/demoimg3.jpeg'],
     PublicationDate: 13062022,    
@@ -66,7 +68,8 @@ const productSet = [{
     id: '0003ab',
     category: 'Hogar y Muebles',
     subcategories: [],
-    etiquetas: ['Hogar y Muebles']
+    etiquetas: ['Hogar y Muebles'],
+    seller: 'Casa Ideal'
 },{
     image: ['/demoimg4.jpg'],
     PublicationDate: 13062022,
@@ -89,7 +92,8 @@ const productSet = [{
     id: '0004ab',
     etiquetas: ['Automóvil','Automotrices','Impreza','Intercooler','Repuestos','Subaru','Topmount','Wrx','Ypipe'],
     category: 'Automóvil',
-    subcategories: []
+    subcategories: [],
+    seller: 'Veloz e Iracundo repuestos'
 },{
     image: ['/demoimg5.jpeg'],
     PublicationDate: 13062022,
@@ -112,7 +116,8 @@ const productSet = [{
     id: '0005ab',
     etiquetas: ['Belleza y Cuidado Personal','Alisadora','Cabello','Cuidado del cabello','Vapor'],
     category: 'Belleza y Cuidado Personal',
-    subcategories: []
+    subcategories: [],
+    seller: 'Columbo'
 },{
     image: ['/demoimg6.jpg'],
     PublicationDate: 13062022,
@@ -135,7 +140,8 @@ const productSet = [{
     id: '0006ab',
     etiquetas: ['Tecnología','Notebook Dell inspirion'],
     category: 'Tecnología',
-    subcategories: []
+    subcategories: [],
+    seller: 'Pc Workshop'
 },{
     image: ['/demoimg7.jpeg'],
     PublicationDate: 13062022,
@@ -158,7 +164,8 @@ const productSet = [{
     id: '0007ab',
     etiquetas: ['Deportes y Fitness','Belleza y Cuidado Personal'],
     category: 'Deportes y Fitness',
-    subcategories: ['Belleza y Cuidado Personal']
+    subcategories: ['Belleza y Cuidado Personal'],
+    seller: 'Columbo'
 },{
     image: ['/demoimg8.png','/demoimg81.jpg','/demoimg82.jpg'],
     PublicationDate: 13062022,
@@ -181,7 +188,8 @@ const productSet = [{
     id: '0008ab',
     etiquetas: ['Electrónica,Audio y Video','Oferta','Precios bajos','Receiver','Yamaha','Home Theater','Receiver','Audio 5.1'],
     category: 'Electrónica,Audio y Video',
-    subcategories: ['Home Theater','Receiver','Audio 5.1']
+    subcategories: ['Home Theater','Receiver','Audio 5.1'],
+    seller: 'Fony'
 },{
     image: ['/demoimg9.jpg'],
     PublicationDate: 13062022,
@@ -204,7 +212,8 @@ const productSet = [{
     id: '0009ab',
     etiquetas: ['Vestuario y Calzado','Vestido de novia','Strapless','Color ivory'],
     category: 'Vestuario y Calzado',
-    subcategories: []
+    subcategories: [],
+    seller: 'Rafael Lorenzo confecciones'
 },
 {
     image: ['/demoimg10.jpeg'],
@@ -228,7 +237,8 @@ const productSet = [{
     id: '0010ab',
     etiquetas: ['Cotillón y Fiestas','Packaging'],
     category: 'Cotillón y Fiestas',
-    subcategories: []
+    subcategories: [],
+    seller: 'Like-a-Box'
 },
 {
     image: ['/demoimg11.jpg'],
@@ -252,7 +262,8 @@ const productSet = [{
     id: '0011ab',
     etiquetas: ['Juegos Infantiles','Bicicletas'],
     category: 'Juegos Infantiles',
-    subcategories: ['Bicicletas']
+    subcategories: ['Bicicletas'],
+    seller: 'El rey de las bicletas electricas'
 }
 ]
 

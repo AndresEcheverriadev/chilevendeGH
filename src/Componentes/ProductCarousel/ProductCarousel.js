@@ -5,11 +5,13 @@ import ProductCard from '../ProductCard/ProductCard'
 import './ProductCarousel.css'
 
 function ProductCarousel({title,linktitle,name}) {
+
     const productsCards = productSet.map((producto) => {
         return  <NavLink to={`/${producto.category}/${producto.name}`}   className='cardContainer'>
                     <ProductCard producto={producto} key={producto.id}/>
                 </NavLink>
-    }) 
+    }); 
+    
     useEffect(() => {
       const gap = 10;
       const carousel = document.getElementById(`carousel${name}`),
@@ -37,9 +39,9 @@ function ProductCarousel({title,linktitle,name}) {
       });
       let width = carousel.offsetWidth;
       window.addEventListener("resize", e => (width = carousel.offsetWidth));      
-    })
-  return (
+    });
 
+  return (
     <div className="carouselContainer">
         <div className="carouselTitles">
             {title? <h5 className="carouselTitle">{title}</h5> : null}

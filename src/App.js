@@ -14,8 +14,8 @@ import CreateUser from './Componentes/CreateUser/CreateUser';
 import UserPage from './Componentes/UserPage/UserPage';
 import UserPasswordPage from './Componentes/UserPasswordPage/UserPasswordPage';
 import UserAddressPage from './Componentes/UserAddressPage/UserAddressPage';
+import UserHistoryPage from './Componentes/UserHistoryPage/UserHistoryPage';
 import './App.css';
-
 
 function App() {
 
@@ -39,6 +39,7 @@ function App() {
               <Route path='/usuario' element={<UserPage/>} />
               <Route path='/usuario/password' element={<UserPasswordPage/>} />
               <Route path='/usuario/direcciones' element={<UserAddressPage/>} />
+              <Route path='/usuario/compras' element={<UserHistoryPage/>} />
               <Route path='/*' element={<Navigate to='/'/>} /> 
             </Routes>
           </div>
