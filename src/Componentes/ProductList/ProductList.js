@@ -9,7 +9,8 @@ function ProductList({product}) {
   const {subTotalItem} = useContext(CartContext);
 
   return (
-    <div className='productListContainer' id='productContainer' >
+    <div className='productListContainer' >
+      <span></span>
        <NavLink to={`/${product.category}/${product.name}`}><h6 className='productListTitle'>{product.name}</h6></NavLink>
        <img className='productListThumb' src={product.image} alt="" />
         <div className='productListQuantity'>

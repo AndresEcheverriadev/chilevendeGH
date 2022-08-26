@@ -1,13 +1,29 @@
-import React from 'react';
+import React, { useMemo, useState, useContext } from 'react';
+import { NavLink } from 'react-router-dom';
 import NavBar from '../NavBar/NavBar';
 import UserPageLinks from '../UserPageLinks/UserPageLinks';
+import { CartContext } from '../CartContext/CartContext';
 import purchaseHistoryMock from '../../Metasite/purchaseHistoryMock'
+import ProductList from '../ProductList/ProductList';
+import Pagination from '../Pagination/Pagination';
 import Footer from '../Footer/Footer';
 import './UserHistoryPage.css';
-import ProductList from '../ProductList/ProductList';
-import Paginator from '../Paginator/Paginator';
+
+let PageSize = 10;
+
+
 
 function UserHistoryPage() {
+
+  const {subTotalItem} = useContext(CartContext);
+
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const currentTableData = useMemo(() => {
+    const firstPageIndex = (currentPage - 1) * PageSize;
+    const lastPageIndex = firstPageIndex + PageSize;
+    return purchaseHistoryMock.slice(firstPageIndex, lastPageIndex);
+  }, [currentPage]);
 
   return (
     <>
@@ -20,17 +36,29 @@ function UserHistoryPage() {
         </div>
 
         <div className='userHistoryPageData'>
-          <div className='userHistoryPageData--products' id="paginated-list" aria-live="polite">
+
+          <div className='userHistoryPageData--products'>
             {
-            purchaseHistoryMock.map((product) => <ProductList  key={product.id} product={product}/>)
+            currentTableData.map((product) =>  <div className='productListContainer'>
+                                                      <NavLink to={`/${product.category}/${product.name}`}><h6 className='productListTitle'>{product.name}</h6></NavLink>
+                                                      <img className='productListThumb' src={product.image} alt="" />
+                                                        <div className='productListQuantity'>
+                                                            <h6>${product.price}</h6>
+                                                            <h6>x{product.cantidadCompra}</h6>
+                                                            <h6 className='cartItemSubtotal--checkout'>Subtotal ${subTotalItem(product)}</h6>
+                                                        </div>
+                                                  </div>)
 
             }
           </div>
-          <div className='userHistoryPageData--paginator'>
-            <Paginator/>
-          </div>
+          <Pagination
+            className="pagination-bar"
+            currentPage={currentPage}
+            totalCount={purchaseHistoryMock.length}
+            pageSize={PageSize}
+            onPageChange={page => setCurrentPage(page)}
+          />
         </div>
-
       </div>
       <Footer/>    
     </div>
