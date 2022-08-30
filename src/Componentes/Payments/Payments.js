@@ -1,10 +1,10 @@
 import React from 'react';
-import visa from '../imgs/VisaAzul.png'; 
-import master from '../imgs/MasterAzul.png';
-import amex from '../imgs/AmexAzul.png';
-import magna from '../imgs/MagnaAzul.png';
-import diners from '../imgs/DinersAzul.png';
-import webpay from '../imgs/Webpay.png'
+import visa from '../../imgs/VisaAzul.png'; 
+import master from '../../imgs/MasterAzul.png';
+import amex from '../../imgs/AmexAzul.png';
+import magna from '../../imgs/MagnaAzul.png';
+import diners from '../../imgs/DinersAzul.png';
+import webpay from '../../imgs/Webpay.png'
 import './Payments.css';
 
 function Payments() {

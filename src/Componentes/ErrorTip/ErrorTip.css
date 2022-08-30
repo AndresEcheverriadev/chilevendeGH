@@ -16,4 +16,5 @@
     margin-bottom: 5px;
     color: var(--colorError);
     gap: 5px;
+    visibility: hidden;
 }

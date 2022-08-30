@@ -28,7 +28,8 @@
     cursor: pointer;
 }
 .pagination-container .pagination-item.selected {
-    background-color: rgba(0, 0, 0, 0.08);
+    background-color: var(--colorAzulContraste);
+    color: var(--colorBlanco);
 }
 .pagination-container .pagination-item .arrow::before {
     position: relative;

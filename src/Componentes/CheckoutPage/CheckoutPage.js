@@ -4,7 +4,7 @@ import {Link, NavLink} from "react-router-dom";
 import { CartContext } from '../CartContext/CartContext';
 import NavBar from '../NavBar/NavBar';
 import Footer from '../Footer/Footer';
-import CartNoItems from '../imgs/CartNoItems_emoji.png';
+import CartNoItems from '../../imgs/CartNoItems_emoji.png';
 import productSet from '../../Metasite/productSet';
 import CategoriesHome from '../CategoriesHome/CategoriesHome';
 import ProductCarousel from '../ProductCarousel/ProductCarousel';

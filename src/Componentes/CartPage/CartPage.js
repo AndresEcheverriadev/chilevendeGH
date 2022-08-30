@@ -7,7 +7,7 @@ import CategoriesHome from '../CategoriesHome/CategoriesHome'
 import ProductCarousel from '../ProductCarousel/ProductCarousel';
 import Footer from '../Footer/Footer'
 import CartProductDetail from '../CartProductDetail/CartProductDetail';
-import CartNoItems from '../imgs/CartNoItems_emoji.png'
+import CartNoItems from '../../imgs/CartNoItems_emoji.png'
 import productSet from '../../Metasite/productSet';
 import Payments from '../Payments/Payments';
 import './CartPage.css'

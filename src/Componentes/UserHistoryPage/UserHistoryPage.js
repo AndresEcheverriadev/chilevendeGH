@@ -1,24 +1,19 @@
 import React, { useMemo, useState, useContext } from 'react';
 import { NavLink } from 'react-router-dom';
+import { CartContext } from '../CartContext/CartContext';
 import NavBar from '../NavBar/NavBar';
 import UserPageLinks from '../UserPageLinks/UserPageLinks';
-import { CartContext } from '../CartContext/CartContext';
 import purchaseHistoryMock from '../../Metasite/purchaseHistoryMock'
-import ProductList from '../ProductList/ProductList';
 import Pagination from '../Pagination/Pagination';
 import Footer from '../Footer/Footer';
 import './UserHistoryPage.css';
 
 let PageSize = 10;
 
-
-
 function UserHistoryPage() {
 
   const {subTotalItem} = useContext(CartContext);
-
   const [currentPage, setCurrentPage] = useState(1);
-
   const currentTableData = useMemo(() => {
     const firstPageIndex = (currentPage - 1) * PageSize;
     const lastPageIndex = firstPageIndex + PageSize;
@@ -30,13 +25,10 @@ function UserHistoryPage() {
     <div className='userHistoryPageContainer'>
       <NavBar/>
       <div className="userHistoryPageMain">
-
         <div className='userHistoryPageSections'>
           <UserPageLinks/>
         </div>
-
         <div className='userHistoryPageData'>
-
           <div className='userHistoryPageData--products'>
             {
             currentTableData.map((product) =>  <div className='productListContainer'>
@@ -48,7 +40,6 @@ function UserHistoryPage() {
                                                             <h6 className='cartItemSubtotal--checkout'>Subtotal ${subTotalItem(product)}</h6>
                                                         </div>
                                                   </div>)
-
             }
           </div>
           <Pagination

@@ -2,6 +2,7 @@ import React from 'react';
 import classnames from 'classnames';
 import { usePagination, DOTS } from '../../Metasite/usePagination.js';
 import './Pagination.css';
+
 const Pagination = props => {
   const {
     onPageChange,

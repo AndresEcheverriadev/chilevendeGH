@@ -1,7 +1,7 @@
 import React from 'react'
-import imgCarrousel1 from '../imgs/carrouselHome1.png'
-import imgCarrousel2 from '../imgs/carrouselHome2.png'
-import imgCarrousel3 from '../imgs/carrouselHome3.png'
+import imgCarrousel1 from '../../imgs/carrouselHome1.png'
+import imgCarrousel2 from '../../imgs/carrouselHome2.png'
+import imgCarrousel3 from '../../imgs/carrouselHome3.png'
 import './CarrouselHome.css'
 
 function CarrouselHome() {
