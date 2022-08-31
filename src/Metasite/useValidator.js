@@ -2,6 +2,7 @@ import { Component, React,useState } from 'react';
 import validator from 'validator'
 import WelcomeEmoji from '../imgs/WelcomeUser_emoji.png';
 import CompraEmoji from '../imgs/compra_emoji.png';
+import SuccessEmoji from '../imgs/WelcomeSuccess_emoji.png'
 import VendeEmoji from '../imgs/vende_emoji.png';
     
     const useValidator = () => {
@@ -12,7 +13,6 @@ import VendeEmoji from '../imgs/vende_emoji.png';
         const[inputPassword, setinputPassword] = useState('');
         const[validatedPassword, setvalidatedPassword] = useState(false);
         const[welcomeUserEmoji, setWelcomeUserEmoji] = useState(WelcomeEmoji);
-        const[loginData, setLoginData] = useState({});
 
 
         const[checkedTerms, setcheckedTerms] = useState(false);
@@ -28,11 +28,14 @@ import VendeEmoji from '../imgs/vende_emoji.png';
         const validateEmail = (e) => {
             const inputEmail = e.target.value;
             const emailErrorTip = document.getElementById('emailErrorTip')
-        if (validator.isEmail(inputEmail) || inputEmail === '') {
+        if (validator.isEmail(inputEmail)) {
             setinputEmail(inputEmail);
             setvalidatedEmail(true);
             emailErrorTip.style.visibility= 'hidden';
-        } else {
+        } else if(inputEmail==='') {
+            setvalidatedEmail(false);
+            emailErrorTip.style.visibility= 'hidden';
+        }else {
             setvalidatedEmail(false);
             emailErrorTip.style.visibility= 'visible';
         }
@@ -52,15 +55,12 @@ import VendeEmoji from '../imgs/vende_emoji.png';
         };
 
         const validatePassword = (e) => {
-            
-            const passwordErrorTip = document.getElementById('passwordErrorTip')
+            const inputPassword = e.target.value;
             if( inputPassword === '') {
                 setvalidatedPassword(false);
-                passwordErrorTip.style.visibility= 'hidden';
             }else {
                 setvalidatedPassword(true);
                 setinputPassword(inputPassword);
-                passwordErrorTip.style.visibility= 'visible';
             }
         };
     
@@ -84,16 +84,17 @@ import VendeEmoji from '../imgs/vende_emoji.png';
         
         // };
 
-        const loginCheck = () => {
-           
-            
+        const loginCheck = (e) => {
+            e.preventDefault();
+            const loginErrorTip = document.getElementById('loginErrorTip')
             if((validatedEmail === true) && (validatedPassword === true)) {
-                setLoginData({emailData: inputEmail,passwordData: inputPassword
-                });
-                console.log(loginData)
+                const loginData = {emailData: inputEmail,passwordData: inputPassword};
+                loginErrorTip.style.visibility= 'hidden';
+                setWelcomeUserEmoji(SuccessEmoji);
+               alert(JSON.stringify(loginData))
             }
             else {
-                alert('Debes ingresar tus datos correctamente');
+                loginErrorTip.style.visibility= 'visible';
             }
         
         };

@@ -10,8 +10,9 @@ function UserLogin() {
   const {
     alerter,
     validateEmail,
+    validatePassword,
     welcomeUserEmoji,
-    loginCheck
+    loginCheck,
   } = useValidator();
 
  return (
@@ -25,12 +26,12 @@ function UserLogin() {
           <form className='userLoginFormContainer'>
             <div class="mb-3">
               <label for="exampleInputEmail1" className="form-label">Nombre de usuario o correo electrónico</label>
-              <input type="email" class="form-control" id="userLoginInputEmail" aria-describedby="emailHelp"  onChange={(e) => validateEmail(e)}/>
+              <input type="email" class="form-control" id="userLoginInputEmail" aria-describedby="emailHelp"  onChange={validateEmail}/>
               <ErrorTip errorText='Escribe una dirección de correo válida' name={'emailErrorTip'}/>
             </div>
             <div class="mb-3">
               <label for="exampleInputPassword1" className="form-label">Contraseña</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" />
+              <input type="password" class="form-control" id="exampleInputPassword1" onChange={validatePassword} />
               <ErrorTip errorText='Debes escribir un password' name={'passwordErrorTip'}/>
             </div>
             <div class="mb-3 form-check">
@@ -42,7 +43,7 @@ function UserLogin() {
             </div>
             <ErrorTip errorText='Debes ingresar tus datos correctamente' name={'loginErrorTip'}/>
             <div className='userLoginForm--buttonsContainer'>
-              <button type="submit" className={`btn btn-primary userLoginForm--btnSession`}  onClick={() => loginCheck()}>Iniciar sesión</button>
+              <button type="submit" className={`btn btn-primary userLoginForm--btnSession`}  onClick={loginCheck}>Iniciar sesión</button>
               <NavLink to='/crear-cuenta'><button type="submit" className="btn btn-outline-primary userLoginForm--btnCreate">Crear cuenta</button></NavLink>
             </div>
           </form>
