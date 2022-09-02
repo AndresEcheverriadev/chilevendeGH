@@ -1,30 +1,22 @@
-import { Component, React,useState } from 'react';
-import validator from 'validator'
+import { Component, React,useEffect,useState } from 'react';
+import validator from 'validator';
 import WelcomeEmoji from '../imgs/WelcomeUser_emoji.png';
 import CompraEmoji from '../imgs/compra_emoji.png';
-import SuccessEmoji from '../imgs/WelcomeSuccess_emoji.png'
+import SuccessEmoji from '../imgs/WelcomeSuccess_emoji.png';
 import VendeEmoji from '../imgs/vende_emoji.png';
     
     const useValidator = () => {
 
- 
         const[inputEmail, setinputEmail] = useState('');
         const[validatedEmail, setvalidatedEmail] = useState(false);
         const[inputPassword, setinputPassword] = useState('');
         const[validatedPassword, setvalidatedPassword] = useState(false);
         const[welcomeUserEmoji, setWelcomeUserEmoji] = useState(WelcomeEmoji);
-
-
+        const[createUserEmoji, setcreateUserEmoji] = useState(CompraEmoji);
         const[checkedTerms, setcheckedTerms] = useState(false);
         const[checkedVendedor, setcheckedVendedor] = useState(false);
-        const[passwordError, setPasswordError] = useState('');
-        const[inputError, setInputError] = useState('');
-        const[createUserEmoji, setcreateUserEmoji] = useState(CompraEmoji);
         const[inputType, setinputType] = useState('');
-        const[isVendedor, setIsVendedor] = useState('');
-        
-        const vendedorTitle = (title) => { return <span>{title}</span> };
-    
+            
         const validateEmail = (e) => {
             const inputEmail = e.target.value;
             const emailErrorTip = document.getElementById('emailErrorTip')
@@ -43,7 +35,7 @@ import VendeEmoji from '../imgs/vende_emoji.png';
     
         const validateNewPassword = (e) => {
         const inputPassword = e.target.value;
-        const newPasswordErrorTip = document.getElementById('passwordErrorTip')
+        const newPasswordErrorTip = document.getElementById('newPasswordErrorTip')
         if(validator.isStrongPassword(inputPassword) || inputPassword === '') {
             setinputPassword(inputPassword);
             setvalidatedPassword(true);
@@ -67,22 +59,20 @@ import VendeEmoji from '../imgs/vende_emoji.png';
         const handleTermsCheckbox = () => {
         setcheckedTerms(!checkedTerms)
         };
-    
-        // const createCheck = (e) => {
-        // e.preventDefault();
-        // if((validatedEmail === true) && (validatedPassword === true) && (checkedTerms === true)) {
-        //     alert(inputPassword);
-        //     alert(inputEmail);
-        //     alert(inputType);
-        // }
-        // else if ((validatedEmail === true) && (validatedPassword === true) && (checkedTerms ===! true)) {
-        //     setInputError(inputErrorMesagge('Debes aceptar los Términos y Condiciones'));
-        // }
-        // else {
-        //     setInputError(inputErrorMesagge('Debes ingresar tus datos correctamente'));
-        //     }
-        
-        // };
+
+        const handleCheckedVendedor = () => {
+            setcheckedVendedor(!checkedVendedor);     
+        };
+
+        const checkedVendedorIcon = () => {
+            setinputType('de vendedor')
+            setcreateUserEmoji(VendeEmoji);
+        }
+
+        const checkedCompradorIcon = () => {
+            setinputType('')
+            setcreateUserEmoji(CompraEmoji);
+        }
 
         const loginCheck = (e) => {
             e.preventDefault();
@@ -96,11 +86,28 @@ import VendeEmoji from '../imgs/vende_emoji.png';
             else {
                 loginErrorTip.style.visibility= 'visible';
             }
-        
         };
 
-        const alerter = () => {
-            alert('hola');
+        const newUserCheck = (e) => {
+            e.preventDefault();
+            const newUserErrorTip = document.getElementById('newUserErrorTip');
+            const termsErrorTip = document.getElementById('termsErrorTip');
+            if((validatedEmail === true) && (validatedPassword === true) && (checkedTerms === true) && (checkedVendedor === true)) {
+                const newUserData = {emailData: inputEmail,passwordData: inputPassword,TypeData: 'vendedor'};
+                newUserErrorTip.style.visibility= 'hidden';
+               alert(JSON.stringify(newUserData))
+            }
+            else if((validatedEmail === true) && (validatedPassword === true) && (checkedTerms === true)) {
+                const newUserData = {emailData: inputEmail,passwordData: inputPassword};
+                newUserErrorTip.style.visibility= 'hidden';
+               alert(JSON.stringify(newUserData))
+            }
+            else if((validatedEmail === true) && (validatedPassword === true) && (checkedTerms === false)) {
+                termsErrorTip.style.visibility= 'visible';
+            }
+            else {
+                newUserErrorTip.style.visibility= 'visible';
+            }
         };
 
         return {
@@ -111,8 +118,21 @@ import VendeEmoji from '../imgs/vende_emoji.png';
             inputPassword,
             validatedPassword,
             validatePassword,
+            validateNewPassword,
             loginCheck,
-            alerter
+            createUserEmoji,
+            handleTermsCheckbox,
+            checkedTerms,
+            checkedVendedor, 
+            setcheckedVendedor,
+            inputType,
+            setinputType,
+            setcreateUserEmoji,
+            handleCheckedVendedor,
+            checkedVendedor,
+            checkedVendedorIcon,
+            checkedCompradorIcon,
+            newUserCheck
         }
 
     

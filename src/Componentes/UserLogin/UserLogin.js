@@ -2,13 +2,13 @@ import React, {useEffect, useRef, useState} from 'react';
 import {NavLink} from 'react-router-dom';
 import Logo from '../Logo/Logo';
 import useValidator from '../../Metasite/useValidator';
-import './UserLogin.css';
 import ErrorTip from '../ErrorTip/ErrorTip';
+import './UserLogin.css';
+
 
 function UserLogin() {
 
   const {
-    alerter,
     validateEmail,
     validatePassword,
     welcomeUserEmoji,
