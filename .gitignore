@@ -8,9 +8,6 @@
 # testing
 /coverage
 
-# production
-/build
-
 # misc
 notecoder.js
 .DS_Store
